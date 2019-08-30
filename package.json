@@ -17,7 +17,7 @@
   "//": "All scripts should run in POSIX sh and Windows cmd.exe",
   "scripts": {
     "lint": "npm run lint-ec && npm run lint-es && npm run lint-rules",
-    "lint-ec": "eclint check *",
+    "lint-ec": "eclint check * rules/*",
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md && echo until skywinder/github-changelog-generator#56 is fixed.",
