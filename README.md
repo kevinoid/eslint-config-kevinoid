@@ -1,62 +1,63 @@
-Project Template
-================
+@kevinoid's ESLint Config
+=========================
 
-[![Build Status: Linux](https://img.shields.io/travis/kevinoid/project-template/master.svg?style=flat&label=build+on+linux)](https://travis-ci.org/kevinoid/project-template)
-[![Build Status: Windows](https://img.shields.io/appveyor/ci/kevinoid/project-template/master.svg?style=flat&label=build+on+windows)](https://ci.appveyor.com/project/kevinoid/project-template)
-[![Coverage](https://img.shields.io/codecov/c/github/kevinoid/project-template.svg?style=flat)](https://codecov.io/github/kevinoid/project-template?branch=master)
-[![Dependency Status](https://img.shields.io/david/kevinoid/project-template.svg?style=flat)](https://david-dm.org/kevinoid/project-template)
-[![Supported Node Version](https://img.shields.io/node/v/@kevinoid/project-template.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/project-template)
-[![Version on NPM](https://img.shields.io/npm/v/@kevinoid/project-template.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/project-template)
+[![Build Status](https://img.shields.io/travis/kevinoid/eslint-config-kevinoid/master.svg?style=flat&label=build+on+linux)](https://travis-ci.org/kevinoid/eslint-config-kevinoid)
+[![Dependency Status](https://img.shields.io/david/kevinoid/eslint-config-kevinoid.svg?style=flat)](https://david-dm.org/kevinoid/eslint-config-kevinoid)
+[![Supported Node Version](https://img.shields.io/node/v/@kevinoid/eslint-config.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/eslint-config)
+[![Version on NPM](https://img.shields.io/npm/v/@kevinoid/eslint-config.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/eslint-config)
 
-A Node.js/npm project template with [codecov](https://codecov.io/),
-[coveralls](https://coveralls.io/), [ESLint](https://eslint.org/),
-[github\_changelog\_generator](https://github.com/github-changelog-generator/github-changelog-generator),
-[nyc](https://github.com/istanbuljs/nyc), [JSDoc](http://usejsdoc.org/), and
-[mocha](https://mochajs.org/).
-
-It is the template that I am using for my own Node.js projects, which
-represents my current preferences.  I am not advocating for these choices nor
-this template specifically, although I am happy to discuss or explain any
-choices made herein.  It is being published both for my own convenience and
-in case it may be useful to others with similar tastes.
-
-## Introductory Example
-
-```js
-```
-
-## Features
+An [ESLint shareable
+configs](https://eslint.org/docs/developer-guide/shareable-configs) for
+[@kevinoid](https://github.com/kevinoid/)'s preferred style (based on
+[Airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+style).
 
 
 ## Installation
 
-[This package](https://www.npmjs.com/package/@kevinoid/project-template) can be
-installed using [npm](https://www.npmjs.com/), either globally or locally, by
-running:
+Before using any configuration from this package, it must be installed, either
+globally or locally, which can be done using the following steps:
 
-```sh
-npm install @kevinoid/project-template
+1.  Install `peerDependencies` (and transitive `peerDependencies`) for
+    `@kevinoid/eslint-config`.  This can be done using `npx install-peerdeps
+    --dev @kevinoid/eslint-config`,
+    [`install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) or
+    manually based on the output from `npm info @kevinoid/eslint-config
+    peerDependencies`.
+2.  Install this package (e.g. `npm install @kevinoid/eslint-config`).
+
+
+## Usage
+
+This package includes configurations for several different environments:
+
+| Name                           | Description       |
+| ------------------------------ | ----------------- |
+| `@kevinoid/eslint-config/node` | Node 6 and later. |
+
+Add the chosen configuration to
+[`extends`](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
+in `.eslintrc`, for example:
+
+```json
+{
+  "extends": "@kevinoid/eslint-config/node"
+}
 ```
 
-## Recipes
+or `eslintConfig` in `package.json`, for example:
 
-More examples can be found in the [test
-specifications](https://kevinoid.github.io/project-template/spec).
+```json
+{
+  "name": "packagename",
+  "version": "1.0.0",
+  ...
+  "eslintConfig": {
+    "extends": "@kevinoid/eslint-config/node"
+  }
+}
+```
 
-## API Docs
-
-To use this module as a library, see the [API
-Documentation](https://kevinoid.github.io/project-template/api).
-
-## Contributing
-
-Contributions are welcome and very much appreciated!  Please add tests to
-cover any changes and ensure `npm test` passes.
-
-If the desired change is large, complex, backwards-incompatible, can have
-significantly differing implementations, or may not be in scope for this
-project, opening an issue before writing the code can avoid frustration and
-save a lot of time and effort.
 
 ## License
 

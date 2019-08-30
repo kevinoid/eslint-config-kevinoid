@@ -1,5 +1,9 @@
-// ESLint configuration <https://eslint.org/docs/user-guide/configuring>
-{
+// ESLint configuration for Node 6 and later.
+// <https://eslint.org/docs/user-guide/configuring>
+
+"use strict";
+
+module.exports = {
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": "airbnb-base",
 
@@ -93,4 +97,4 @@
       ]
     }]
   }
-}
+};
