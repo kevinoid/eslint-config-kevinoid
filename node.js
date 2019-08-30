@@ -83,18 +83,6 @@ module.exports = {
       "anonymous": "never",
       "named": "never",
       "asyncArrow": "always"
-    }],
-
-    //// ECMAScript 6 Rules <https://eslint.org/docs/rules/#ecmascript-6>
-    // eslint-plugin-import
-    // Allow requiring devDependencies for build and test
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": [
-        "gulpfile.js",
-        "test-bin/**",
-        "test-lib/**",
-        "test/**"
-      ]
     }]
   }
 };
