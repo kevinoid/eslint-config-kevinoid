@@ -67,8 +67,6 @@ module.exports = {
     // disallow process.exit()
     // this is disabled locally only when require.main === module
     "no-process-exit": "error",
-    // disallow extra spaces in object literals
-    "object-curly-spacing": ["error", "never"],
     // allow multiple variable declarations per block/function and multiple
     // declarators per declaration
     "one-var": "off",
