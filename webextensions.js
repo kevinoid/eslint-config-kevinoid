@@ -1,0 +1,31 @@
+// ESLint configuration for JS run directly in browsers as WebExtensions.
+// <https://eslint.org/docs/user-guide/configuring>
+
+"use strict";
+
+module.exports = {
+  // Based on Airbnb with changes to match Node core and my prefs.
+  "extends": [
+    "airbnb-base",
+    "./rules/best-practices",
+    "./rules/style",
+    "./rules/variables"
+  ],
+
+  "parserOptions": {
+    "sourceType": "script"
+  },
+
+  "env": {
+    "browser": true,
+    "webextensions": true
+  },
+
+  "rules": {
+    // allow console (which is always supported and conventional for logging)
+    "no-console": "off",
+
+    // require 'use strict' in global scope
+    "strict": ["error", "global"]
+  }
+};

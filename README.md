@@ -31,10 +31,11 @@ globally or locally, which can be done using the following steps:
 
 This package includes configurations for several different environments:
 
-| Name                           | Description                              |
-| ------------------------------ | ---------------------------------------- |
-| `@kevinoid/eslint-config/ie11` | Browsers including Internet Explorer 11. |
-| `@kevinoid/eslint-config/node` | Node 6 and later.                        |
+| Name                                    | Description                              |
+| --------------------------------------- | ---------------------------------------- |
+| `@kevinoid/eslint-config/ie11`          | Browsers including Internet Explorer 11. |
+| `@kevinoid/eslint-config/node`          | Node 6 and later.                        |
+| `@kevinoid/eslint-config/webextensions` | [Browser Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) |
 
 Add the chosen configuration to
 [`extends`](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
