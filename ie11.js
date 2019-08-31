@@ -8,9 +8,13 @@ module.exports = {
   "extends": [
     // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
     "airbnb-base/legacy",
+
+    // ESLint built-in rules
     "./rules/best-practices",
     "./rules/style",
     "./rules/variables",
+
+    // IE-specific rules
     "./rules/ie11-restricted-globals",
     "./rules/ie11-restricted-properties"
   ],
