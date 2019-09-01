@@ -29,7 +29,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "eslint-config-airbnb-base": "^14.0.0"
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-promise": "^4.2.1"
   },
   "devDependencies": {
     "eclint": "^2.8.1",
@@ -37,6 +38,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-promise": "^4.2.1",
     "greenkeeper-lockfile": "^1.15.1"
   },
   "engines": {

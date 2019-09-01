@@ -16,7 +16,10 @@ module.exports = {
 
     // IE-specific rules
     "./rules/ie11-restricted-globals",
-    "./rules/ie11-restricted-properties"
+    "./rules/ie11-restricted-properties",
+
+    // Plugin rules
+    "./rules/promise"
   ],
 
   "parserOptions": {

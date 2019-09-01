@@ -11,7 +11,10 @@ module.exports = {
     // ESLint built-in rules
     "./rules/best-practices",
     "./rules/style",
-    "./rules/variables"
+    "./rules/variables",
+
+    // Plugin rules
+    "./rules/promise"
   ],
 
   "parserOptions": {
