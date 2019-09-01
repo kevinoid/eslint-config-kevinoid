@@ -58,8 +58,12 @@ const restricted = {
   },
   "Object": {
     "assign": true,
+    "fromEntries": true,
+    "getOwnPropertyDescriptors": true,
     "getOwnPropertySymbols": true,
-    "is": true
+    "entries": true,
+    "is": true,
+    "values": true
   },
   "String": {
     "fromCodePoint": true,
