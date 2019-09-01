@@ -143,7 +143,11 @@ module.exports = {
       }
     ],
 
-    //// ECMAScript 6 Rules <https://eslint.org/docs/rules/#ecmascript-6>
+
+    // ----------------------------------------------------------------
+    // ECMAScript 6 Rules <https://eslint.org/docs/rules/#ecmascript-6>
+    // ----------------------------------------------------------------
+
     // disallow modifying variables that are declared using const
     "no-const-assign": "error",
 
