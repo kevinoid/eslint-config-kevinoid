@@ -26,6 +26,9 @@ module.exports = {
     "no-param-reassign": "off",
 
     // disallow unnecessary use of Function.prototype.{apply,call}
-    "no-useless-call": "error"
+    "no-useless-call": "error",
+
+    // require using Error objects as Promise rejection reason (including empty)
+    "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }]
   }
 };
