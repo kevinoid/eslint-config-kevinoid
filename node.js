@@ -14,12 +14,9 @@ module.exports = {
     "./rules/variables",
 
     // Plugin rules
+    "./rules/node",
     "./rules/promise"
   ],
-
-  "parserOptions": {
-    "sourceType": "script"
-  },
 
   "rules": {
     // require 'use strict' in global scope
