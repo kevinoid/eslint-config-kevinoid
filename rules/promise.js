@@ -9,6 +9,10 @@ module.exports = {
   ],
 
   "rules": {
+    // Don't require return inside then() functions
+    // Promises can be used for sequencing functions with no return value
+    "promise/always-return": "off",
+
     // Allow nested then() or catch()
     // e.g. for use with closures where it may be unavoidable
     "promise/no-nesting": "off",
