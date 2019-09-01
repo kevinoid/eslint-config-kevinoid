@@ -14,7 +14,8 @@ module.exports = {
     "./rules/variables",
 
     // Plugin rules
-    "./rules/promise"
+    "./rules/promise",
+    "./rules/unicorn"
   ],
 
   "parserOptions": {
@@ -31,6 +32,9 @@ module.exports = {
     "no-console": "off",
 
     // require 'use strict' in global scope
-    "strict": ["error", "global"]
+    "strict": ["error", "global"],
+
+    // since .flatMap() is not available in Edge or Safari
+    "unicorn/prefer-flat-map": "off"
   }
 };

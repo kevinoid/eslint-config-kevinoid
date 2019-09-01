@@ -15,11 +15,16 @@ module.exports = {
 
     // Plugin rules
     "./rules/node",
-    "./rules/promise"
+    "./rules/promise",
+    "./rules/unicorn"
   ],
 
   "rules": {
     // require 'use strict' in global scope
-    "strict": ["error", "global"]
+    "strict": ["error", "global"],
+
+    // don't require .flatMap() over .map().flat()
+    // since .flatMap() only became available in Node 11
+    "unicorn/prefer-flat-map": "off"
   }
 };
