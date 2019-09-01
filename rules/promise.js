@@ -17,6 +17,11 @@ module.exports = {
     // e.g. when writing a Promise wrapper for cb API is inconvenient
     "promise/no-promise-in-callback": "off",
 
+    // Avoid wrapping values in Promise.resolve when not needed
+    // Both Promise.reject and throw have their uses, I have no strong pref
+    // See xjamundx/eslint-plugin-promise#50 for discussion
+    "promise/no-return-wrap": ["error", { "allowReject": true }],
+
     // Avoid calling cb() inside of a then() (use nodeify instead)
     "promise/no-callback-in-promise": "error",
 
