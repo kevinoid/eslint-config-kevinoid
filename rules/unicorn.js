@@ -68,6 +68,12 @@ module.exports = {
     // consistency advantage doesn't outweigh perf and backwards compat
     "unicorn/prefer-query-selector": "off",
 
+    // don't prefer Reflect.apply() over Function#apply()
+    // although it is less verbose than Function.prototype.apply.call, I don't
+    // see the advantage over .apply (since user-provided functions can throw
+    // or call other functions without overriding .apply anyway).
+    "unicorn/prefer-reflect-apply": "off",
+
     // don't require .textContent over .innerText
     // these have different behavior and uses
     "unicorn/prefer-text-content": "off",
