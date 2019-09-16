@@ -27,6 +27,15 @@ module.exports = {
     // require correct Error subclassing
     "unicorn/custom-error-definition": "error",
 
+    // check expiration conditions in TODO comments
+    // allow TODO without conditions, which I use for various purposes
+    "unicorn/expiring-todo-comments": [
+      "error",
+      {
+        "allowWarningComments": true
+      }
+    ],
+
     // don't require explicitly comparing the length property of a value
     // checking truthyness can be convenient when checking if Array-like
     "unicorn/explicit-length-check": "off",
