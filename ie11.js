@@ -20,7 +20,10 @@ module.exports = {
 
     // Plugin rules
     "./rules/promise",
-    "./rules/unicorn"
+    "./rules/unicorn",
+
+    // IE-specific plugin rules
+    "./rules/ie11-unicorn"
   ],
 
   "parserOptions": {
