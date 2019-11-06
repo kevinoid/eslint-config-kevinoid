@@ -4,6 +4,10 @@
 
 module.exports = {
   "rules": {
+    // allow use of a for loop that can be replaced with a for-of loop.
+    // since IE 11 doesn't support for-of loops
+    "unicorn/no-for-loop": "off",
+
     // don't require the exponentiation operator over Math.pow()
     // since IE 11 doesn't support the exponentiation operator
     "unicorn/prefer-exponentiation-operator": "off",
