@@ -17,6 +17,7 @@ module.exports = {
     // IE-specific rules
     "./rules/ie11-restricted-globals",
     "./rules/ie11-restricted-properties",
+    "./rules/ie11-restricted-syntax",
 
     // Plugin rules
     "./rules/promise",
@@ -58,93 +59,6 @@ module.exports = {
       "exports": "always-multiline",
       "functions": "never"
     }],
-
-
-    // ------------------------------------------------------------------
-    // Stylistic Issues <https://eslint.org/docs/rules/#stylistic-issues>
-    // ------------------------------------------------------------------
-
-    // disallow certain syntax forms
-    // https://eslint.org/docs/rules/no-restricted-syntax
-    "no-restricted-syntax": [
-      "error",
-      {
-        "selector": "ArrayPattern, ObjectPattern",
-        "message": "IE11 does not support destructuring."
-      },
-      {
-        "selector": "ArrowFunctionExpression",
-        "message": "IE11 does not support arrow functions."
-      },
-      {
-        "selector": "AssignmentPattern",
-        "message": "IE11 does not support default parameters."
-      },
-      {
-        "selector": "ClassDeclaration, ClassExpression",
-        "message": "IE11 does not support classes."
-      },
-      {
-        "selector": "ExportAllDeclaration, ExportDefaultDeclaration, ExportNamedDeclaration, ExportSpecifier, ImportDeclaration, ImportDefaultSpecifier, ImportNamespaceSpecifier, ImportSpecifier",
-        "message": "IE11 does not support modules."
-      },
-      {
-        "selector": "ForInStatement",
-        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
-      },
-      {
-        "selector": "ForOfStatement",
-        "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
-      },
-      {
-        "selector": "FunctionDeclaration[generator=true], FunctionExpression[generator=true], YieldExpression",
-        "message": "IE11 does not support generators."
-      },
-      {
-        "selector": "LabeledStatement",
-        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
-      },
-      {
-        "selector": "Literal[raw=/^0[bo]/]",
-        "message": "IE11 does not support binary or octal literals."
-      },
-      {
-        "selector": "Literal[raw=/^([^\\\\]|\\\\.)*\\\\u\\{/]",
-        "message": "IE11 does not support unicode escapes with braces."
-      },
-      {
-        "selector": "Property[computed=true]",
-        "message": "IE11 does not support computed properties."
-      },
-      {
-        "selector": "Property[method=true]",
-        "message": "IE11 does not support method properties."
-      },
-      {
-        "selector": "Property[shorthand=true]",
-        "message": "IE11 does not support shorthand properties."
-      },
-      {
-        "selector": "Literal[regex.flags=/[uy]/]",
-        "message": "IE11 does not support u or y RegExp flags."
-      },
-      {
-        "selector": "RestElement",
-        "message": "IE11 does not support rest parameters."
-      },
-      {
-        "selector": "SpreadElement",
-        "message": "IE11 does not support spread."
-      },
-      {
-        "selector": "TemplateElement, TemplateLiteral, TaggedTemplateExpression",
-        "message": "IE11 does not support template literals."
-      },
-      {
-        "selector": "WithStatement",
-        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
-      }
-    ],
 
 
     // ----------------------------------------------------------------
