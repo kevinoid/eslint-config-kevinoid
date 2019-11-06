@@ -9,7 +9,7 @@ const airbnbBestPractices =
 const allowed = {
   "Math": {
     // Allow Math.pow since exponentiation operator is not supported
-    "pow": false
+    "pow": true
   },
   "window": {
     // Allow on window since not supported on Number
