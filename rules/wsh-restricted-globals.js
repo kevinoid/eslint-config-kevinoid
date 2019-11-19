@@ -32,5 +32,10 @@ module.exports = {
         name,
         "message": notSupported
       })))
+      // WSH globals which are restricted
+      .concat({
+        "name": "RuntimeObject",
+        "message": "Use 'this' to get global object.  https://stackoverflow.com/q/3277182"
+      })
   }
 };
