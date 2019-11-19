@@ -5,11 +5,20 @@
 
 const ie11RestrictedGlobals = require("./ie11-restricted-globals.js");
 
+const notSupported = "Not supported by JScript.";
+
 module.exports = {
   "rules": {
     "no-restricted-globals": ie11RestrictedGlobals
       .rules["no-restricted-globals"]
-      // Add globals not supported by WSH
+      // Adjust "Not supported by IE" messages for JScript
+      .map((restriction) => {
+        const { message } = restriction;
+        return message && message.startsWith("Not supported")
+          ? { ...restriction, "message": notSupported }
+          : restriction;
+      })
+      // Additional globals not supported by JScript
       .concat([
         "constructor",
         "hasOwnProperty",
@@ -19,6 +28,9 @@ module.exports = {
         "toLocaleString",
         "toString",
         "valueOf"
-      ])
+      ].map((name) => ({
+        name,
+        "message": notSupported
+      })))
   }
 };

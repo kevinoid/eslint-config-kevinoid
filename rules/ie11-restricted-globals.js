@@ -24,6 +24,9 @@ module.exports = {
         "Reflect",
         "Symbol",
         "WeakSet"
-      ])
+      ].map((name) => ({
+        name,
+        "message": "Not supported by IE."
+      })))
   }
 };
