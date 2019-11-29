@@ -1,5 +1,25 @@
 # Change Log
 
+## [2.0.0](https://github.com/kevinoid/eslint-config-kevinoid/tree/v2.0.0) (2019-11-29)
+[Full Changelog](https://github.com/kevinoid/eslint-config-kevinoid/compare/v1.0.1...v2.0.0)
+
+### BREAKING CHANGES
+
+- Enables new
+  [prefer-negative-index](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-negative-index.md)
+  rule.
+- WSH: pre-defined globals are now non-writable.
+- WSH: add `RuntimeObject` to `no-restricted-globals`, since unbound `this` is
+  always preferable (see link in error message for details).
+
+### New Features
+
+- Add messages to `no-restricted-globals`.
+- Update `globals` to `^12.3.0` for additional WSH globals (`CollectGarbage`,
+  `Debug`, `RuntimeObject`).
+- Update `eslint-plugin-unicorn` to `^14.0.0`.
+
+
 ## [1.0.1](https://github.com/kevinoid/eslint-config-kevinoid/tree/v1.0.1) (2019-11-17)
 [Full Changelog](https://github.com/kevinoid/eslint-config-kevinoid/compare/v1.0.0...v1.0.1)
 
