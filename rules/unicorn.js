@@ -73,6 +73,10 @@ module.exports = {
     // these have different behavior and uses
     "unicorn/prefer-text-content": "off",
 
+    // trimStart/trimEnd are not always available in supported environments
+    // TODO [engine:node@>=10]: enable for Node, consider for other environments
+    "unicorn/prefer-trim-start-end": "off",
+
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off",
 
