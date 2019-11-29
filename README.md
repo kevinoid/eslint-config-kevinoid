@@ -64,5 +64,9 @@ or `eslintConfig` in `package.json`, for example:
 
 ## License
 
-This package is available under the terms of the
-[MIT License](https://opensource.org/licenses/MIT).
+This project is available under the terms of the [MIT License](LICENSE.txt).
+See the [summary at TLDRLegal](https://tldrlegal.com/license/mit-license).
+
+The [template](https://github.com/kevinoid/node-project-template) upon which
+this project is based is available under the terms of
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
