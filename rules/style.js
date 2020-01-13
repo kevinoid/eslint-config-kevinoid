@@ -46,7 +46,23 @@ module.exports = {
     // Requires operator at the beginning of the line in multiline statements
     // Airbnb prevents breaks around =, suggesting ().  I don't see the advantage.
     // Break after = looks better to me, so first assigned operand is farther left.
-    "operator-linebreak": ["error", "before", { "overrides": { "=": "after" } }],
+    "operator-linebreak": ["error", "before", {
+      "overrides": {
+        "=": "after",
+        "+=": "after",
+        "-=": "after",
+        "*=": "after",
+        "/=": "after",
+        "%=": "after",
+        "**=": "after",
+        "<<=": "after",
+        ">>=": "after",
+        ">>>=": "after",
+        "&=": "after",
+        "|=": "after",
+        "^=": "after"
+      }
+    }],
 
     // space before function parens only for async arrow (as Node core does)
     "space-before-function-paren": ["error", {
