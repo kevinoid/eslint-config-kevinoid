@@ -10,6 +10,7 @@ module.exports = {
 
     // disallow declaration of variables that are not used in the code
     // allow unused args for documentation, future use, and correct .length
-    "no-unused-vars": ["error", { "args": "none" }]
+    // allow in object destructuring to omit props from rest property
+    "no-unused-vars": ["error", { "args": "none", "ignoreRestSiblings": true }]
   }
 };
