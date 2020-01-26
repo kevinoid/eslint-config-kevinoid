@@ -1,5 +1,32 @@
 # Change Log
 
+# [3.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v2.0.0...v3.0.0) (2020-01-26)
+
+
+### BREAKING CHANGES
+
+* `operator-linebreak` `after` for all assignment operators
+  ([7bae3ec](https://github.com/kevinoid/eslint-config-kevinoid/commit/7bae3ec4ea14ac446d380c385e121b833e4b26f5))
+* Update
+  [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn/)
+  to
+  [`^15.0.0`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v15.0.0),
+  enabling new
+  [`prefer-modern-dom-apis`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-modern-dom-apis.md)
+  rule.
+* Update
+  [`eslint-plugin-node`](https://github.com/mysticatea/eslint-plugin-node/) to
+  [`^11.0.0`](https://github.com/mysticatea/eslint-plugin-node/releases/tag/v11.0.0).
+
+
+### Features
+
+* Enable `ignoreRestSiblings` for
+  [`no-unused-vars`](https://eslint.org/docs/rules/no-unused-vars) rule
+  ([a979bf6](https://github.com/kevinoid/eslint-config-kevinoid/commit/a979bf6bef80cb643109b039d9c2290beaf8922f))
+
+
+
 ## [2.0.0](https://github.com/kevinoid/eslint-config-kevinoid/tree/v2.0.0) (2019-11-29)
 [Full Changelog](https://github.com/kevinoid/eslint-config-kevinoid/compare/v1.0.1...v2.0.0)
 
