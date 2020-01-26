@@ -23,8 +23,9 @@
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
     "preversion": "check-audit && depcheck --ignores eslint*,greenkeeper-lockfile && david && git-branch-is master && travis-status -b master -c -w -x",
-    "test": "npm run lint && npm run test-eslint",
+    "test": "npm run test-peer-versions && npm run lint && npm run test-eslint",
     "test-eslint": "echo | eslint --no-eslintrc -c ie11.js --stdin && echo | eslint --no-eslintrc -c node.js --stdin && echo | eslint --no-eslintrc -c webextensions.js --stdin && echo | eslint --no-eslintrc -c wsh.js --stdin",
+    "test-peer-versions": "peer-version-check package.json",
     "version": "npm run changelog && echo && echo === Please edit CHANGELOG.md as desired, then exit === && echo && $npm_config_shell && git commit -m \"Update CHANGELOG.md for $npm_package_version\" CHANGELOG.md",
     "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is npm-audit-resolver travis-status"
   },
@@ -46,7 +47,8 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-unicorn": "^15.0.0",
-    "greenkeeper-lockfile": "^1.15.1"
+    "greenkeeper-lockfile": "^1.15.1",
+    "peer-version-check": "^0.1.0"
   },
   "engines": {
     "node": ">=8.3",
