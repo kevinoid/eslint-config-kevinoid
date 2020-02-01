@@ -64,6 +64,10 @@ module.exports = {
       }
     }],
 
+    // Disallow the use of Math.pow in favor of the ** operator
+    // https://eslint.org/docs/rules/prefer-exponentiation-operator
+    "prefer-exponentiation-operator": "error",
+
     // space before function parens only for async arrow (as Node core does)
     "space-before-function-paren": ["error", {
       "anonymous": "never",

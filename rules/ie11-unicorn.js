@@ -8,10 +8,6 @@ module.exports = {
     // since IE 11 doesn't support for-of loops
     "unicorn/no-for-loop": "off",
 
-    // don't require the exponentiation operator over Math.pow()
-    // since IE 11 doesn't support the exponentiation operator
-    "unicorn/prefer-exponentiation-operator": "off",
-
     // don't require .flatMap() over .map().flat()
     // since IE 11 doesn't support .flatMap()
     "unicorn/prefer-flat-map": "off",

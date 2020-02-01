@@ -60,6 +60,13 @@ module.exports = {
       "functions": "never"
     }],
 
+    // ------------------------------------------------------------------
+    // Stylistic Issues <https://eslint.org/docs/rules/#stylistic-issues>
+    // ------------------------------------------------------------------
+
+    // Allow the use of Math.pow in favor of the ** operator,
+    // which is unsupported by IE 11
+    "prefer-exponentiation-operator": "off",
 
     // ----------------------------------------------------------------
     // ECMAScript 6 Rules <https://eslint.org/docs/rules/#ecmascript-6>
