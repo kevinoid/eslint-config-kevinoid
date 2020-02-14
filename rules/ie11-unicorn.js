@@ -4,10 +4,6 @@
 
 module.exports = {
   "rules": {
-    // allow use of a for loop that can be replaced with a for-of loop.
-    // since IE 11 doesn't support for-of loops
-    "unicorn/no-for-loop": "off",
-
     // don't require .flatMap() over .map().flat()
     // since IE 11 doesn't support .flatMap()
     "unicorn/prefer-flat-map": "off",

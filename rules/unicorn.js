@@ -41,6 +41,11 @@ module.exports = {
     // which is useful to minimize diff for adopted code
     "unicorn/no-abusive-eslint-disable": "off",
 
+    // allow use of a for loop that can be replaced with a for-of loop.
+    // this rule conflicts with no-restricted-syntax of iterators/generators
+    // from airbnb-base.
+    "unicorn/no-for-loop": "off",
+
     // allow the use of hexadecimal escapes
     "unicorn/no-hex-escape": "off",
 
