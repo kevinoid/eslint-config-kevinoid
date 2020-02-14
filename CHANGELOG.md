@@ -1,4 +1,32 @@
-# Change Log
+# [4.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v3.0.0...v4.0.0) (2020-02-14)
+
+
+### BREAKING CHANGES
+
+* Drop support for Node.js 8, require 10 or later (due to
+  sindresorhus/eslint-plugin-unicorn@d2ffe2c in
+  `eslint-plugin-unicorn@16.0.0`).
+* Require lower-case `e` in  number literals (due to
+  sindresorhus/eslint-plugin-unicorn#490 in
+  `eslint-plugin-unicorn@16.0.0`).
+* Enable `unicorn/prefer-trim-start-end` for `node` env.
+  ([b9b90c4](https://github.com/kevinoid/eslint-config-kevinoid/commit/b9b90c4a5075b3361799d74e759ede7b6f001527))
+
+
+### Bug Fixes
+
+* Use `prefer-exponentiation-operator` instead of
+  `unicorn/prefer-exponentiation-operator`
+  ([8b471c9](https://github.com/kevinoid/eslint-config-kevinoid/commit/8b471c9b564a4b6c50d1829399ae0f9bb9bf96dd))
+
+
+### Features
+
+* Disable `unicorn/no-for-loop` due to conflicts with `restricted-syntax` from
+  `eslint-config-airbnb-base` which prevents iterators/generators due to
+  regenerator polyfill overhead
+  ([fe93887](https://github.com/kevinoid/eslint-config-kevinoid/commit/fe938875ad31b449038a2eedd5f7c826999c967b))
+
 
 # [3.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v2.0.0...v3.0.0) (2020-01-26)
 
