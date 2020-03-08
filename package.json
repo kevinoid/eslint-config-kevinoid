@@ -22,7 +22,7 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
-    "preversion": "check-audit && depcheck --ignores eslint*,greenkeeper-lockfile && david && git-branch-is master && travis-status -b master -c -w -x",
+    "preversion": "check-audit && depcheck --ignores eslint* && david && git-branch-is master && travis-status -b master -c -w -x",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "echo | eslint --no-eslintrc -c ie11.js --stdin && echo | eslint --no-eslintrc -c node.js --stdin && echo | eslint --no-eslintrc -c webextensions.js --stdin && echo | eslint --no-eslintrc -c wsh.js --stdin",
     "test-peer-versions": "peer-version-check package.json",
