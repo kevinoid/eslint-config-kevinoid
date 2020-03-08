@@ -18,6 +18,11 @@ module.exports = {
   "rules": {
     ...unicorn.configs.recommended.rules,
 
+    // don't require regex character classes over character sets
+    // classes are shorter but less understandable to programmers familiar with
+    // other regex dialects (where they are absent or behave differently)
+    "unicorn/better-regex": "off",
+
     // require catch variable name to begin with err (or _ for ignored)
     "unicorn/catch-error-name": ["error", {
       "name": "err",
@@ -83,12 +88,7 @@ module.exports = {
     "unicorn/prefer-trim-start-end": "off",
 
     // don't prevent common abbreviations
-    "unicorn/prevent-abbreviations": "off",
-
-    // don't require regex character classes over character sets
-    // classes are shorter but less understandable to programmers familiar with
-    // other regex dialects (where they are absent or behave differently)
-    "unicorn/regex-shorthand": "off"
+    "unicorn/prevent-abbreviations": "off"
   }
 };
 
