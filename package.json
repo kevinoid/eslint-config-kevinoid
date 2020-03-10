@@ -22,13 +22,13 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
-    "preversion": "check-audit && depcheck --ignores eslint* && david && git-branch-is master && travis-status -b master -c -w -x",
+    "preversion": "depcheck --ignores eslint* && david && git-branch-is master && travis-status -b master -c -w -x",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "echo | eslint --no-eslintrc -c ie11.js --stdin && echo | eslint --no-eslintrc -c node.js --stdin && echo | eslint --no-eslintrc -c webextensions.js --stdin && echo | eslint --no-eslintrc -c wsh.js --stdin",
     "test-peer-versions": "peer-version-check package.json",
     "test-peer-versions-ci": "npm run test-peer-versions || node -e \"process.exitCode = /^greenkeeper/.test(process.env.TRAVIS_BRANCH)?0:1\"",
     "version": "npm run changelog && echo && echo === Please edit CHANGELOG.md as desired, then exit === && echo && $npm_config_shell && git commit -m \"Update CHANGELOG.md for $npm_package_version\" CHANGELOG.md",
-    "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is npm-audit-resolver travis-status"
+    "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is travis-status"
   },
   "dependencies": {
     "globals": "^12.3.0"
