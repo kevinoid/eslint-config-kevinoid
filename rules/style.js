@@ -3,6 +3,9 @@
 
 "use strict";
 
+const airbnbStyle =
+  require("eslint-config-airbnb-base/rules/style");
+
 module.exports = {
   "rules": {
     // require camel case names (even for properties and destructuring)
@@ -26,6 +29,13 @@ module.exports = {
     // (Not ESLint ignore props which ignores any lines which contain these.)
     "max-len": ["error", 80, 2, {
       "ignorePattern": "^\\s*((/?\\*|/[/])\\s*)?('[^'\\\\]*(\\\\.[^'\\\\]*)*'|\"[^\"\\\\]*(\\\\.[^\"\\\\]*)*\"|/[^/\\\\]*(\\\\.[^/\\\\]*)*/[gimuy]*|[^:/?#\\s]+:/[/]\\S+);?$"
+    }],
+
+    // require a capital letter for constructors and new for capitalized funcs
+    // Workaround https://github.com/airbnb/javascript/issues/2200
+    "new-cap": ["error", {
+      ...airbnbStyle.rules["new-cap"][1],
+      "capIsNew": true
     }],
 
     // allow nested ternary expressions
