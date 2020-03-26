@@ -69,6 +69,11 @@ module.exports = {
     // consistency advantage doesn't outweigh backwards compat
     "unicorn/prefer-node-remove": "off",
 
+    // don't prefer Number static properties over global ones.
+    // I don't find these more-verbose and less-compatible versions preferable,
+    // with the exception of isFinite/isNaN already caught by airbnb-base.
+    "unicorn/prefer-number-properties": "off",
+
     // don't require .querySelector() over .getElementById() et al.
     // consistency advantage doesn't outweigh perf and backwards compat
     "unicorn/prefer-query-selector": "off",
@@ -78,6 +83,10 @@ module.exports = {
     // see the advantage over .apply (since user-provided functions can throw
     // or call other functions without overriding .apply anyway).
     "unicorn/prefer-reflect-apply": "off",
+
+    // don't prefer Set#has() over Array#includes() when checking for existence
+    // simplicity+flexibility vs speed trade-off that can be made case-by-case
+    "unicorn/prefer-set-has": "off",
 
     // don't require .textContent over .innerText
     // these have different behavior and uses
