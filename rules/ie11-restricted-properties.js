@@ -3,8 +3,7 @@
 
 "use strict";
 
-const airbnbBestPractices =
-  require("eslint-config-airbnb-base/rules/best-practices");
+const bestPractices = require("./best-practices");
 
 const allowed = {
   "Math": {
@@ -74,7 +73,7 @@ const restricted = {
 module.exports = {
   "rules": {
     "no-restricted-properties": Array.prototype.concat.apply(
-      airbnbBestPractices
+      bestPractices
         .rules["no-restricted-properties"]
         // Remove IE-specific allowed properties
         .filter((restriction) => typeof restriction !== "object"
