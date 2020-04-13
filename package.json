@@ -31,7 +31,7 @@
     "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is travis-status"
   },
   "dependencies": {
-    "globals": "^12.3.0"
+    "globals": "^13.0.0"
   },
   "peerDependencies": {
     "eslint-config-airbnb-base": "^14.0.0",
