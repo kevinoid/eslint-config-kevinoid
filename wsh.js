@@ -32,14 +32,7 @@ module.exports = {
   // Unsupported ones are disallowed by no-restricted-globals rule
   // https://github.com/eslint/eslint/issues/2657
   // https://github.com/eslint/eslint/issues/4085#issuecomment-146938022
-  "globals":
-    // Although wsh globals can be overwritten, no valid reason I'm aware of
-    // https://github.com/sindresorhus/globals/issues/157
-    Object.keys(globals.wsh)
-      .reduce((newGlobals, name) => {
-        newGlobals[name] = false;
-        return newGlobals;
-      }, Object.create(null)),
+  "globals": globals.wsh,
 
   "parserOptions": {
     "ecmaVersion": 3,
