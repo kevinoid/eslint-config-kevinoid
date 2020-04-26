@@ -23,10 +23,12 @@ module.exports = {
     // other regex dialects (where they are absent or behave differently)
     "unicorn/better-regex": "off",
 
-    // require catch variable name to begin with err (or _ for ignored)
+    // require catch variable name to begin with err
     "unicorn/catch-error-name": ["error", {
       "name": "err",
-      "caughtErrorsIgnorePattern": "^(_|err)"
+      "ignore": [
+        "^err"
+      ]
     }],
 
     // require correct Error subclassing
