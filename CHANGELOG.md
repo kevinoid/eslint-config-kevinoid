@@ -1,3 +1,22 @@
+# [7.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v6.0.1...v7.0.0) (2020-04-26)
+
+
+### BREAKING CHANGES
+
+* Enable new
+  [`no-null`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-null.md) rule.
+* Remove `XDomainRequest` global for `wsh` environment.
+
+
+### Dependency Updates
+
+* Update to `eslint-plugin-unicorn@^19.0.0`
+  ([5b3c8bf](https://github.com/kevinoid/eslint-config-kevinoid/commit/5b3c8bfe6c0e74033c508412728241c81b638f53))
+* Update to `globals@^13.0.0`, which includes WScript non-writable globals.
+  ([353f9dc](https://github.com/kevinoid/eslint-config-kevinoid/commit/353f9dcbcad73550b650220fd3414ee641c2aa29))
+  ([ddcebcf](https://github.com/kevinoid/eslint-config-kevinoid/commit/ddcebcf3da7f8c6b2476d4baad5796397c762dc2))
+
+
 ## [6.0.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v6.0.0...v6.0.1) (2020-04-09)
 
 
