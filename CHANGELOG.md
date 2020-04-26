@@ -5,7 +5,7 @@
 
 * Fix [`unicorn/catch-error-name`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/catch-error-name.md) configuration to use
   `ignore` instead of `caughtErrorsIgnorePattern` for 19.0.0 (as a result of
-  [sindresorhus/eslint-plugin-unicorn#661](https://github.com/sindresorhus/eslint-plugin-unicorn/pull/661)
+  [sindresorhus/eslint-plugin-unicorn#661](https://github.com/sindresorhus/eslint-plugin-unicorn/pull/661))
   ([06bf7f6](https://github.com/kevinoid/eslint-config-kevinoid/commit/06bf7f64f66778fdad7c0a78f0e69cdad9f34bee))
 
 
@@ -24,7 +24,7 @@
 ### BREAKING CHANGES
 
 * Enable new
-  [`no-null`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-null.md) rule.
+  [`unicorn/no-null`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-null.md) rule.
 * Remove `XDomainRequest` global for `wsh` environment.
 
 
