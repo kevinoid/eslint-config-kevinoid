@@ -1,3 +1,12 @@
+# [7.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v7.0.0...v7.1.0) (2020-04-26)
+
+
+### Features
+
+* Disable [`unicorn/no-fn-reference-in-iterator`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-fn-reference-in-iterator.md)
+  ([898069d](https://github.com/kevinoid/eslint-config-kevinoid/commit/898069d52f24a26e84d028cbb871afc746d629ec))
+
+
 # [7.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v6.0.1...v7.0.0) (2020-04-26)
 
 
