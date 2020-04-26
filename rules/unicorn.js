@@ -46,6 +46,12 @@ module.exports = {
     // which is useful to minimize diff for adopted code
     "unicorn/no-abusive-eslint-disable": "off",
 
+    // allow passing a function reference directly to iterator methods
+    // if this rule could be limited to required/imported functions, I'd
+    // probably enable it.  As is, it has too many false-positives for globals
+    // and safe globals (e.g. string.split().map(Number)).
+    "unicorn/no-fn-reference-in-iterator": "off",
+
     // allow use of a for loop that can be replaced with a for-of loop.
     // this rule conflicts with no-restricted-syntax of iterators/generators
     // from airbnb-base.
