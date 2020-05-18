@@ -33,21 +33,21 @@
     "globals": "^13.0.0"
   },
   "peerDependencies": {
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-jsdoc": "^27.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^19.0.0"
+    "eslint-plugin-unicorn": "^20.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.7.1",
-    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsdoc": "^27.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^19.0.0",
+    "eslint-plugin-unicorn": "^20.0.0",
     "peer-version-check": "^0.1.0"
   },
   "engines": {

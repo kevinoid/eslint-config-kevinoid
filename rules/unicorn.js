@@ -66,8 +66,17 @@ module.exports = {
     // if they are indented one-expression-per-line, they are clear enough for me
     "unicorn/no-nested-ternary": "off",
 
+    // allow Array#reduce() and Array#reduceRight()
+    // I agree #reduce() can be hard to read, but is useful enough not to warn.
+    "unicorn/no-reduce": "off",
+
     // allow Array destructuring with consecutive ignored values
     "unicorn/no-unreadable-array-destructuring": "off",
+
+    // allow "useless" undefined
+    // since `return undefined` is used to consistently return a value:
+    // https://eslint.org/docs/rules/consistent-return
+    "unicorn/no-useless-undefined": "off",
 
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat

@@ -12,6 +12,10 @@ module.exports = {
     // since IE 11 doesn't support .includes()
     "unicorn/prefer-includes": "off",
 
+    // don't prefer omitting the catch binding parameter
+    // since IE 11 doesn't support optional catch binding
+    "unicorn/prefer-optional-catch-binding": "off",
+
     // don't require String#startsWith() & String#endsWith() over alternatives
     // since IE 11 doesn't support startsWith/endsWith
     "unicorn/prefer-starts-ends-with": "off"
