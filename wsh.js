@@ -22,6 +22,7 @@ module.exports = {
     "./rules/wsh-restricted-syntax",
 
     // Plugin rules
+    "./rules/jsdoc",
     "./rules/unicorn",
 
     // WSH-specific plugin rules

@@ -20,6 +20,7 @@ module.exports = {
     "./rules/ie11-restricted-syntax",
 
     // Plugin rules
+    "./rules/jsdoc",
     "./rules/promise",
     "./rules/unicorn",
 
