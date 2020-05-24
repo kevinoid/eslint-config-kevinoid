@@ -1,3 +1,13 @@
+# [8.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v7.1.1...v8.0.0) (2020-05-23)
+
+
+### Features
+
+* Add [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc)
+  ([9aba777](https://github.com/kevinoid/eslint-config-kevinoid/commit/9aba777fa609c6b3d9f6526f4a4b362a1a4f6a1c))
+
+
+
 ## [7.1.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v7.1.0...v7.1.1) (2020-04-26)
 
 
