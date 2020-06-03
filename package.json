@@ -17,8 +17,7 @@
   "//": "All scripts should run in POSIX sh and Windows cmd.exe",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -u",
-    "lint": "npm run lint-ec && npm run lint-es && npm run lint-rules",
-    "lint-ec": "eclint check * rules/*",
+    "lint": "npm run lint-es && npm run lint-rules",
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
@@ -41,7 +40,6 @@
     "eslint-plugin-unicorn": "^19.0.0"
   },
   "devDependencies": {
-    "eclint": "^2.8.1",
     "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-find-rules": "^3.4.0",
