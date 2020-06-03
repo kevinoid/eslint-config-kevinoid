@@ -50,6 +50,10 @@ module.exports = {
     // Warnings are not particularly useful for me.  Switch to error.
     ...rulesWarnToError(jsdoc.configs.recommended.rules),
 
+    // Requires a hyphen before the @param description is not used.
+    // It seems inconsistent with other tags and doesn't add value for me.
+    "jsdoc/require-hyphen-before-param-description": ["error", "never"],
+
     // Don't require JSDoc comments on classes and functions.
     "jsdoc/require-jsdoc": "off",
 
