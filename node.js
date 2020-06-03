@@ -10,6 +10,7 @@ module.exports = {
 
     // ESLint built-in rules
     "./rules/best-practices",
+    "./rules/possible-errors",
     "./rules/style",
     "./rules/variables",
 
