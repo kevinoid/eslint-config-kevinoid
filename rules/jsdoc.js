@@ -3,12 +3,53 @@
 
 "use strict";
 
+// Note: eslint-plugin-jsdoc is a peerDependency, since it must be loadable
+// in the project being linted per
+// https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config
+// Require from parent module in case it is not reachable from this module
+// See https://github.com/jaredhanson/node-parent-require
+const jsdoc = module.parent.require("eslint-plugin-jsdoc");
+
+
+/** Gets a rule configuration with warning switched to error.
+ *
+ * @private
+ */
+function ruleWarnToError(ruleConfig) {
+  if (ruleConfig === "warn") {
+    return "error";
+  }
+
+  if (Array.isArray(ruleConfig) && ruleConfig[0] === "warn") {
+    ruleConfig = ruleConfig.slice(0);
+    ruleConfig[0] = "error";
+    return ruleConfig;
+  }
+
+  return ruleConfig;
+}
+
+
+/** Gets a rules configuration with warnings switched to errors.
+ *
+ * @private
+ */
+function rulesWarnToError(rules) {
+  return Object.keys(rules).reduce((newRules, ruleName) => {
+    newRules[ruleName] = ruleWarnToError(rules[ruleName]);
+    return newRules;
+  }, {});
+}
+
+
 module.exports = {
-  "extends": [
-    "plugin:jsdoc/recommended"
-  ],
+  ...jsdoc.configs.recommended,
 
   "rules": {
+    // jsdoc recommends many rules at warning level.
+    // Warnings are not particularly useful for me.  Switch to error.
+    ...rulesWarnToError(jsdoc.configs.recommended.rules),
+
     // Don't require JSDoc comments on classes and functions.
     "jsdoc/require-jsdoc": "off",
 
