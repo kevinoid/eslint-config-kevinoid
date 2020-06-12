@@ -10,7 +10,6 @@
 // See https://github.com/jaredhanson/node-parent-require
 const jsdoc = module.parent.require("eslint-plugin-jsdoc");
 
-
 /** Gets a rule configuration with warning switched to error.
  *
  * @private
@@ -29,7 +28,6 @@ function ruleWarnToError(ruleConfig) {
   return ruleConfig;
 }
 
-
 /** Gets a rules configuration with warnings switched to errors.
  *
  * @private
@@ -40,7 +38,6 @@ function rulesWarnToError(rules) {
     return newRules;
   }, {});
 }
-
 
 module.exports = {
   ...jsdoc.configs.recommended,
