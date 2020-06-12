@@ -1,3 +1,18 @@
+# [9.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v8.0.0...v9.0.0) (2020-06-12)
+
+### BREAKING CHANGES
+
+* [`eslint@^7`](https://github.com/eslint/eslint/releases/tag/v7.0.0)
+* [`eslint-config-jsdoc@^27`](https://github.com/gajus/eslint-plugin-jsdoc/releases/tag/v27.0.0)
+
+### Features
+
+* Don't require `@param`/`@returns` with `@private` ([99bcfe8](https://github.com/kevinoid/eslint-config-kevinoid/commit/99bcfe8f1aff5aaad5f733ec449cff2655ddf617))
+* Enable jsdoc rules at error level ([9709f93](https://github.com/kevinoid/eslint-config-kevinoid/commit/9709f934ebf10b310af71aacf15d19400bca355c))
+* Enable `no-constant-condition` as error ([5e2f997](https://github.com/kevinoid/eslint-config-kevinoid/commit/5e2f9974b463c53ad42b83afde323cf0ae28d52b))
+* Enable `require-hyphen-before-param-description` to forbid hyphen ([89a358c](https://github.com/kevinoid/eslint-config-kevinoid/commit/89a358c7d6bd5fc0a131601d0bae468636ee5a0b))
+
+
 # [8.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v7.1.1...v8.0.0) (2020-05-23)
 
 
