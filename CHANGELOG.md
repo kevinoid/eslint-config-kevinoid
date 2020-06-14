@@ -1,3 +1,10 @@
+# [9.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.0.0...v9.1.0) (2020-06-14)
+
+### Features
+
+* Use jsdoc typescript mode ([e46a389](https://github.com/kevinoid/eslint-config-kevinoid/commit/e46a389954152990d82c7e787bebc3f2c7a40dea))
+
+
 # [9.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v8.0.0...v9.0.0) (2020-06-12)
 
 ### BREAKING CHANGES
