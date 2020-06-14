@@ -21,7 +21,7 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
-    "preversion": "depcheck --ignores eslint* && david -i eslint -i eslint-plugin-unicorn && git-branch-is master && travis-status -b master -c -w -x",
+    "preversion": "depcheck && david && git-branch-is master && travis-status -b master -c -w -x",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "test-eslint-ie11": "echo | eslint --no-eslintrc -c ie11.js --rule \"no-multiple-empty-lines: 0\" --stdin",
