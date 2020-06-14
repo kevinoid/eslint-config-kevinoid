@@ -65,5 +65,12 @@ module.exports = {
     "jsdoc/require-returns": ["error", {
       "exemptedBy": ["inheritdoc", "private"]
     }]
+  },
+
+  "settings": {
+    "jsdoc": {
+      // Use typescript mode for @template tag
+      "mode": "typescript"
+    }
   }
 };
