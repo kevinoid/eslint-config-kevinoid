@@ -1,3 +1,10 @@
+# [9.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.1.0...v9.2.0) (2020-06-14)
+
+### Features
+
+* Disable `promise/no-return-in-finally` ([07efe5c](https://github.com/kevinoid/eslint-config-kevinoid/commit/07efe5cb598c3f9e397bcb6e1dc239b65fbffb10))
+
+
 # [9.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.0.0...v9.1.0) (2020-06-14)
 
 ### Features
