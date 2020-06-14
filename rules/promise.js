@@ -29,8 +29,9 @@ module.exports = {
     // Avoid calling cb() inside of a then() (use nodeify instead)
     "promise/no-callback-in-promise": "error",
 
-    // Disallow return statements in finally()
-    "promise/no-return-in-finally": "error",
+    // Allow return statements in finally()
+    // Want to disallow returning non-Promise.  Promise is necessary for async.
+    "promise/no-return-in-finally": "off",
 
     // Ensures the proper number of arguments are passed to Promise functions
     "promise/valid-params": "error"
