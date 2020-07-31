@@ -1,3 +1,15 @@
+# [10.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.2.0...v10.0.0) (2020-07-31)
+
+### Features
+
+* Bump `eslint-plugin-jsdoc` from 28.7.0 to 29.2.0 ([2f2f8e5](https://github.com/kevinoid/eslint-config-kevinoid/commit/2f2f8e564bff3f0fc9681dbd07d70ab71dd0f62d))
+
+### BREAKING CHANGES
+
+* `eslint-plugin-jsdoc` now adds spaces between union items
+  and removes JSDuck support (unions with "/" instead of "|").
+
+
 # [9.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.1.0...v9.2.0) (2020-06-14)
 
 ### Features
