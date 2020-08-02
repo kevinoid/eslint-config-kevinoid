@@ -67,10 +67,23 @@ module.exports = {
     }]
   },
 
+  // Note: Support Closure Compiler tags (like @template) with mode:closure.
+  //
+  // Would prefer TypeScript, but can't use mode:typescript without rejecting
+  // module: types, which are not supported by TypeScript:
+  // https://github.com/jsdoctypeparser/jsdoctypeparser/issues/50#issuecomment-480340239
+  // Since JSDoc does not support TypeScript's import types, can't use those:
+  // https://github.com/jsdoc/jsdoc/issues/1632
+  // https://github.com/jsdoc/jsdoc/issues/1645
+  //
+  // mode:closure with tagNamePreference for @returns is best compromise:
+  // https://github.com/gajus/eslint-plugin-jsdoc/issues/619
   "settings": {
     "jsdoc": {
-      // Use typescript mode for @template tag
-      "mode": "typescript"
+      "mode": "closure",
+      "tagNamePreference": {
+        "return": "returns"
+      }
     }
   }
 };
