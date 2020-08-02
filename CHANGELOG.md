@@ -1,3 +1,11 @@
+# [11.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v10.0.0...v11.0.0) (2020-08-02)
+
+### BREAKING CHANGES
+
+* Lint JSDoc in closure mode to support `@template` (and other) tags along
+  with `module:` type syntax. ([3a14edd](https://github.com/kevinoid/eslint-config-kevinoid/commit/3a14edd767ddd56dbead132944de519ede68b6ce))
+
+
 # [10.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v9.2.0...v10.0.0) (2020-07-31)
 
 ### Features
