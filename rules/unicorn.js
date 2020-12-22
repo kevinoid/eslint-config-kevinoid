@@ -31,8 +31,11 @@ module.exports = {
       ]
     }],
 
-    // require correct Error subclassing
-    "unicorn/custom-error-definition": "error",
+    // don't require correct Error subclassing
+    // requiring name to be set in the constructor is overly-verbose and adds
+    // an unnecessary instance property:
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/90#issuecomment-318929442
+    "unicorn/custom-error-definition": "off",
 
     // don't require explicitly comparing the length property of a value
     // checking truthyness can be convenient when checking if Array-like
