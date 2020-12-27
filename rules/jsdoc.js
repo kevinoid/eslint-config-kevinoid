@@ -8,7 +8,10 @@
 // https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config
 // Require from parent module in case it is not reachable from this module
 // See https://github.com/jaredhanson/node-parent-require
-const jsdoc = module.parent.require("eslint-plugin-jsdoc");
+// Avoid using module.parent https://nodejs.org/api/deprecations.html#DEP0144
+const moduleParent = Object.values(require.cache)
+  .find((m) => m.children.includes(module));
+const jsdoc = moduleParent.require("eslint-plugin-jsdoc");
 
 /** Gets a rule configuration with warning switched to error.
  *
