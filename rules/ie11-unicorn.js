@@ -16,6 +16,10 @@ module.exports = {
     // since IE 11 doesn't support .includes()
     "unicorn/prefer-includes": "off",
 
+    // don't enforce the use of Math.trunc() instead of bitwise operators
+    // since IE 11 doesn't provide Math.trunc()
+    "unicorn/prefer-math-trunc": "off",
+
     // don't prefer omitting the catch binding parameter
     // since IE 11 doesn't support optional catch binding
     "unicorn/prefer-optional-catch-binding": "off",
