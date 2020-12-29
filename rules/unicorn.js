@@ -58,7 +58,11 @@ module.exports = {
     // if this rule could be limited to required/imported functions, I'd
     // probably enable it.  As is, it has too many false-positives for globals
     // and safe globals (e.g. string.split().map(Number)).
-    "unicorn/no-fn-reference-in-iterator": "off",
+    "unicorn/no-array-callback-reference": "off",
+
+    // allow Array#reduce() and Array#reduceRight()
+    // I agree #reduce() can be hard to read, but is useful enough not to warn.
+    "unicorn/no-array-reduce": "off",
 
     // allow the use of hexadecimal escapes
     "unicorn/no-hex-escape": "off",
@@ -66,10 +70,6 @@ module.exports = {
     // allow nested ternary expressions
     // if they are indented one-expression-per-line, they are clear enough for me
     "unicorn/no-nested-ternary": "off",
-
-    // allow Array#reduce() and Array#reduceRight()
-    // I agree #reduce() can be hard to read, but is useful enough not to warn.
-    "unicorn/no-reduce": "off",
 
     // allow Array destructuring with consecutive ignored values
     "unicorn/no-unreadable-array-destructuring": "off",
@@ -81,11 +81,15 @@ module.exports = {
 
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat
-    "unicorn/prefer-node-append": "off",
+    "unicorn/prefer-dom-node-append": "off",
 
     // don't require Node#remove() instead of Node#removeChild()
     // consistency advantage doesn't outweigh backwards compat
-    "unicorn/prefer-node-remove": "off",
+    "unicorn/prefer-dom-node-remove": "off",
+
+    // don't require .textContent over .innerText
+    // these have different behavior and uses
+    "unicorn/prefer-dom-node-text-content": "off",
 
     // don't prefer Number static properties over global ones.
     // I don't find these more-verbose and less-compatible versions preferable,
@@ -106,13 +110,9 @@ module.exports = {
     // simplicity+flexibility vs speed trade-off that can be made case-by-case
     "unicorn/prefer-set-has": "off",
 
-    // don't require .textContent over .innerText
-    // these have different behavior and uses
-    "unicorn/prefer-text-content": "off",
-
     // don't prefer trimStart/trimEnd to trimLeft/trimRight
     // TODO: enable once supported by Firefox ESR
-    "unicorn/prefer-trim-start-end": "off",
+    "unicorn/prefer-string-trim-start-end": "off",
 
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off"

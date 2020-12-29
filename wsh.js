@@ -70,6 +70,6 @@ module.exports = {
     // ---------------------------------------------------------------------------
     // don't require Array.isArray() instead of instanceof Array
     // since WSH doesn't support Array.isArray()
-    "unicorn/no-array-instanceof": "off"
+    "unicorn/no-instanceof-array": "off"
   }
 };

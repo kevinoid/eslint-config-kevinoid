@@ -35,9 +35,9 @@ module.exports = {
 
     // don't require .flatMap() over .map().flat()
     // since .flatMap() only became available in Node 11
-    "unicorn/prefer-flat-map": "off",
+    "unicorn/prefer-array-flat-map": "off",
 
     // prefer String#trimStart/trimEnd to trimLeft/trimRight
-    "unicorn/prefer-trim-start-end": "error"
+    "unicorn/prefer-string-trim-start-end": "error"
   }
 };

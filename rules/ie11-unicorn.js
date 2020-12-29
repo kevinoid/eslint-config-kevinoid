@@ -8,13 +8,13 @@ module.exports = {
     // since IE 11 doesn't support for-of loops.
     "unicorn/no-for-loop": "off",
 
+    // don't require .flatMap() over .map().flat()
+    // since IE 11 doesn't support .flatMap()
+    "unicorn/prefer-array-flat-map": "off",
+
     // don't prefer default parameters over reassignment
     // since IE 11 doesn't support default parameters
     "unicorn/prefer-default-parameters": "off",
-
-    // don't require .flatMap() over .map().flat()
-    // since IE 11 doesn't support .flatMap()
-    "unicorn/prefer-flat-map": "off",
 
     // don't prefer .includes() over .indexOf() when checking for existence
     // since IE 11 doesn't support .includes()
@@ -30,6 +30,6 @@ module.exports = {
 
     // don't require String#startsWith() & String#endsWith() over alternatives
     // since IE 11 doesn't support startsWith/endsWith
-    "unicorn/prefer-starts-ends-with": "off"
+    "unicorn/prefer-string-starts-ends-with": "off"
   }
 };
