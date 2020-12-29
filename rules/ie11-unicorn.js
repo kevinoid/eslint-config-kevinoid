@@ -4,6 +4,10 @@
 
 module.exports = {
   "rules": {
+    // don't prefer default parameters over reassignment
+    // since IE 11 doesn't support default parameters
+    "unicorn/prefer-default-parameters": "off",
+
     // don't require .flatMap() over .map().flat()
     // since IE 11 doesn't support .flatMap()
     "unicorn/prefer-flat-map": "off",
