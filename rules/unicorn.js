@@ -60,11 +60,6 @@ module.exports = {
     // and safe globals (e.g. string.split().map(Number)).
     "unicorn/no-fn-reference-in-iterator": "off",
 
-    // allow use of a for loop that can be replaced with a for-of loop.
-    // this rule conflicts with no-restricted-syntax of iterators/generators
-    // from airbnb-base.
-    "unicorn/no-for-loop": "off",
-
     // allow the use of hexadecimal escapes
     "unicorn/no-hex-escape": "off",
 

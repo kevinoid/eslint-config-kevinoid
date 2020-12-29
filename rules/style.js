@@ -46,6 +46,17 @@ module.exports = {
     // this is disabled locally only when require.main === module
     "no-process-exit": "error",
 
+    // disallow certain syntax forms
+    "no-restricted-syntax": airbnbStyle.rules["no-restricted-syntax"]
+      // allow for-of statement
+      // Although I agree that .every/filter/find/map/some are preferable to
+      // loops, there are some idioms which are easier and clearer to express
+      // using for...of (e.g. early return, generators, for await...of, await
+      // each item).  Performance on-par with alternatives and use is advocated
+      // by Mathias Bynens <https://youtu.be/m9cTaYI95Zc?t=959>.
+      // Note: Consider disabling when transpiling w/ regenerator-runtime.
+      .filter((nrs) => nrs.selector !== "ForOfStatement"),
+
     // allow multiple variable declarations per block/function and multiple
     // declarators per declaration
     "one-var": "off",

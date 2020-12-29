@@ -4,6 +4,10 @@
 
 module.exports = {
   "rules": {
+    // allow use of a for loop that can be replaced with a for-of loop.
+    // since IE 11 doesn't support for-of loops.
+    "unicorn/no-for-loop": "off",
+
     // don't prefer default parameters over reassignment
     // since IE 11 doesn't support default parameters
     "unicorn/prefer-default-parameters": "off",
