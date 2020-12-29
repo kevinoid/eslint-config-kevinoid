@@ -41,7 +41,7 @@
     "eslint-plugin-jsdoc": "^30.0.3",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^24.0.0"
+    "eslint-plugin-unicorn": "^25.0.0"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-jsdoc": "^30.0.3",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^24.0.0",
+    "eslint-plugin-unicorn": "^25.0.0",
     "peer-version-check": "^0.1.0"
   },
   "engines": {
