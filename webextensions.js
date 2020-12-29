@@ -21,7 +21,13 @@ module.exports = {
   ],
 
   "parserOptions": {
-    "sourceType": "script"
+    "sourceType": "script",
+    // airbnb-base disables generators due to regenerator-runtime overhead.
+    // The current and LTS versions of WebExtension browsers support generators
+    // without regenerator, so this is not a concern.
+    "ecmaFeatures": {
+      "generators": true
+    }
   },
 
   "env": {

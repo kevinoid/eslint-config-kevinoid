@@ -21,6 +21,14 @@ module.exports = {
     "./rules/unicorn"
   ],
 
+  "parserOptions": {
+    // airbnb-base disables generators due to regenerator-runtime overhead.
+    // Node.js has supported generators without regenerator since v4.
+    "ecmaFeatures": {
+      "generators": true
+    }
+  },
+
   "rules": {
     // require 'use strict' in global scope
     "strict": ["error", "global"],
