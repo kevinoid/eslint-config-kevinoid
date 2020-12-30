@@ -34,7 +34,7 @@ module.exports = {
     "strict": ["error", "global"],
 
     // don't require .flatMap() over .map().flat()
-    // since .flatMap() only became available in Node 11
+    // TODO [engine:node@>=11]: Enable this rule
     "unicorn/prefer-array-flat-map": "off"
   }
 };
