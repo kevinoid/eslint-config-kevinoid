@@ -110,10 +110,6 @@ module.exports = {
     // simplicity+flexibility vs speed trade-off that can be made case-by-case
     "unicorn/prefer-set-has": "off",
 
-    // don't prefer trimStart/trimEnd to trimLeft/trimRight
-    // TODO: enable once supported by Firefox ESR
-    "unicorn/prefer-string-trim-start-end": "off",
-
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off"
   }
