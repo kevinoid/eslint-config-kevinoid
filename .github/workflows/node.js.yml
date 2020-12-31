@@ -35,6 +35,8 @@ jobs:
       run: node --version
     - name: Install dependencies
       run: npm install
+    - name: Test peer versions
+      run: npm run test-peer-versions
     - name: Lint
       run: npm run lint
     - name: Run tests
