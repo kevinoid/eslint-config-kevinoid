@@ -10,11 +10,6 @@ name: Node.js CI
 on:   # yamllint disable-line rule:truthy
   pull_request: {}
   push: {}
-  schedule:
-  # Run once a day (at 8:40 AM UTC) to check for exogenous breakage.
-  # TODO: Run when dependencies are updated.  (Like Dependabot, but on
-  # in-range updates and without sending a PR.)
-  - cron: '40 8 * * *'
 
 jobs:
   test-primary:
