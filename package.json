@@ -15,6 +15,16 @@
     "url": "https://github.com/kevinoid/eslint-config-kevinoid.git"
   },
   "type": "commonjs",
+  "exports": {
+    "./ie11": "./ie11.js",
+    "./ie11.js": "./ie11.js",
+    "./node": "./node.js",
+    "./node.js": "./node.js",
+    "./webextensions": "./webextensions.js",
+    "./webextensions.js": "./webextensions.js",
+    "./wsh": "./wsh.js",
+    "./wsh.js": "./wsh.js"
+  },
   "//": "All scripts should run in POSIX sh and Windows cmd.exe",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -u",
