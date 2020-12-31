@@ -1,3 +1,22 @@
+# [12.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v11.0.0...v12.0.0) (2020-12-31)
+
+### BREAKING CHANGES
+
+* Package exports are now defined to prevent importing files other than the
+  env-specific exported files.  Other files are not part of the package API
+  and may be changed at any time.
+
+### Features
+
+* Bump `eslint-plugin-unicorn` from 21.0.0 to 25.0.1.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+* Allow generators for node and webextensions env ([6290fee](https://github.com/kevinoid/eslint-config-kevinoid/commit/6290feea88a561f90a65a18a9b87ab33f829da85))
+* Allow/Prefer `for...of` loops ([a6de803](https://github.com/kevinoid/eslint-config-kevinoid/commit/a6de803dcc1cdbf434bcc069ef8eb9188fc390df))
+* Disable `unicorn/custom-error-definition` ([bcbb98e](https://github.com/kevinoid/eslint-config-kevinoid/commit/bcbb98ea1429ccfc84ca3d47115b3a2c0a7d652d))
+* Disable `unicorn/prefer-ternary` ([e6d6432](https://github.com/kevinoid/eslint-config-kevinoid/commit/e6d64326d30fa610dac31f8a2a9064ce6f95be10))
+* Enable `unicorn/prefer-string-trim-start-end` ([cc70995](https://github.com/kevinoid/eslint-config-kevinoid/commit/cc70995fd1bc47825fca5cdbf9254a21ae5ee12c))
+
+
 # [11.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v10.0.0...v11.0.0) (2020-08-02)
 
 ### BREAKING CHANGES
