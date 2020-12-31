@@ -110,6 +110,10 @@ module.exports = {
     // simplicity+flexibility vs speed trade-off that can be made case-by-case
     "unicorn/prefer-set-has": "off",
 
+    // don't prefer ternary expressions over simple if-else statements
+    // either can be clearer, should be decided on case-by-case basis
+    "unicorn/prefer-ternary": "off",
+
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off"
   }
