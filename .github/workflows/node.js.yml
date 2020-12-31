@@ -41,16 +41,6 @@ jobs:
       run: npm run lint
     - name: Run tests
       run: npm run test-eslint
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-    - name: Upload coverage to Coveralls
-      # Note: @master is currently the only version
-      # https://github.com/coverallsapp/github-action/issues/11
-      uses: coverallsapp/github-action@master
-      with:
-        flag-name: 'ubuntu-latest_x64_*'
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel: true
 
   test-secondary:
     # Only test secondary platforms if primary test platform passed
@@ -91,21 +81,3 @@ jobs:
       run: npm install
     - name: Run tests
       run: npm run test-eslint
-    # Note: Not uploading to Codecov, due to poor support for matrix builds
-    # https://github.com/codecov/codecov-action/issues/40
-    - name: Upload coverage to Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        flag-name: ${{ matrix.os }}_${{ matrix.arch }}_${{ matrix.node }}
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        parallel: true
-
-  finish:
-    needs: test-secondary
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
-        parallel-finished: true
