@@ -71,6 +71,12 @@ module.exports = {
     // if they are indented one-expression-per-line, they are clear enough for me
     "unicorn/no-nested-ternary": "off",
 
+    // disallow new Array()
+    // Both due to constructor type confusion (mentioned in unicorn docs) and
+    // poor performance in JS engines due to sparse/"holey" array type, which
+    // is never upgraded to non-holey <https://youtu.be/m9cTaYI95Zc?t=770>
+    "unicorn/no-new-array": "error",
+
     // allow Array destructuring with consecutive ignored values
     "unicorn/no-unreadable-array-destructuring": "off",
 
