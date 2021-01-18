@@ -1,3 +1,13 @@
+# [13.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v12.0.0...v13.0.0) (2021-01-18)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from 25.0.1 to 26.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+* Bump `eslint-plugin-jsdoc` from 30.7.13 to 31.0.7.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases).
+
+
 # [12.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v11.0.0...v12.0.0) (2020-12-31)
 
 ### BREAKING CHANGES
