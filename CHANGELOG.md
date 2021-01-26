@@ -1,3 +1,23 @@
+# [14.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v13.0.0...v14.0.0) (2021-01-26)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from 26.0.0 to 27.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v27.0.0).
+
+### Features
+
+* Disable [`jsdoc/require-yields-check`](https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-require-yields-check)
+  which conflicts with a common parameter checking idiom.
+
+### Bug Fixes
+
+* Handle `object` in `no-restricted-globals` config to fix IE-specific
+  overrides of Airbnb configuration. ([04d9ef9](https://github.com/kevinoid/eslint-config-kevinoid/commit/04d9ef994f433aa6739205eb42e383c626e271df))
+* Disable [`unicorn/no-array-for-each`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-for-each.md)
+  for IE, which lacks support for `for-of`.
+
+
 # [13.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v12.0.0...v13.0.0) (2021-01-18)
 
 ### BREAKING CHANGES
