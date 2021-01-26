@@ -8,6 +8,10 @@ module.exports = {
     // since IE 11 doesn't support for-of loops.
     "unicorn/no-for-loop": "off",
 
+    // don't prefer for-of over Array#forEach()
+    // since IE 11 doesn't support for-of loops.
+    "unicorn/no-array-for-each": "off",
+
     // don't require .flatMap() over .map().flat()
     // since IE 11 doesn't support .flatMap()
     "unicorn/prefer-array-flat-map": "off",
