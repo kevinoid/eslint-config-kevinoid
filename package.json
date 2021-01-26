@@ -1,6 +1,6 @@
 {
   "name": "@kevinoid/eslint-config",
-  "version": "13.0.0",
+  "version": "14.0.0",
   "description": "ESLint shareable config for @kevinoid's style (based on airbnb).",
   "keywords": [
     "eslint",
@@ -37,7 +37,7 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
-    "preversion": "depcheck && david && git-branch-is master && travis-status -b master -c -w -x",
+    "preversion": "depcheck && david && git-branch-is master",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
