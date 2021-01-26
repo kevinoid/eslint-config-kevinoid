@@ -67,7 +67,15 @@ module.exports = {
     // Note: Would prefer to require for @private if any other tags present.
     "jsdoc/require-returns": ["error", {
       "exemptedBy": ["inheritdoc", "private"]
-    }]
+    }],
+
+    // Don't ensure that a yield is present in the function body
+    // It is a common idiom to export a non-generator function which performs
+    // argument checking before calling a non-exported generator function.
+    // (So argument validation is not deferred until iteration.)
+    // Since the JSDoc annotations are on the exported function, this idiom
+    // violates this rule.  Disable it.
+    "jsdoc/require-yields-check": "off"
   },
 
   // Note: Support Closure Compiler tags (like @template) with mode:closure.
