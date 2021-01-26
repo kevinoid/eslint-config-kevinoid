@@ -3,6 +3,7 @@
 
 "use strict";
 
+const assert = require("assert");
 const airbnbVariables =
   require("eslint-config-airbnb-base/rules/variables");
 
@@ -11,12 +12,17 @@ module.exports = {
     "no-restricted-globals": airbnbVariables
       .rules["no-restricted-globals"]
       // Remove IE-specific allowed globals
-      .filter((name) => !{
-        // Allow globally since not supported on Number
-        "isFinite": true,
-        // Allow globally since not supported on Number
-        "isNaN": true
-      }[name])
+      .filter((restriction) => {
+        // restriction can be string or object with .name property
+        // see https://eslint.org/docs/rules/no-restricted-globals#options
+        const name = restriction.name || restriction;
+        assert.strictEqual(typeof name, "string");
+        return true  // for consistent formatting below
+          // Allow globally since not supported on Number
+          && name !== "isFinite"
+          // Allow globally since not supported on Number
+          && name !== "isNaN";
+      })
       // Add globals not supported by IE 11
       .concat([
         "Promise",
