@@ -23,6 +23,7 @@
   "exports": {
     "./ie11": "./ie11.js",
     "./ie11.js": "./ie11.js",
+    "./package.json": "./package.json",
     "./node": "./node.js",
     "./node.js": "./node.js",
     "./webextensions": "./webextensions.js",
