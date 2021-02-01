@@ -1,3 +1,10 @@
+# [14.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v14.0.0...v14.1.0) (2021-02-01)
+
+### Features
+
+* Export `package.json` for [depcheck](https://github.com/depcheck/depcheck).
+
+
 # [14.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v13.0.0...v14.0.0) (2021-01-26)
 
 ### BREAKING CHANGES
