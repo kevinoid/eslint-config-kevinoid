@@ -38,7 +38,7 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated",
     "postpublish": "git push --follow-tags origin master && echo Remember to update GitHub Releases from CHANGELOG.md",
-    "preversion": "depcheck && david && git-branch-is master",
+    "preversion": "depcheck && david && git-branch-is master && hub-ci-status -vv --wait",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
@@ -49,7 +49,7 @@
     "test-peer-versions": "peer-version-check package.json",
     "test-peer-versions-ci": "npm run test-peer-versions",
     "version": "npm run changelog && echo && echo === Please edit CHANGELOG.md as desired, then exit === && echo && $npm_config_shell && git commit -m \"Update CHANGELOG.md for $npm_package_version\" CHANGELOG.md",
-    "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is travis-status"
+    "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is hub-ci-status"
   },
   "dependencies": {
     "globals": "^13.0.0"
