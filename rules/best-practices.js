@@ -15,6 +15,10 @@ module.exports = {
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
     "default-case-last": "error",
 
+    // require grouped accessor pairs in object literals and classes
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "grouped-accessor-pairs": "error",
+
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
     "no-extra-parens": ["error", "all", {
