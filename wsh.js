@@ -48,6 +48,15 @@ module.exports = {
   },
 
   "rules": {
+    // --------------------------------------------------------------
+    // Best Practices <https://eslint.org/docs/rules/#best-practices>
+    // --------------------------------------------------------------
+
+    // disallow creation of functions within loops
+    // Since WSH does not support const/let or block scoping, functions declared
+    // in loops have same scope as outside.  Forbid them to avoid confusion.
+    "no-loop-func": "error",
+
     // ----------------------------------------------------------------
     // Strict Mode <https://eslint.org/docs/rules/#strict-mode>
     // ----------------------------------------------------------------

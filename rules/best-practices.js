@@ -20,6 +20,14 @@ module.exports = {
       "returnAssign": false
     }],
 
+    // allow creation of functions within loops
+    // This is only a problem with var, which is disallowed by the no-var rule.
+    // The unicorn/consistent-function-scoping rule catches unnecessary depth.
+    //
+    // Note: IE 11 supports const/let block scoping, but loop index is outside
+    // block scope, so a copy must be made to capture it.
+    "no-loop-func": "off",
+
     // disallow multiple spaces, except before EOL comments
     // (which can be useful for inline comment alignment)
     "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
