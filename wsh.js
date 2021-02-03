@@ -65,6 +65,14 @@ module.exports = {
     // it has no effect in WSH, but may be beneficial if script has other uses
     "strict": "off",
 
+    // ------------------------------------------------------------------
+    // Stylistic Issues <https://eslint.org/docs/rules/#stylistic-issues>
+    // ------------------------------------------------------------------
+
+    // allow the use of Math.pow in favor of the ** operator,
+    // which is unsupported by WSH
+    "prefer-exponentiation-operator": "off",
+
     // ---------------------------------------------------------------------------
     // Unicorn Rules <https://github.com/sindresorhus/eslint-plugin-unicorn#rules>
     // ---------------------------------------------------------------------------
