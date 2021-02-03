@@ -28,6 +28,10 @@ module.exports = {
 
     // disallow returning values from Promise executor functions
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-promise-executor-return": "error"
+    "no-promise-executor-return": "error",
+
+    // disallow returning values from setters
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-setter-return": "error"
   }
 };
