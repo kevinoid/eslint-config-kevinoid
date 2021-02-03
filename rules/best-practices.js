@@ -19,6 +19,10 @@ module.exports = {
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
     "grouped-accessor-pairs": "error",
 
+    // disallow returning value in constructor
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-constructor-return": "error",
+
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
     "no-extra-parens": ["error", "all", {
