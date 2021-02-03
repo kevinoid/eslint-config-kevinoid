@@ -64,6 +64,10 @@ module.exports = {
     // require using Error objects as Promise rejection reason (including empty)
     "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
 
+    // disallow use of the RegExp constructor in favor of RegExp literals
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "prefer-regex-literals": "error",
+
     // don't require all vars to be at top of their containing scope
     // benefits from locality (comprehensibility, ease of editing) outweigh
     // matching effective scope, since ESLint will warn about use-before-decl.
