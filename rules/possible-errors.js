@@ -36,6 +36,10 @@ module.exports = {
 
     // disallow loops with a body that allows only one iteration
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-unreachable-loop": "error"
+    "no-unreachable-loop": "error",
+
+    // disallow useless backreferences in regular expressions
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-useless-backreference": "error"
   }
 };
