@@ -11,6 +11,10 @@ module.exports = {
     // require curly braces around all control statements, not just multi-line.
     "curly": ["error", "all"],
 
+    // enforce default clauses in switch statements to be last
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "default-case-last": "error",
+
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
     "no-extra-parens": ["error", "all", {
