@@ -24,6 +24,10 @@ module.exports = {
 
     // disallow number literals that lose precision
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-loss-of-precision": "error"
+    "no-loss-of-precision": "error",
+
+    // disallow returning values from Promise executor functions
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-promise-executor-return": "error"
   }
 };
