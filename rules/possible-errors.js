@@ -32,6 +32,10 @@ module.exports = {
 
     // disallow returning values from setters
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-setter-return": "error"
+    "no-setter-return": "error",
+
+    // disallow loops with a body that allows only one iteration
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-unreachable-loop": "error"
   }
 };
