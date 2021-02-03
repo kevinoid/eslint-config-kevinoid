@@ -49,15 +49,6 @@ module.exports = {
 
   "rules": {
     // ----------------------------------------------------------------
-    // Best Practices <https://eslint.org/docs/rules/#best-practices>
-    // ----------------------------------------------------------------
-
-    // don't require all vars to be at top of their containing scope
-    // benefits from locality (comprehensibility, ease of editing) outweigh
-    // matching effective scope, since ESLint will warn about use-before-decl.
-    "vars-on-top": "off",
-
-    // ----------------------------------------------------------------
     // Strict Mode <https://eslint.org/docs/rules/#strict-mode>
     // ----------------------------------------------------------------
 

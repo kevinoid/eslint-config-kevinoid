@@ -42,6 +42,11 @@ module.exports = {
     "no-useless-call": "error",
 
     // require using Error objects as Promise rejection reason (including empty)
-    "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }]
+    "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
+
+    // don't require all vars to be at top of their containing scope
+    // benefits from locality (comprehensibility, ease of editing) outweigh
+    // matching effective scope, since ESLint will warn about use-before-decl.
+    "vars-on-top": "off"
   }
 };
