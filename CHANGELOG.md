@@ -1,3 +1,33 @@
+# [15.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v14.1.0...v15.0.0) (2021-02-10)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from 27.0.0 to 28.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v28.0.0).
+* Enable several rules marked for next major version of `airbnb-base` (since
+  this package already depends on the requisite version of ESLint):
+  - Enable [`default-case-last`](https://eslint.org/docs/rules/default-case-last).
+  - Enable [`grouped-accessor-pairs`](https://eslint.org/docs/rules/grouped-accessor-pairs).
+  - Enable [`no-constructor-return`](https://eslint.org/docs/rules/no-constructor-return).
+  - Enable [`no-dupe-else-if`](https://eslint.org/docs/rules/no-dupe-else-if).
+  - Enable [`no-import-assign`](https://eslint.org/docs/rules/no-import-assign).
+  - Enable [`no-loss-of-precision`](https://eslint.org/docs/rules/no-loss-of-precision).
+  - Enable [`no-nonoctal-decimal-escape`](https://eslint.org/docs/rules/no-nonoctal-decimal-escape).
+  - Enable [`no-promise-executor-return`](https://eslint.org/docs/rules/no-promise-executor-return).
+  - Enable [`no-setter-return`](https://eslint.org/docs/rules/no-setter-return).
+  - Enable [`no-unreachable-loop`](https://eslint.org/docs/rules/no-unreachable-loop).
+  - Enable [`no-unsafe-optional-chaining`](https://eslint.org/docs/rules/no-unsafe-optional-chaining).
+  - Enable [`no-useless-backreference`](https://eslint.org/docs/rules/no-useless-backreference).
+  - Enable [`prefer-regex-literals`](https://eslint.org/docs/rules/prefer-regex-literals).
+
+### Features
+
+* No prefer-exponentiation-operator for WSH ([9fb35a3](https://github.com/kevinoid/eslint-config-kevinoid/commit/9fb35a3660bf08640422974b7c54359a1c65fe33))
+* Disable no-inner-declarations rule ([08493af](https://github.com/kevinoid/eslint-config-kevinoid/commit/08493afefc495a3917d33a335ebeaede68839a55))
+* Disable no-loop-func for all but WSH ([2cb6e6a](https://github.com/kevinoid/eslint-config-kevinoid/commit/2cb6e6a9d992fb2a4d5d076587b738719a0226c3))
+* Disable vars-on-top everywhere ([da5cd4c](https://github.com/kevinoid/eslint-config-kevinoid/commit/da5cd4c0e9a73ab5a300058aaa154896d50f60b2))
+
+
 # [14.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v14.0.0...v14.1.0) (2021-02-01)
 
 ### Features
