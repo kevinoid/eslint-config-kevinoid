@@ -38,6 +38,12 @@ module.exports = {
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
     "no-unreachable-loop": "error",
 
+    // disallow use of optional chaining in contexts where the undefined value is not allowed
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-unsafe-optional-chaining": ["error", {
+      "disallowArithmeticOperators": true
+    }],
+
     // disallow useless backreferences in regular expressions
     // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
     "no-useless-backreference": "error"
