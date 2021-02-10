@@ -29,7 +29,7 @@ jobs:
     - name: Display Node.js version
       run: node --version
     - name: Install dependencies
-      run: npm install
+      run: npm install --strict-peer-deps
     - name: Test peer versions
       run: npm run test-peer-versions
     - name: Lint
@@ -73,6 +73,6 @@ jobs:
     - name: Display Node.js version
       run: node --version
     - name: Install dependencies
-      run: npm install
+      run: npm install --strict-peer-deps
     - name: Run tests
       run: npm run test-eslint
