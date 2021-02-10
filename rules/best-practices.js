@@ -44,6 +44,10 @@ module.exports = {
     // (which can be useful for inline comment alignment)
     "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
+    // Disallow \8 and \9 escape sequences in string literals
+    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
+    "no-nonoctal-decimal-escape": "error",
+
     // allow reassignment of function parameters
     // simplicity for optional arguments outweighs the perf advantage, usually
     "no-param-reassign": "off",
