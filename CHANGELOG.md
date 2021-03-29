@@ -1,3 +1,20 @@
+# [16.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v15.0.0...v16.0.0) (2021-03-29)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from 28.0.0 to 29.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v29.0.0).
+* Bump `eslint-plugin-jsdoc` from 31.6.1 to 32.0.0.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases/tag/v32.0.0).
+
+### Features
+
+* Don't `prefer-destructuring` for Array assignment ([488c10a](https://github.com/kevinoid/eslint-config-kevinoid/commit/488c10a2117b72012cea2dfa3b22b81483971658))
+* Use `env` and `parserOptions` from `eslint-plugin-unicorn`, unless
+  overridden.
+* Use `parserOptions` `ecmaVersion: 2020` and `sourceType: script` for `node`.
+
+
 # [15.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v14.1.0...v15.0.0) (2021-02-10)
 
 ### BREAKING CHANGES
