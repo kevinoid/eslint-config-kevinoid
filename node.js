@@ -32,7 +32,8 @@ module.exports = {
     // which are only supported on node>=14:
     // https://github.com/mysticatea/eslint-plugin-node/issues/266
     // https://github.com/mysticatea/eslint-plugin-node/issues/267
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "sourceType": "script"
   },
 
   "rules": {
