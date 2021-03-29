@@ -124,9 +124,3 @@ module.exports = {
     "unicorn/prevent-abbreviations": "off"
   }
 };
-
-// Remove env and parserOptions settings
-// (Which are undesirable in most configurations and conflict with better
-// settings from node plugin for Node configuration.)
-delete module.exports.env;
-delete module.exports.parserOptions;
