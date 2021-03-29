@@ -9,6 +9,7 @@ module.exports = {
     "airbnb-base",
 
     // ESLint built-in rules
+    "./rules/es6",
     "./rules/best-practices",
     "./rules/possible-errors",
     "./rules/style",
