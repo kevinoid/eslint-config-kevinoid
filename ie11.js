@@ -40,8 +40,9 @@ module.exports = {
 
   "env": {
     "browser": true,
-    // Note: Not enabling ES6 env since IE11 doesn't support most ES6 globals.
-    // See https://kangax.github.io/compat-table/es6/#ie11
+    // Disable es6 env enabled by unicorn, since IE11 doesn't support most ES6
+    // globals.  See https://kangax.github.io/compat-table/es6/#ie11
+    "es6": false,
     "node": false
   },
 
