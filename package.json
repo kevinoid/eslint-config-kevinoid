@@ -58,7 +58,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-jsdoc": "^32.0.0",
     "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-unicorn": "^29.0.0"
   },
   "devDependencies": {
@@ -68,7 +68,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsdoc": "^32.0.0",
     "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-unicorn": "^29.0.0",
     "peer-version-check": "^0.1.0"
   },
