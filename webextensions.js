@@ -33,6 +33,8 @@ module.exports = {
 
   "env": {
     "browser": true,
+    // Disable node env added by airbnb-base/legacy
+    "node": false,
     "webextensions": true
   },
 
