@@ -23,7 +23,7 @@ function ruleWarnToError(ruleConfig) {
   }
 
   if (Array.isArray(ruleConfig) && ruleConfig[0] === "warn") {
-    ruleConfig = ruleConfig.slice(0);
+    ruleConfig = [...ruleConfig];
     ruleConfig[0] = "error";
     return ruleConfig;
   }
