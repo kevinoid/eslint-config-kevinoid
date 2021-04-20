@@ -3,15 +3,9 @@
 
 "use strict";
 
-// Note: eslint-plugin-jsdoc is a peerDependency, since it must be loadable
-// in the project being linted per
-// https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config
-// Require from parent module in case it is not reachable from this module
-// See https://github.com/jaredhanson/node-parent-require
-// Avoid using module.parent https://nodejs.org/api/deprecations.html#DEP0144
-const moduleParent = Object.values(require.cache)
-  .find((m) => m.children.includes(module));
-const jsdoc = moduleParent.require("eslint-plugin-jsdoc");
+const eslintRequire = require("../lib/eslint-require.js");
+
+const jsdoc = eslintRequire("eslint-plugin-jsdoc");
 
 /** Gets a rule configuration with warning switched to error.
  *
