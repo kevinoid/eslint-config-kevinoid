@@ -42,6 +42,7 @@ module.exports = {
 
   "rules": {
     // require 'use strict' in global scope
+    // Note: This rule has no effect when sourceType: module
     "strict": ["error", "global"],
 
     // don't require .flatMap() over .map().flat()
