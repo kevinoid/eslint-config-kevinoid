@@ -16,6 +16,7 @@ module.exports = {
     "./rules/variables",
 
     // Plugin rules
+    "./rules/import",
     "./rules/jsdoc",
     "./rules/promise",
     "./rules/unicorn",
