@@ -17,9 +17,12 @@ module.exports = {
 
     // Plugin rules
     "./rules/jsdoc",
-    "./rules/node",
     "./rules/promise",
-    "./rules/unicorn"
+    "./rules/unicorn",
+
+    // extend node plugin last because it sets parserOptions based on type
+    // field from nearest ancestor package.json to process.cwd().
+    "./rules/node"
   ],
 
   "parserOptions": {
@@ -27,14 +30,7 @@ module.exports = {
     // Node.js has supported generators without regenerator since v4.
     "ecmaFeatures": {
       "generators": true
-    },
-    // ecmaVersion 2021 might be preferable for numeric separators, but would
-    // accept optional chaining (?.) and nullish coalescing (??) without error,
-    // which are only supported on node>=14:
-    // https://github.com/mysticatea/eslint-plugin-node/issues/266
-    // https://github.com/mysticatea/eslint-plugin-node/issues/267
-    "ecmaVersion": 2020,
-    "sourceType": "script"
+    }
   },
 
   "rules": {
