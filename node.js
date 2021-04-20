@@ -33,6 +33,13 @@ module.exports = {
     }
   },
 
+  "env": {
+    // Disable node env added by airbnb-base/legacy.
+    // globals are set by plugin:node based on package.json#type.
+    // Enabling the node env would define CommonJS globals unconditionally.
+    "node": false
+  },
+
   "rules": {
     // require 'use strict' in global scope
     "strict": ["error", "global"],
