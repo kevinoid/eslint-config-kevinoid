@@ -1,3 +1,21 @@
+# [17.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v16.0.0...v17.0.0) (2021-04-30)
+
+### BREAKING CHANGES
+
+* Enable `unicorn/prefer-module` and `unicorn/prefer-node-protocol` rules.
+* Enable `import/no-unused-modules` rule for ESM packages.
+* Disable `node` env for node to avoid defining globals which are only
+  available in CommonJS modules.
+* `parserOptions` for node are now set by `plugin:node/recommended` based
+  on `package.json#type`.
+* Enable `import/extensions` rule.
+
+### Features
+
+* Allow `eslint-plugin-node` to set `parserOptions` based on
+  `package.json#type`.
+
+
 # [16.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v15.0.0...v16.0.0) (2021-03-29)
 
 ### BREAKING CHANGES
