@@ -36,7 +36,18 @@ module.exports = {
     // Node.js has supported generators without regenerator since v4.
     "ecmaFeatures": {
       "generators": true
-    }
+    },
+    // It would be preferable to use the version set by eslint-plugin-node
+    // (determined based on package.json#engines/node).  Unfortunately, it
+    // currently sets ecmaVersion: 2019 unconditionally, which lacks support
+    // for widely used language features (e.g. import() and import.meta).
+    //
+    // ecmaVersion 2021 might be preferable for numeric separators, but would
+    // accept optional chaining (?.) and nullish coalescing (??) without error,
+    // which are only supported on node>=14:
+    // https://github.com/mysticatea/eslint-plugin-node/issues/266
+    // https://github.com/mysticatea/eslint-plugin-node/issues/267
+    "ecmaVersion": 2020
   },
 
   "env": {
