@@ -1,3 +1,15 @@
+# [17.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v17.0.0...v17.1.0) (2021-05-06)
+
+### Features
+
+* Disable `unicorn/prefer-node-protocol` until `node:` is supported by
+  `eslint-plugin-node`.
+* Configure `parserOptions.ecmaVersion: 2020`, since `ecmaVersion: 2019` set
+  by `plugin:node/recommended` lacks support for `import()` and
+  `import.meta.url`, while `ecmaVersion: 2021` would not warn about `?.` and
+  `??` on Node.js versions which don't support them.
+
+
 # [17.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v16.0.0...v17.0.0) (2021-04-30)
 
 ### BREAKING CHANGES
