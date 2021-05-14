@@ -68,10 +68,6 @@ module.exports = {
     "import/no-unused-modules": sourceType === "script" ? "off" : ["error", {
       "missingExports": true,
       "unusedExports": true
-    }],
-
-    // don't require .flatMap() over .map().flat()
-    // TODO [engine:node@>=11]: Enable this rule
-    "unicorn/prefer-array-flat-map": "off"
+    }]
   }
 };
