@@ -3,7 +3,7 @@
 
 "use strict";
 
-const bestPractices = require("./best-practices");
+const bestPractices = require("./best-practices.js");
 
 const allowed = {
   "Math": {
