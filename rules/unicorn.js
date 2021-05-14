@@ -79,6 +79,15 @@ module.exports = {
     // https://eslint.org/docs/rules/consistent-return
     "unicorn/no-useless-undefined": "off",
 
+    // enforce correct digit grouping for numbers with numeric separators
+    // do not require nor forbid separators, only enforce correctness when used
+    "unicorn/numeric-separators-style": ["error", {
+      "onlyIfContainsSeparator": true,
+      "number": {
+        "minimumDigits": 0
+      }
+    }],
+
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat
     "unicorn/prefer-dom-node-append": "off",
