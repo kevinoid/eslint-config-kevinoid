@@ -1,3 +1,22 @@
+# [18.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v17.1.0...v18.0.0) (2021-05-14)
+
+### BREAKING CHANGES
+
+* Drop support for Node.js 10.  Require Node.js 12 or later.
+* Enable additional `eslint-plugin-unicorn` rules:
+  - [`unicorn/no-document-cookie`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-document-cookie.md)
+  - [`unicorn/numeric-separators-style`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md)
+  - [`unicorn/prefer-array-flat`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat.md)
+  - [`unicorn/prefer-array-flat-map`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-flat-map.md)
+
+### Dependency Updates
+
+* Update to
+  [`eslint-plugin-unicorn@^32.0.0`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v32.0.0)
+* Update to
+  [`eslint-plugin-jsdoc@^34.0.0`](https://github.com/gajus/eslint-plugin-jsdoc/releases/tag/v34.0.0)
+
+
 # [17.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v17.0.0...v17.1.0) (2021-05-06)
 
 ### Features
