@@ -1,3 +1,13 @@
+## [18.0.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v18.0.0...v18.0.1) (2021-05-16)
+
+### Features
+
+* Configure `definedTypes` for the
+  [`jsdoc/no-undefined-types`](https://github.com/gajus/eslint-plugin-jsdoc#eslint-plugin-jsdoc-rules-no-undefined-types)
+  rule for ECMAScript/TypeScript types which do not have a matching name in
+  the global scope (e.g. `Generator`, `Iterator`, etc.).
+
+
 # [18.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v17.1.0...v18.0.0) (2021-05-14)
 
 ### BREAKING CHANGES
