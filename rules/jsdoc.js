@@ -44,6 +44,21 @@ module.exports = {
     // Warnings are not particularly useful for me.  Switch to error.
     ...rulesWarnToError(jsdoc.configs.recommended.rules),
 
+    // Check that types in jsdoc comments are defined.
+    "jsdoc/no-undefined-types": ["error", {
+      // Allow types defined by ECMAScript (and TypeScript) which do not have
+      // globally defined names.
+      // https://github.com/gajus/eslint-plugin-jsdoc/issues/280#issuecomment-503789555
+      // https://262.ecma-international.org/
+      // https://github.com/falsandtru/TypeScript/tree/master/src/lib
+      "definedTypes": [
+        "Generator",
+        "Iterable",
+        "Iterator",
+        "TypedArray"
+      ]
+    }],
+
     // Requires a hyphen before the @param description is not used.
     // It seems inconsistent with other tags and doesn't add value for me.
     "jsdoc/require-hyphen-before-param-description": ["error", "never"],
