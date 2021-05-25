@@ -44,6 +44,9 @@ module.exports = {
     // Warnings are not particularly useful for me.  Switch to error.
     ...rulesWarnToError(jsdoc.configs.recommended.rules),
 
+    // Allow single- and multi-line blocks, with text on first/last line.
+    "jsdoc/multiline-blocks": "off",
+
     // Check that types in jsdoc comments are defined.
     "jsdoc/no-undefined-types": ["error", {
       // Allow types defined by ECMAScript (and TypeScript) which do not have
