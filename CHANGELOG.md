@@ -1,3 +1,12 @@
+## [19.0.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v19.0.0...v19.0.1) (2021-05-29)
+
+### Bug Fixes
+
+* Improve code for importing peer dependencies to fix issues when
+  `require.main` is not `eslint`.
+  ([d898698](https://github.com/kevinoid/eslint-config-kevinoid/commit/d89869855b7685f0437942804c8baa28a10ba15a))
+
+
 # [19.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v18.0.1...v19.0.0) (2021-05-29)
 
 ### Dependency Updates
