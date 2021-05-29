@@ -3,9 +3,9 @@
 
 "use strict";
 
-const eslintRequire = require("../lib/eslint-require.js");
+const requirePeer = require("../lib/require-peer.js");
 
-const unicorn = eslintRequire("eslint-plugin-unicorn");
+const unicorn = requirePeer("eslint-plugin-unicorn");
 
 module.exports = {
   // Based on Unicorn recommended config

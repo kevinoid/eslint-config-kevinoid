@@ -3,10 +3,10 @@
 
 "use strict";
 
-const eslintRequire = require("./lib/eslint-require.js");
+const requirePeer = require("./lib/require-peer.js");
 
 const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
-  eslintRequire("eslint-plugin-node");
+  requirePeer("eslint-plugin-node");
 
 module.exports = {
   // Based on Airbnb with changes to match Node core and my prefs.

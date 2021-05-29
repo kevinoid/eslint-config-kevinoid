@@ -3,9 +3,9 @@
 
 "use strict";
 
-const eslintRequire = require("../lib/eslint-require.js");
+const requirePeer = require("../lib/require-peer.js");
 
-const jsdoc = eslintRequire("eslint-plugin-jsdoc");
+const jsdoc = requirePeer("eslint-plugin-jsdoc");
 
 /** Gets a rule configuration with warning switched to error.
  *
