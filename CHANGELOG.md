@@ -1,3 +1,11 @@
+# [19.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v18.0.1...v19.0.0) (2021-05-29)
+
+### Dependency Updates
+
+* Update to
+  [`eslint-plugin-jsdoc@^35.0.0`](https://github.com/gajus/eslint-plugin-jsdoc/releases/tag/v35.0.0)
+
+
 ## [18.0.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v18.0.0...v18.0.1) (2021-05-16)
 
 ### Features
