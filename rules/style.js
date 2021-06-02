@@ -28,7 +28,7 @@ module.exports = {
     // possibly prefixed with comment opener or suffixed with ";".
     // (Not ESLint ignore props which ignores any lines which contain these.)
     "max-len": ["error", 80, 2, {
-      "ignorePattern": "^\\s*((/?\\*|/[/])\\s*)?('[^'\\\\]*(\\\\.[^'\\\\]*)*'|\"[^\"\\\\]*(\\\\.[^\"\\\\]*)*\"|/[^/\\\\]*(\\\\.[^/\\\\]*)*/[gimuy]*|[^:/?#\\s]+:/[/]\\S+);?$"
+      "ignorePattern": "^\\s*((/?\\*|/[/])\\s*)?('[^'\\\\]*(\\\\.[^'\\\\]*)*'|\"[^\"\\\\]*(\\\\.[^\"\\\\]*)*\"|/[^/\\\\]*(\\\\.[^/\\\\]*)*/[gimuy]*|[^:/?#\\s]+:/[/]\\S+)[,;]?$"
     }],
 
     // require a capital letter for constructors and new for capitalized funcs
