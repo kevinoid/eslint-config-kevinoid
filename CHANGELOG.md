@@ -1,3 +1,23 @@
+# [20.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v19.0.1...v20.0.0) (2021-06-07)
+
+### BREAKING CHANGES
+
+* Enable additional `eslint-plugin-unicorn` rules:
+  - [`prefer-prototype-methods`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-prototype-methods.md).
+  - [`require-number-to-fixed-digits-argument`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-number-to-fixed-digits-argument.md)
+  - [`require-array-join-separator`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-array-join-separator.md)
+
+### Dependency Updates
+
+* Update to
+  [`eslint-plugin-unicorn@^33.0.0`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v33.0.0)
+
+### Bug Fixes
+
+* Match trailing comma in `max-len` `ignorePattern`
+  ([aeb7825](https://github.com/kevinoid/eslint-config-kevinoid/commit/aeb78256d67c447928fba491257b61d7ccf511db))
+
+
 ## [19.0.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v19.0.0...v19.0.1) (2021-05-29)
 
 ### Bug Fixes
