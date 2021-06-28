@@ -55,7 +55,10 @@ module.exports = {
       // each item).  Performance on-par with alternatives and use is advocated
       // by Mathias Bynens <https://youtu.be/m9cTaYI95Zc?t=959>.
       // Note: Consider disabling when transpiling w/ regenerator-runtime.
-      .filter((nrs) => nrs.selector !== "ForOfStatement"),
+      .filter((nrs) => nrs.selector !== "ForOfStatement")
+      // allow labeled statements
+      // this is better handled by the no-labels rule
+      .filter((nrs) => nrs.selector !== "LabeledStatement"),
 
     // allow multiple variable declarations per block/function and multiple
     // declarators per declaration
