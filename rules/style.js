@@ -38,6 +38,12 @@ module.exports = {
       "capIsNew": true
     }],
 
+    // allow use of the continue statement
+    // although I agree that it can make code harder to follow, like early
+    // return, it can also avoid a rightward march for checking several
+    // error/skip conditions.
+    "no-continue": "off",
+
     // allow nested ternary expressions
     // if they are indented one-expression-per-line, they are clear enough for me
     "no-nested-ternary": "off",
