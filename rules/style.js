@@ -25,7 +25,7 @@ module.exports = {
     // enforce a maximum line length
     // reduce from 100 to 80 chars (conventional terminal width)
     // ignore lines which consist of a single string, URL, or RegExp literal,
-    // possibly prefixed with comment opener or suffixed with ";".
+    // possibly prefixed with comment opener or suffixed with ";" or ",".
     // (Not ESLint ignore props which ignores any lines which contain these.)
     "max-len": ["error", 80, 2, {
       "ignorePattern": "^\\s*((/?\\*|/[/])\\s*)?('[^'\\\\]*(\\\\.[^'\\\\]*)*'|\"[^\"\\\\]*(\\\\.[^\"\\\\]*)*\"|/[^/\\\\]*(\\\\.[^/\\\\]*)*/[gimuy]*|[^:/?#\\s]+:/[/]\\S+)[,;]?$"
@@ -49,7 +49,6 @@ module.exports = {
     "no-nested-ternary": "off",
 
     // disallow process.exit()
-    // this is disabled locally only when require.main === module
     "no-process-exit": "error",
 
     // disallow certain syntax forms
