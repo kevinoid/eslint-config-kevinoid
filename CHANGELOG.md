@@ -1,3 +1,22 @@
+# [21.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v20.0.0...v21.0.0) (2021-06-29)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from 33.0.1 to 34.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v34.0.0):
+  - Enable new rule [`no-array-method-this-argument`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-method-this-argument.md).
+  - Enable new rule [`require-post-message-target-origin`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-post-message-target-origin.md).
+* Disallow [`process.nextTick`](https://nodejs.org/api/process.html#process_process_nexttick_callback_args) in [`no-restricted-properties`](https://eslint.org/docs/rules/no-restricted-properties) in favor of [`queueMicrotask`](https://nodejs.org/api/globals.html#globals_queuemicrotask_callback) as [recommended by the Node.js API docs](https://nodejs.org/api/process.html#process_process_nexttick_callback_args) ([a01b279](https://github.com/kevinoid/eslint-config-kevinoid/commit/a01b279d971e4460719a76f0e42fe94d8efebd1c))
+
+### Bug Fixes
+
+* Allow `LabeledStatement` in [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax) rule, since it is already disallowed by [`no-labels`](https://eslint.org/docs/rules/no-labels) ([9cfe4ff](https://github.com/kevinoid/eslint-config-kevinoid/commit/9cfe4ff69484433d29b405c77526e5c8f291a3b0))
+
+### Features
+
+* Disable [`no-continue`](https://eslint.org/docs/rules/no-continue) rule ([280ab85](https://github.com/kevinoid/eslint-config-kevinoid/commit/280ab85296d7090e3cd82745df83e99ec3e01f9b))
+
+
 # [20.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v19.0.1...v20.0.0) (2021-06-07)
 
 ### BREAKING CHANGES
