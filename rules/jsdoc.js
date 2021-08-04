@@ -30,10 +30,10 @@ function ruleWarnToError(ruleConfig) {
  * @private
  */
 function rulesWarnToError(rules) {
-  return Object.keys(rules).reduce((newRules, ruleName) => {
-    newRules[ruleName] = ruleWarnToError(rules[ruleName]);
-    return newRules;
-  }, {});
+  return Object.fromEntries(
+    Object.entries(rules)
+      .map(([ruleName, ruleValue]) => [ruleName, ruleWarnToError(ruleValue)])
+  );
 }
 
 module.exports = {
