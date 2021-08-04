@@ -1,3 +1,17 @@
+# [22.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v21.0.0...v22.0.0) (2021-08-04)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from ^34.0.0 to ^35.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v35.0.0):
+  - Enable new rule [`prefer-object-from-entries`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-object-from-entries.md).
+  - Enable new rule [`no-useless-length-check`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-length-check.md).
+  - Enable new rule [`no-useless-spread`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-spread.md).
+* Bump `eslint-plugin-jsdoc` from ^35.0.0 to ^36.0.2.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases/tag/v35.0.0).
+* Require Node.js ^12.20 || ^14.14 || ^16, for eslint-plugin-jsdoc@^36.
+
+
 # [21.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v20.0.0...v21.0.0) (2021-06-29)
 
 ### BREAKING CHANGES
