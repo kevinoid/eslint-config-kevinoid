@@ -1,3 +1,15 @@
+# [23.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v22.0.0...v23.0.0) (2021-09-15)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from ^35.0.0 to ^36.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v36.0.0):
+  - Enable new rule
+    [`no-useless-fallback-in-spread`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-fallback-in-spread.md).
+  - Enable new rule
+    [`no-invalid-remove-event-listener`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-remove-event-listener.md).
+
+
 # [22.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v21.0.0...v22.0.0) (2021-08-04)
 
 ### BREAKING CHANGES
