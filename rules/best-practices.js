@@ -11,18 +11,6 @@ module.exports = {
     // require curly braces around all control statements, not just multi-line.
     "curly": ["error", "all"],
 
-    // enforce default clauses in switch statements to be last
-    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "default-case-last": "error",
-
-    // require grouped accessor pairs in object literals and classes
-    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "grouped-accessor-pairs": "error",
-
-    // disallow returning value in constructor
-    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-constructor-return": "error",
-
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
     "no-extra-parens": ["error", "all", {
@@ -43,10 +31,6 @@ module.exports = {
     // disallow multiple spaces, except before EOL comments
     // (which can be useful for inline comment alignment)
     "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
-
-    // Disallow \8 and \9 escape sequences in string literals
-    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "no-nonoctal-decimal-escape": "error",
 
     // allow reassignment of function parameters
     // simplicity for optional arguments outweighs the perf advantage, usually
@@ -71,10 +55,6 @@ module.exports = {
 
     // require using Error objects as Promise rejection reason (including empty)
     "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
-
-    // disallow use of the RegExp constructor in favor of RegExp literals
-    // TODO [eslint-config-airbnb-base@>=15]: Remove if enabled
-    "prefer-regex-literals": "error",
 
     // don't require all vars to be at top of their containing scope
     // benefits from locality (comprehensibility, ease of editing) outweigh
