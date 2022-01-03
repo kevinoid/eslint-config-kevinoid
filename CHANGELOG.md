@@ -1,3 +1,23 @@
+# [24.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v23.0.0...v24.0.0) (2022-01-03)
+
+### BREAKING CHANGES
+
+* Require ESLint 8.
+* Enable
+  [`array-bracket-newline`](https://eslint.org/docs/rules/array-bracket-newline)
+  and
+  [`array-element-newline`](https://eslint.org/docs/rules/array-element-newline)
+  for consistent newlines in arrays.  (To match
+  [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
+  and
+  [`function-call-argument-newline`](https://eslint.org/docs/rules/function-call-argument-newline)
+  for functions).
+* Enable
+  [`no-unused-private-class-members`](https://eslint.org/docs/rules/no-unused-private-class-members).
+* Include `typeof` expressions in
+  [`no-undef`](https://eslint.org/docs/rules/no-undef).
+
+
 # [23.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v22.0.0...v23.0.0) (2021-09-15)
 
 ### BREAKING CHANGES
