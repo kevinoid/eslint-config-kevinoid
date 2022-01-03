@@ -8,6 +8,12 @@ const airbnbStyle =
 
 module.exports = {
   "rules": {
+    // enforce line breaks after opening and before closing array brackets
+    "array-bracket-newline": ["error", "consistent"],
+
+    // enforce line breaks between array elements
+    "array-element-newline": ["error", "consistent"],
+
     // require camel case names (even for properties and destructuring)
     // Note: options object needed to override airbnb, values set for clarity.
     "camelcase": ["error", {
