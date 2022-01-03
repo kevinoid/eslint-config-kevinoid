@@ -65,6 +65,10 @@ module.exports = {
     // disallow unnecessary use of Function.prototype.{apply,call}
     "no-useless-call": "error",
 
+    // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
+    // TODO [engine:node@>=16.9]: Prefer Object.hasOwn()
+    "prefer-object-has-own": "off",
+
     // require using Error objects as Promise rejection reason (including empty)
     "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
 
