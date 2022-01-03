@@ -100,6 +100,12 @@ module.exports = {
     // these have different behavior and uses
     "unicorn/prefer-dom-node-text-content": "off",
 
+    // don't prefer reading a JSON file as a Buffer
+    // A Buffer passed to JSON.parse() is converted to string like any other
+    // non-string value.  Buffer#toString() assumes utf-8 encoding.  Better
+    // to make the string conversion and encoding assumption explicit.
+    "unicorn/prefer-json-parse-buffer": "off",
+
     // don't prefer node: protocol when importing builtin modules
     // TODO: enable once eslint-plugin-node and depcheck support it:
     // https://github.com/mysticatea/eslint-plugin-node/issues/275
