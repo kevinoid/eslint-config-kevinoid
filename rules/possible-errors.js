@@ -12,6 +12,9 @@ module.exports = {
     // This is permitted in ES6 and accepted in all pre-ES6 engines I use.
     // As with vars-on-top rule, prefer declarations in scope of use for
     // ease of editing and comprehensibility.
-    "no-inner-declarations": "off"
+    "no-inner-declarations": "off",
+
+    // disallow unused private class members
+    "no-unused-private-class-members": "error"
   }
 };
