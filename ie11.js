@@ -40,9 +40,9 @@ module.exports = {
 
   "env": {
     "browser": true,
-    // Disable es6 env enabled by unicorn, since IE11 doesn't support most ES6
-    // globals.  See https://kangax.github.io/compat-table/es6/#ie11
-    "es6": false,
+    // Disable es2022 enabled by unicorn, since IE11 doesn't support even most
+    // ES6 globals.  See https://kangax.github.io/compat-table/es6/#ie11
+    "es2022": false,
     // Disable node env enabled by airbnb-base/legacy
     "node": false
   },

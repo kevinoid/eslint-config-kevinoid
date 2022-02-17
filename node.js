@@ -49,10 +49,16 @@ module.exports = {
     // which are only supported on node>=14:
     // https://github.com/mysticatea/eslint-plugin-node/issues/266
     // https://github.com/mysticatea/eslint-plugin-node/issues/267
+    // TODO [engine:node@>=14]: Bump ecmaVersion to 2021
     "ecmaVersion": 2020
   },
 
   "env": {
+    // Disable es2021 env added by eslint-plugin-unicorn, add es2020 instead.
+    // TODO [engine:node@>=15]: Enable es2021 (AggregateError,
+    // FinalizationRegistry, WeakRef)
+    "es2020": true,
+    "es2022": false,
     // Disable node env added by airbnb-base/legacy.
     // globals are set by plugin:node based on package.json#type.
     // Enabling the node env would define CommonJS globals unconditionally.

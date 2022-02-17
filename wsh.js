@@ -44,8 +44,8 @@ module.exports = {
   "env": {
     // Disable browser env added by airbnb-base/legacy
     "browser": false,
-    // Disable es6 env added by unicorn
-    "es6": false,
+    // Disable es2022 env added by unicorn
+    "es2022": false,
     // Disable node env added by airbnb-base/legacy
     "node": false
   },
