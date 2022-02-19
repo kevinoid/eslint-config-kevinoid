@@ -4,6 +4,8 @@
 
 "use strict";
 
+const airbnbStyle =
+  require("eslint-config-airbnb-base/rules/style");
 const globals = require("globals");
 
 module.exports = {
@@ -71,6 +73,14 @@ module.exports = {
     // ------------------------------------------------------------------
     // Stylistic Issues <https://eslint.org/docs/rules/#stylistic-issues>
     // ------------------------------------------------------------------
+
+    // require a capital letter for constructors, but do not require capitalized
+    // functions be called with new operator since many built-in WSH functions
+    // are capitalized.
+    "new-cap": ["error", {
+      ...airbnbStyle.rules["new-cap"][1],
+      "capIsNew": false
+    }],
 
     // allow the use of Math.pow in favor of the ** operator,
     // which is unsupported by WSH
