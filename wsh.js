@@ -86,6 +86,15 @@ module.exports = {
     // which is unsupported by WSH
     "prefer-exponentiation-operator": "off",
 
+    // ----------------------------------------------------------
+    // JSDoc Rules <https://github.com/gajus/eslint-plugin-jsdoc>
+    // ----------------------------------------------------------
+
+    // don't check that types in jsdoc comments are defined.
+    // although this would be nice, I'm not aware of type definitions for the
+    // WSH built-in types, which makes this warning too noisy in many projects.
+    "jsdoc/no-undefined-types": "off",
+
     // ---------------------------------------------------------------------------
     // Unicorn Rules <https://github.com/sindresorhus/eslint-plugin-unicorn#rules>
     // ---------------------------------------------------------------------------
