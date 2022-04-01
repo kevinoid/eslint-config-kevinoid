@@ -32,6 +32,10 @@ module.exports = {
     // since IE 11 doesn't provide Math.trunc()
     "unicorn/prefer-math-trunc": "off",
 
+    // don't prefer modern Math APIs over legacy patterns
+    // since IE 11 doesn't support these APIs
+    "unicorn/prefer-modern-math-apis": "off",
+
     // don't prefer omitting the catch binding parameter
     // since IE 11 doesn't support optional catch binding
     "unicorn/prefer-optional-catch-binding": "off",
