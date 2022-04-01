@@ -1,3 +1,32 @@
+# [25.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v24.0.0...v25.0.0) (2022-04-01)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from ^40.1.0 to ^42.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases):
+  - Enable new rule
+    [`text-encoding-identifier-case`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md).
+  - Enable `es2020` env (but not `es2022` as eslint-plugin-unicorn does).
+  - Enable new rule
+    [`no-useless-switch-case`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-switch-case.md)
+  - Enable new rule
+    [`prefer-modern-math-apis`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-modern-math-apis.md)
+    (except ie11 and wsh envs, which lack these APIs)
+  - Enable new rule
+    [`no-unreadable-iife`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unreadable-iife.md)
+  - Enable new rule
+    [`prefer-native-coercion-functions`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-native-coercion-functions.md)
+* Bump `eslint-plugin-jsdoc` from ^37.9.7 to ^38.0.3.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases)
+  - `jsdoc/match-description` regular expressions now need to take account
+    for trailing whitespace.
+
+### Bug Fixes
+
+* disable `capIsNew` `new-cap` option for WSH ([2e40bf5](https://github.com/kevinoid/eslint-config-kevinoid/commit/2e40bf50d17f65292e31eba80093bfa40eae0c66))
+* disable `jsdoc/no-undefined-types` for WSH ([3d9c51d](https://github.com/kevinoid/eslint-config-kevinoid/commit/3d9c51dd8fe19087cd6ff7f02abf76b68076520c))
+
+
 # [24.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v23.0.0...v24.0.0) (2022-01-03)
 
 ### BREAKING CHANGES
