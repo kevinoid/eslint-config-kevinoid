@@ -43,14 +43,7 @@ module.exports = {
     // (determined based on package.json#engines/node).  Unfortunately, it
     // currently sets ecmaVersion: 2019 unconditionally, which lacks support
     // for widely used language features (e.g. import() and import.meta).
-    //
-    // ecmaVersion 2021 might be preferable for numeric separators, but would
-    // accept optional chaining (?.) and nullish coalescing (??) without error,
-    // which are only supported on node>=14:
-    // https://github.com/mysticatea/eslint-plugin-node/issues/266
-    // https://github.com/mysticatea/eslint-plugin-node/issues/267
-    // TODO [engine:node@>=14]: Bump ecmaVersion to 2021
-    "ecmaVersion": 2020
+    "ecmaVersion": 2021
   },
 
   "env": {
