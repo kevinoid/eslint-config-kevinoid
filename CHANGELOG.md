@@ -1,3 +1,15 @@
+# [26.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v25.0.0...v26.0.0) (2022-05-05)
+
+### BREAKING CHANGES
+
+* Drop support for Node.js 12.  Require Node.js 14.14 or later.
+
+### Features
+
+* use parserOptions.ecmaVersion 2021 ([14611b2](https://github.com/kevinoid/eslint-config-kevinoid/commit/14611b25acd029d455e95832d2340277390da1fc))
+
+
+
 # [25.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v24.0.0...v25.0.0) (2022-04-01)
 
 ### BREAKING CHANGES
