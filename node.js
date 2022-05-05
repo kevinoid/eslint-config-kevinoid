@@ -47,8 +47,8 @@ module.exports = {
   },
 
   "env": {
-    // Disable es2021 env added by eslint-plugin-unicorn, add es2020 instead.
-    // TODO [engine:node@>=15]: Enable es2021 (AggregateError,
+    // Disable es2022 env added by eslint-plugin-unicorn, add es2020 instead.
+    // TODO [engine:node@>=15]: Enable es2022 (AggregateError,
     // FinalizationRegistry, WeakRef)
     "es2020": true,
     "es2022": false,
