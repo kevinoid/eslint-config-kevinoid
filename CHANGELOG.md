@@ -1,3 +1,30 @@
+# [27.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v26.0.0...v27.0.0) (2022-07-03)
+
+### BREAKING CHANGES
+
+* Drop support for Node.js less than 14.18.
+* Switch from
+  [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node),
+  to
+  [eslint-plugin-n](https://github.com/weiran-zsd/eslint-plugin-node)
+  (as [done by xo](https://github.com/xojs/xo/pull/660)).
+* Bump `eslint-plugin-unicorn` from ^42.0.0 to ^43.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v43.0.0)
+  - Enable new
+    [`prefer-logical-operator-over-ternary`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-logical-operator-over-ternary.md)
+    rule
+  - Enable new
+    [`prefer-event-target`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md)
+    rule.
+  - Enable
+    [`prefer-top-level-await`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-top-level-await.md)
+    rule.
+* Update to
+  [`eslint-plugin-unicorn@^43.0.0`](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v33.0.0)
+* Enable
+  [`unicorn/prefer-node-protocol`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-node-protocol.md)
+
+
 # [26.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v25.0.0...v26.0.0) (2022-05-05)
 
 ### BREAKING CHANGES
