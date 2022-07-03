@@ -46,6 +46,10 @@ module.exports = {
     "strict": ["error", "global"],
 
     // since .flatMap() is not available in Edge or Safari
-    "unicorn/prefer-array-flat-map": "off"
+    "unicorn/prefer-array-flat-map": "off",
+
+    // don't prefer modules, which are not well supported in WebExtensions
+    // https://stackoverflow.com/q/48104433
+    "unicorn/prefer-module": "off"
   }
 };
