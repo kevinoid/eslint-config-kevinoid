@@ -1,3 +1,11 @@
+# [27.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.0.0...v27.1.0) (2022-07-03)
+
+### Features
+
+* Bump `parserOptions.ecmaVersion` to 2022
+  ([7e1978d](https://github.com/kevinoid/eslint-config-kevinoid/commit/7e1978d3e0681e5007bf078616bc7942acadc0d2))
+
+
 # [27.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v26.0.0...v27.0.0) (2022-07-03)
 
 ### BREAKING CHANGES
