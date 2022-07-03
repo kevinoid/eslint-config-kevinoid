@@ -42,8 +42,9 @@ module.exports = {
     // It would be preferable to use the version set by eslint-plugin-n
     // (determined based on package.json#engines/node).  Unfortunately, it
     // currently sets ecmaVersion: 2019 unconditionally, which lacks support
-    // for widely used language features (e.g. import() and import.meta).
-    "ecmaVersion": 2021
+    // for widely used language features (e.g. import() and import.meta in
+    // 2021, top-level await in 2022).
+    "ecmaVersion": 2022
   },
 
   "env": {
