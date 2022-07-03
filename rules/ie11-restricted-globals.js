@@ -3,7 +3,7 @@
 
 "use strict";
 
-const assert = require("assert");
+const assert = require("node:assert");
 const airbnbVariables =
   require("eslint-config-airbnb-base/rules/variables");
 

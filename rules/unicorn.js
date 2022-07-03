@@ -100,13 +100,6 @@ module.exports = {
     // these have different behavior and uses
     "unicorn/prefer-dom-node-text-content": "off",
 
-    // don't prefer node: protocol when importing builtin modules
-    // TODO: enable once eslint-plugin-node and depcheck support it:
-    // https://github.com/mysticatea/eslint-plugin-node/issues/275
-    // https://github.com/depcheck/depcheck/pull/635
-    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1200
-    "unicorn/prefer-node-protocol": "off",
-
     // don't prefer Number static properties over global ones.
     // I don't find these more-verbose and less-compatible versions preferable,
     // with the exception of isFinite/isNaN already caught by airbnb-base.
