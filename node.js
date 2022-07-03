@@ -8,7 +8,7 @@ const { "rules": { "no-restricted-properties": noRestrictedProps } } =
   require("./rules/best-practices.js");
 
 const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
-  requirePeer("eslint-plugin-node");
+  requirePeer("eslint-plugin-n");
 
 module.exports = {
   // Based on Airbnb with changes to match Node core and my prefs.
@@ -30,7 +30,7 @@ module.exports = {
 
     // extend node plugin last because it sets parserOptions based on type
     // field from nearest ancestor package.json to process.cwd().
-    "./rules/node"
+    "./rules/n"
   ],
 
   "parserOptions": {
@@ -39,7 +39,7 @@ module.exports = {
     "ecmaFeatures": {
       "generators": true
     },
-    // It would be preferable to use the version set by eslint-plugin-node
+    // It would be preferable to use the version set by eslint-plugin-n
     // (determined based on package.json#engines/node).  Unfortunately, it
     // currently sets ecmaVersion: 2019 unconditionally, which lacks support
     // for widely used language features (e.g. import() and import.meta).
