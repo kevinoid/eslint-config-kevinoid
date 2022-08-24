@@ -1,3 +1,12 @@
+## [27.1.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.1.0...v27.1.1) (2022-08-24)
+
+
+### Features
+
+* Support Node.js >16 ([353e13a](https://github.com/kevinoid/eslint-config-kevinoid/commit/353e13acd72c799fd174b025147ac985e2cc8a60))
+
+
+
 # [27.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.0.0...v27.1.0) (2022-07-03)
 
 ### Features
