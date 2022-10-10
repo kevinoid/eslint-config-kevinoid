@@ -124,6 +124,9 @@ module.exports = {
     "unicorn/prefer-ternary": "off",
 
     // don't prevent common abbreviations
-    "unicorn/prevent-abbreviations": "off"
+    "unicorn/prevent-abbreviations": "off",
+
+    // enforce consistent brace style for case clauses
+    "unicorn/switch-case-braces": ["error", "avoid"]
   }
 };
