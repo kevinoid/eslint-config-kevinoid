@@ -11,6 +11,10 @@ module.exports = {
   "rules": {
     // require file extensions in import declarations
     // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
-    "n/file-extension-in-import": "error"
+    "n/file-extension-in-import": "error",
+
+    // allow process.exit()
+    // this rule is redundant with the built-in no-process-exit rule
+    "n/no-process-exit": "off"
   }
 };
