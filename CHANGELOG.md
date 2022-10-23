@@ -1,3 +1,25 @@
+# [28.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.1.1...v28.0.0) (2022-10-23)
+
+### BREAKING CHANGES
+
+* Bump `eslint-plugin-unicorn` from ^43.0.0 to ^44.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v44.0.0)
+  - Enable new
+    [`no-unnecessary-await`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unnecessary-await.md)
+    rule
+  - Enable new
+    [`switch-case-braces`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/switch-case-braces.md)
+    rule to avoid unnecessary braces.
+
+### Features
+
+* Support Node.js >16 ([9fe3e66](https://github.com/kevinoid/eslint-config-kevinoid/commit/9fe3e66b61cd03f988a1e9f2f5b9551465353158))
+* Disable `unicorn/prefer-module` for webextensions ([831eabb](https://github.com/kevinoid/eslint-config-kevinoid/commit/831eabb60b580f054b21d9d9cf6c4073c06f7174))
+* Enable `unicorn/prefer-array-flat-map` in webextensions ([bcb9dce](https://github.com/kevinoid/eslint-config-kevinoid/commit/bcb9dce55eff7ee552a14973a9f94e3c628499eb))
+* Ignore `import/no-unresolved` false-positives ([c10642a](https://github.com/kevinoid/eslint-config-kevinoid/commit/c10642a20135afe50ee25a7ce4374c9f6bcf97bc))
+
+
+
 ## [27.1.1](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.1.0...v27.1.1) (2022-08-24)
 
 
