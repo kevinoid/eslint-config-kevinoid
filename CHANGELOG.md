@@ -1,3 +1,14 @@
+# [28.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v28.0.0...v28.1.0) (2022-10-23)
+
+
+### Features
+
+* Disable `n/no-process-exit`
+  ([5bd1dc8](https://github.com/kevinoid/eslint-config-kevinoid/commit/5bd1dc876296837d3ccc39a49af51034d6b256b0))
+  which is already checked by the built-in `no-process-exit` rule.
+
+
+
 # [28.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v27.1.1...v28.0.0) (2022-10-23)
 
 ### BREAKING CHANGES
