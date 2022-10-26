@@ -28,6 +28,13 @@ module.exports = {
     // Allow developers to develop with native EOL.  VCS manages committed style.
     "linebreak-style": "off",
 
+    // Require logical assignment logical operator shorthand
+    // TODO [engine:node@>=15]: Uncomment
+    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    // "logical-assignment-operators": ["error", "always", {
+    //   "enforceForIfStatements": true
+    // }],
+
     // enforce a maximum line length
     // reduce from 100 to 80 chars (conventional terminal width)
     // ignore lines which consist of a single string, URL, or RegExp literal,
