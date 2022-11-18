@@ -63,7 +63,7 @@
     "eslint-plugin-unicorn": "^44.0.2"
   },
   "devDependencies": {
-    "eslint": "^8.2.0",
+    "eslint": "^8.27.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-find-rules": "^4.0.0",
     "eslint-plugin-import": "^2.25.3",

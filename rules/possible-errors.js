@@ -14,6 +14,10 @@ module.exports = {
     // ease of editing and comprehensibility.
     "no-inner-declarations": "off",
 
+    // disallow new operators with global non-constructor functions
+    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    "no-new-native-nonconstructor": "error",
+
     // disallow unused private class members
     "no-unused-private-class-members": "error"
   }
