@@ -61,6 +61,9 @@ module.exports = {
     // allow the use of hexadecimal escapes
     "unicorn/no-hex-escape": "off",
 
+    // allow negated conditions
+    "unicorn/no-negated-condition": "off",
+
     // allow nested ternary expressions
     // if they are indented one-expression-per-line, they are clear enough for me
     "unicorn/no-nested-ternary": "off",
