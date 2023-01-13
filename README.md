@@ -2,7 +2,7 @@
 =========================
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/kevinoid/eslint-config-kevinoid/node.js.yml?branch=main&style=flat&label=build)](https://github.com/kevinoid/eslint-config-kevinoid/actions?query=branch%3Amain)
-[![Dependency Status](https://img.shields.io/david/kevinoid/eslint-config-kevinoid.svg?style=flat)](https://david-dm.org/kevinoid/eslint-config-kevinoid)
+[![Dependency Status](https://img.shields.io/librariesio/release/npm/@kevinoid%2Feslint-config.svg?style=flat)](https://libraries.io/npm/@kevinoid%2Feslint-config)
 [![Supported Node Version](https://img.shields.io/node/v/@kevinoid/eslint-config.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/eslint-config)
 [![Version on NPM](https://img.shields.io/npm/v/@kevinoid/eslint-config.svg?style=flat)](https://www.npmjs.com/package/@kevinoid/eslint-config)
 
