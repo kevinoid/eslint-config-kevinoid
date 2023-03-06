@@ -91,6 +91,14 @@ module.exports = {
       }
     }],
 
+    // don't prefer Array#at() and String#at()
+    // TODO [engine:node@>=16.6]: Enable unicorn/prefer-at
+    "unicorn/prefer-at": "off",
+
+    // don't prefer Blob#arrayBuffer() and Blob#text()
+    // TODO [engine:node@>=15]: Enable unicorn/prefer-blob-reading-methods
+    "unicorn/prefer-blob-reading-methods": "off",
+
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat
     "unicorn/prefer-dom-node-append": "off",
@@ -102,6 +110,10 @@ module.exports = {
     // don't require .textContent over .innerText
     // these have different behavior and uses
     "unicorn/prefer-dom-node-text-content": "off",
+
+    // don't prefer EventTarget over EventEmitter
+    // TODO [engine:node@>=15]: Enable unicorn/prefer-event-target
+    "unicorn/prefer-event-target": "off",
 
     // don't prefer Number static properties over global ones.
     // I don't find these more-verbose and less-compatible versions preferable,
@@ -121,6 +133,10 @@ module.exports = {
     // don't prefer Set#has() over Array#includes() when checking for existence
     // simplicity+flexibility vs speed trade-off that can be made case-by-case
     "unicorn/prefer-set-has": "off",
+
+    // don't prefer String#replaceAll() over regex searches with the global flag
+    // TODO [engine:node@>=15]: Enable unicorn/prefer-string-replace-all
+    "unicorn/prefer-string-replace-all": "off",
 
     // don't prefer ternary expressions over simple if-else statements
     // either can be clearer, should be decided on case-by-case basis
