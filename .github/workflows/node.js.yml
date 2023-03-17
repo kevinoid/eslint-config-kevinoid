@@ -1,52 +1,13 @@
-# GitHub Actions Workflow configuration
-# https://docs.github.com/actions/reference/workflow-syntax-for-github-actions
-# https://docs.github.com/actions/guides/building-and-testing-nodejs
-
-name: Node.js CI
-
-# Note: on key treated as boolean key by YAML
-# https://github.com/adrienverge/yamllint/issues/158#issuecomment-454313233
-# However, GitHub Actions documentation is consistent in using it unquoted.
+name: Failing Workflow
 on:   # yamllint disable-line rule:truthy
-  pull_request:
-    branches-ignore:
-    - template
-  push:
-    branches-ignore:
-    - template
+  push: {}
   workflow_dispatch: {}
-
 jobs:
   test:
-    name: >-
-      Test on Node.js ${{ matrix.node }} ${{ matrix.arch }} on ${{ matrix.os }}
-    timeout-minutes: 5
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        arch:
-        # Uncomment if package needs testing on different architectures
-        # - x86
-        - x64
-        os:
-        # Uncomment if package needs testing on macOS:
-        # - macos-latest
-        - windows-latest
-        node:
-        - '14.18'
+    name: Checkout and Setup
+    timeout-minutes: 2
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Node.js ${{ matrix.node }}
+    - name: Set up Node.js
       uses: actions/setup-node@v3
-      env:
-        ACTIONS_STEP_DEBUG: true
-      with:
-        node-version: ${{ matrix.node }}
-        architecture: ${{ matrix.arch }}
-        check-latest: ${{ matrix.node == '*' }}
-    - name: Display Node.js version
-      run: node --version
-    - name: Install dependencies
-      run: npm install --strict-peer-deps
-    - name: Run tests
-      run: npm run test-eslint
