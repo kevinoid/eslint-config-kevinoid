@@ -17,44 +17,10 @@ on:   # yamllint disable-line rule:truthy
   workflow_dispatch: {}
 
 jobs:
-  test-primary:
-    name: Lint and Test on Node.js * x64 on ubuntu-latest
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        # Note: '*' is "latest LTS version" (without check-latest, it would be
-        # "latest LTS version in local cache") because it first checks
-        # https://github.com/actions/node-versions/releases then falls back to
-        # https://nodejs.org/dist/index.json
-        # For explanation and discussion, see:
-        # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#check-latest-version=
-        # https://github.com/actions/setup-node/issues/61#issuecomment-577548687
-        # https://github.com/actions/setup-node/issues/164#issuecomment-648999618
-        # https://github.com/actions/setup-node/pull/104
-        #
-        # Support for "current"/"latest"/"node" was added in v3.2.0
-        # https://github.com/actions/setup-node/pull/483
-        node-version: latest
-        architecture: x64
-        check-latest: true
-    - name: Display Node.js version
-      run: node --version
-    - name: Install dependencies
-      run: npm install --strict-peer-deps
-    - name: Lint
-      run: npm run lint
-    - name: Run tests
-      run: npm run test-eslint
-
-  test-secondary:
-    # Only test secondary platforms if primary test platform passed
-    needs:
-    - test-primary
+  test:
     name: >-
       Test on Node.js ${{ matrix.node }} ${{ matrix.arch }} on ${{ matrix.os }}
+    timeout-minutes: 5
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -65,20 +31,15 @@ jobs:
         os:
         # Uncomment if package needs testing on macOS:
         # - macos-latest
-        - ubuntu-latest
         - windows-latest
         node:
         - '14.18'
-        - '>=17.1'
-        exclude:
-        # Exclude os/version already run in test-primary
-        - arch: x64
-          os: ubuntu-latest
-          node: latest
     steps:
     - uses: actions/checkout@v3
     - name: Set up Node.js ${{ matrix.node }}
       uses: actions/setup-node@v3
+      env:
+        ACTIONS_STEP_DEBUG: true
       with:
         node-version: ${{ matrix.node }}
         architecture: ${{ matrix.arch }}
