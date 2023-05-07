@@ -1,3 +1,40 @@
+# [29.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v28.1.0...v29.0.0) (2023-05-07)
+
+### BREAKING CHANGES
+
+* Drop support for Node.js &lt;16.
+* Enable
+[`logical-assignment-operators`](https://eslint.org/docs/latest/rules/logical-assignment-operators).
+* Require eslint@^8.27.0 and enable new rules
+  - Enable new
+    [`no-empty-static-block`](https://eslint.org/docs/latest/rules/no-empty-static-block).
+  - Enable new
+    [`no-new-native-nonconstructor`](https://eslint.org/docs/latest/rules/no-new-native-nonconstructor).
+* Bump `eslint-plugin-unicorn` from ^44.0.0 to ^47.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases)
+  - Enable new
+    [`unicorn/no-typeof-undefined`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-typeof-undefined.md).
+  - Enable new
+    [`unicorn/prefer-set-size`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-set-size.md).
+  - Enable new
+    [`unicorn/prefer-blob-reading-methods`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-blob-reading-methods.md).
+  - Enable
+    [`unicorn/prefer-event-target`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-event-target.md).
+  - Enable
+    [`unicorn/prefer-string-replace-all`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-string-replace-all.md).
+* Bump `eslint-plugin-jsdoc` from ^39.9.1 to ^43.0.0.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases)
+  - [`jsdoc/newline-after-description`](https://github.com/gajus/eslint-plugin-jsdoc/tree/v41.1.2#user-content-eslint-plugin-jsdoc-rules-newline-after-description)
+    was replaced by
+    [`jsdoc/tag-lines`](https://github.com/gajus/eslint-plugin-jsdoc/blob/v43.2.0/docs/rules/tag-lines.md).
+
+### Bug Fixes
+
+* Rename `node.js` to `nodejs.js` to avoid inadvertent invocation on Windows.
+  Continue to export `/node` and `/node.js` from this package for compatibility.
+  ([f313889](https://github.com/kevinoid/eslint-config-kevinoid/commit/f3138894656d6089ef254753a8c8e0555faa635f))
+
+
 # [28.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v28.0.0...v28.1.0) (2022-10-23)
 
 
