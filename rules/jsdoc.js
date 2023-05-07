@@ -87,7 +87,11 @@ module.exports = {
     // (So argument validation is not deferred until iteration.)
     // Since the JSDoc annotations are on the exported function, this idiom
     // violates this rule.  Disable it.
-    "jsdoc/require-yields-check": "off"
+    "jsdoc/require-yields-check": "off",
+
+    "jsdoc/tag-lines": ["error", "never", {
+      "startLines": 1
+    }]
   },
 
   // Note: Support Closure Compiler tags (like @template) with mode:closure.
