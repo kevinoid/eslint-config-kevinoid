@@ -34,7 +34,7 @@ This package includes configurations for several different environments:
 | Name                                    | Description                              |
 | --------------------------------------- | ---------------------------------------- |
 | `@kevinoid/eslint-config/ie11`          | Browsers including Internet Explorer 11. |
-| `@kevinoid/eslint-config/node`          | Node 6 and later.                        |
+| `@kevinoid/eslint-config/nodejs`        | Node 6 and later.                        |
 | `@kevinoid/eslint-config/webextensions` | [Browser Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) |
 | `@kevinoid/eslint-config/wsh`           | [JScript 5.8](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/scripting-articles/hbxc2t98(v=vs.84)) in [Windows Script Host](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc738350(v=ws.10)) |
 
@@ -44,7 +44,7 @@ in `.eslintrc`, for example:
 
 ```json
 {
-  "extends": "@kevinoid/eslint-config/node"
+  "extends": "@kevinoid/eslint-config/nodejs"
 }
 ```
 
@@ -56,7 +56,7 @@ or `eslintConfig` in `package.json`, for example:
   "version": "1.0.0",
   ...
   "eslintConfig": {
-    "extends": "@kevinoid/eslint-config/node"
+    "extends": "@kevinoid/eslint-config/nodejs"
   }
 }
 ```

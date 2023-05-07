@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  "extends": "./node",
+  "extends": "./nodejs",
 
   // Use style consistent with JSON for easier sharing between formats
   "rules": {
