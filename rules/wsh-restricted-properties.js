@@ -34,7 +34,7 @@ module.exports = {
         .rules["no-restricted-properties"]
         .map((prop) => (typeof prop !== "object" ? prop : {
           ...prop,
-          "message": prop.message.replace(/IE(\s*11)?/g, "WSH")
+          "message": prop.message.replaceAll(/IE(\s*11)?/g, "WSH")
         })),
       // Add WSH-specific restricted properties
       Object.keys(restricted)

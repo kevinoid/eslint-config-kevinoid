@@ -29,11 +29,10 @@ module.exports = {
     "linebreak-style": "off",
 
     // Require logical assignment logical operator shorthand
-    // TODO [engine:node@>=15]: Uncomment
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
-    // "logical-assignment-operators": ["error", "always", {
-    //   "enforceForIfStatements": true
-    // }],
+    "logical-assignment-operators": ["error", "always", {
+      "enforceForIfStatements": true
+    }],
 
     // enforce a maximum line length
     // reduce from 100 to 80 chars (conventional terminal width)
