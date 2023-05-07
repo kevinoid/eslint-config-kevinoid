@@ -69,7 +69,7 @@ jobs:
         - windows-latest
         node:
         - '16'
-        - '>=17.1'
+        - 'latest'
         exclude:
         # Exclude os/version already run in test-primary
         - arch: x64
