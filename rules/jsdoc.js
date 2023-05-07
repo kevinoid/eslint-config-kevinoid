@@ -89,6 +89,9 @@ module.exports = {
     // violates this rule.  Disable it.
     "jsdoc/require-yields-check": "off",
 
+    // Prohibit blank lines between JSDoc tags.
+    // Ensure there is a single blank line between the description and the
+    // first tag.
     "jsdoc/tag-lines": ["error", "never", {
       "startLines": 1
     }]
