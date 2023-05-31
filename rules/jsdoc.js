@@ -3,47 +3,12 @@
 
 "use strict";
 
-const requirePeer = require("../lib/require-peer.js");
-
-const jsdoc = requirePeer("eslint-plugin-jsdoc");
-
-/** Gets a rule configuration with warning switched to error.
- *
- * @private
- */
-function ruleWarnToError(ruleConfig) {
-  if (ruleConfig === "warn") {
-    return "error";
-  }
-
-  if (Array.isArray(ruleConfig) && ruleConfig[0] === "warn") {
-    ruleConfig = [...ruleConfig];
-    ruleConfig[0] = "error";
-    return ruleConfig;
-  }
-
-  return ruleConfig;
-}
-
-/** Gets a rules configuration with warnings switched to errors.
- *
- * @private
- */
-function rulesWarnToError(rules) {
-  return Object.fromEntries(
-    Object.entries(rules)
-      .map(([ruleName, ruleValue]) => [ruleName, ruleWarnToError(ruleValue)])
-  );
-}
-
 module.exports = {
-  ...jsdoc.configs.recommended,
+  "extends": [
+    "plugin:jsdoc/recommended-error"
+  ],
 
   "rules": {
-    // jsdoc recommends many rules at warning level.
-    // Warnings are not particularly useful for me.  Switch to error.
-    ...rulesWarnToError(jsdoc.configs.recommended.rules),
-
     // Allow single- and multi-line blocks, with text on first/last line.
     "jsdoc/multiline-blocks": "off",
 
