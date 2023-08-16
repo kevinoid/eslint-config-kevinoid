@@ -18,6 +18,7 @@ module.exports = {
     // Plugin rules
     "./rules/jsdoc",
     "./rules/promise",
+    "./rules/regexp",
     "./rules/unicorn"
   ],
 

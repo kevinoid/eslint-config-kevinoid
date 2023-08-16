@@ -26,6 +26,7 @@ module.exports = {
     "./rules/import",
     "./rules/jsdoc",
     "./rules/promise",
+    "./rules/regexp",
     "./rules/unicorn",
 
     // extend node plugin last because it sets parserOptions based on type

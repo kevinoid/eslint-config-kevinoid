@@ -26,6 +26,7 @@ module.exports = {
 
     // Plugin rules
     "./rules/jsdoc",
+    "./rules/regexp",
     "./rules/unicorn",
 
     // WSH-specific plugin rules
