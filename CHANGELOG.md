@@ -1,3 +1,21 @@
+# [30.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v29.0.0...v30.0.0) (2023-08-17)
+
+### BREAKING CHANGES
+
+* Use [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) to check `RegExp`s. ([554ec3b](https://github.com/kevinoid/eslint-config-kevinoid/commit/554ec3bc8d6c97e48092ab0354f83baa523842fc))
+* Bump `eslint-plugin-jsdoc` from ^43.0.0 to ^46.0.0.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases).
+* Bump `eslint-plugin-n` from ^15.0.0 to ^16.0.0.  See [Release
+  Notes](https://github.com/eslint-community/eslint-plugin-n/releases/tag/16.0.0).
+* Bump `eslint-plugin-unicorn` from ^47.0.0 to ^48.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases/tag/v48.0.0).
+* Enforce import ordering and newlines ([9e9cd45](https://github.com/kevinoid/eslint-config-kevinoid/commit/9e9cd45666250927911164927363a19570321208))
+
+### Features
+
+* Extend `plugin:jsdoc/recommended-error` rather than converting `warn` to `error` ([6a316b9](https://github.com/kevinoid/eslint-config-kevinoid/commit/6a316b9c224d32426af9bcce415f5f0fbf53960d))
+
+
 # [29.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v28.1.0...v29.0.0) (2023-05-07)
 
 ### BREAKING CHANGES
