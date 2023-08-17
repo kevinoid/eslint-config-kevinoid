@@ -5,6 +5,7 @@
 
 const airbnbImports = require("eslint-config-airbnb-base/rules/imports");
 
+const airbnbImportOpts = airbnbImports.rules["import/order"][1];
 const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];
 
 module.exports = {
@@ -23,6 +24,18 @@ module.exports = {
           // https://github.com/import-js/eslint-plugin-import/issues/1810
           "ava"
         ]
+      }
+    ],
+
+    "import/order": [
+      "error",
+      {
+        ...airbnbImportOpts,
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always",
+        "warnOnUnassignedImports": true
       }
     ]
   }
