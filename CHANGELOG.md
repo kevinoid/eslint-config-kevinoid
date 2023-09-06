@@ -1,3 +1,10 @@
+# [31.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v30.0.0...v31.0.0) (2023-09-06)
+
+### Features
+
+* Group `builtin` imports separately before others in the import order ([c1aaec3](https://github.com/kevinoid/eslint-config-kevinoid/commit/c1aaec3977448173e4f585f784772492b8eb5f23))
+
+
 # [30.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v29.0.0...v30.0.0) (2023-08-17)
 
 ### BREAKING CHANGES
