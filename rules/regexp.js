@@ -37,6 +37,14 @@ module.exports = {
     // since I often find it preferable to use the common/expected case.
     "regexp/letter-case": "off",
 
+    // Don't allow super-linear worst-case runtime moving across input string
+    //
+    // Note: Default for ignoreSticky is false, which differs from docs:
+    // https://github.com/ota-meshi/eslint-plugin-regexp/issues/629
+    "regexp/no-super-linear-move": ["error", {
+      "ignoreSticky": true
+    }],
+
     // Don't prefer \d to [0-9].
     // I find 0-9 clearer. (\d matches Unicode digits in some RegEx dialects)
     "regexp/prefer-d": "off",
