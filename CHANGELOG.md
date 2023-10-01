@@ -1,3 +1,10 @@
+# [31.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v31.0.0...v31.1.0) (2023-10-01)
+
+### Features
+
+* Enable [`ignoreSticky`](https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-super-linear-move.html#ignoresticky-boolean) for [`regexp/no-super-linear-move`](https://ota-meshi.github.io/eslint-plugin-regexp/rules/no-super-linear-move.html) ([99b5de6](https://github.com/kevinoid/eslint-config-kevinoid/commit/99b5de6b18fcbd9ebfa54bef878060eac5521870))
+
+
 # [31.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v30.0.0...v31.0.0) (2023-09-06)
 
 ### Features
