@@ -18,13 +18,6 @@ const {
 // Configure all rules as error.
 const errorRules = warnToError(rules);
 
-// Remove deprecated rules
-delete errorRules["regexp/no-assertion-capturing-group"];
-delete errorRules["regexp/no-useless-exactly-quantifier"];
-delete errorRules["regexp/no-useless-non-greedy"];
-delete errorRules["regexp/order-in-character-class"];
-delete errorRules["regexp/prefer-t"];
-
 module.exports = {
   ...regexpConfig,
 
