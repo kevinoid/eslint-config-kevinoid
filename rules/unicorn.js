@@ -91,10 +91,6 @@ module.exports = {
       }
     }],
 
-    // don't prefer Array#at() and String#at()
-    // TODO [engine:node@>=16.6]: Enable unicorn/prefer-at
-    "unicorn/prefer-at": "off",
-
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat
     "unicorn/prefer-dom-node-append": "off",
