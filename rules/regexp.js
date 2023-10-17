@@ -63,6 +63,13 @@ module.exports = {
     // ASCII-only case-insensitive patterns) that it is counter-productive.
     "regexp/require-unicode-regexp": "off",
 
+    // Don't require v flag
+    // As with require-unicode-regexp, there are enough cases where v is not
+    // useful (e.g. literal patterns, ASCII-only case-insensitive patterns)
+    // that it is counter-productive.
+    // Additionally, it's only supported on Node.js 20 and later.
+    "regexp/require-unicode-sets-regexp": "off",
+
     // Don't require elements of character classes to be sorted.
     // Although this is nice in theory, in practice I find sorting ASCII
     // punctuation before numbers and letters to be more difficult to read.
