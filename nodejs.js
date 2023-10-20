@@ -52,7 +52,11 @@ module.exports = {
     // Disable node env added by airbnb-base/legacy.
     // globals are set by plugin:node based on package.json#type.
     // Enabling the node env would define CommonJS globals unconditionally.
-    "node": false
+    //
+    // FIXME: eslint-plugin-n does not keep up with recent globals, like fetch:
+    // https://github.com/eslint-community/eslint-plugin-n/issues/35
+    // Leave node enabled until eslint-plugin-n is updated.
+    // "node": false
   },
 
   "rules": {
