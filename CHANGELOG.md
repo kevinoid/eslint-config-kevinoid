@@ -1,3 +1,18 @@
+# [32.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v31.1.0...v32.0.0) (2023-10-20)
+
+### BREAKING CHANGES
+
+* Drop support for Node.js &lt;18.
+
+### Features
+
+* Bump `eslint-plugin-regexp` from ^1.15.0 to ^2.0.0.  See [Release
+  Notes](https://github.com/ota-meshi/eslint-plugin-regexp/releases/tag/v2.0.0).
+* Enable [`prefer-object-has-own`](https://eslint.org/docs/latest/rules/prefer-object-has-own) ([e743137](https://github.com/kevinoid/eslint-config-kevinoid/commit/e74313792d899e5e85c9c6f12bb80d539c69d462))
+* Enable [`unicorn/prefer-at`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-at.md) ([294d4ea](https://github.com/kevinoid/eslint-config-kevinoid/commit/294d4eaa045989e85e130abd0748fcd1ed918db3))
+* Re-enable `node` env for `fetch` global ([3779eec](https://github.com/kevinoid/eslint-config-kevinoid/commit/3779eec0e1897ce32c414d49056647bb124f3755))
+
+
 # [31.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v31.0.0...v31.1.0) (2023-10-01)
 
 ### Features
