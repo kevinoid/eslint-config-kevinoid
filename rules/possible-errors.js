@@ -5,6 +5,10 @@
 
 module.exports = {
   "rules": {
+    // disallow expressions where the operation doesn't affect the value
+    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    "no-constant-binary-expression": "error",
+
     // disallow constant expressions in conditions
     "no-constant-condition": "error",
 
