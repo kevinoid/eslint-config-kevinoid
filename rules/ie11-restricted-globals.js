@@ -22,9 +22,8 @@ module.exports = {
           // see https://eslint.org/docs/rules/no-restricted-globals#options
           const name = restriction.name || restriction;
           assert.strictEqual(typeof name, "string");
-          return true  // for consistent formatting below
-            // Allow globally since not supported on Number
-            && name !== "isFinite"
+          // Allow globally since not supported on Number
+          return name !== "isFinite"
             // Allow globally since not supported on Number
             && name !== "isNaN";
         }),
