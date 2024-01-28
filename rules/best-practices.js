@@ -36,6 +36,10 @@ module.exports = {
     // (which can be useful for inline comment alignment)
     "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
+    // disallow calls to the Object constructor without an argument
+    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    "no-object-constructor": "error",
+
     // allow reassignment of function parameters
     // simplicity for optional arguments outweighs the perf advantage, usually
     "no-param-reassign": "off",
