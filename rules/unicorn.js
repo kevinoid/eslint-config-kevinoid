@@ -112,6 +112,14 @@ module.exports = {
     // consistency advantage doesn't outweigh perf and backwards compat
     "unicorn/prefer-query-selector": "off",
 
+    // don't prefer using the `String.raw` tag to avoid escaping `\`
+    // it often makes the combined literal longer
+    // it's much less performant
+    // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/2048#issuecomment-2122922399
+    // it can make code (particularly RegExp) harder to read (due to being uncommon)
+    // literals are inconsistent: with escapes can't use String.raw, no \ don't need it
+    "unicorn/prefer-string-raw": "off",
+
     // don't prefer Reflect.apply() over Function#apply()
     // although it is less verbose than Function.prototype.apply.call, I don't
     // see the advantage over .apply (since user-provided functions can throw
