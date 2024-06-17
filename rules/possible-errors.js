@@ -6,7 +6,7 @@
 module.exports = {
   "rules": {
     // disallow expressions where the operation doesn't affect the value
-    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    // TODO [eslint@>=9]: Remove.  Included in default config.
     "no-constant-binary-expression": "error",
 
     // disallow constant expressions in conditions
@@ -23,6 +23,7 @@ module.exports = {
     "no-new-native-nonconstructor": "error",
 
     // disallow unused private class members
+    // TODO [eslint@>=9]: Remove.  Included in default config.
     "no-unused-private-class-members": "error"
   }
 };

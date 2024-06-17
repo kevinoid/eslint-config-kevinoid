@@ -12,7 +12,7 @@ module.exports = {
     "curly": ["error", "all"],
 
     // disallow empty static blocks
-    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
+    // TODO [eslint@>=9]: Remove.  Included in default config.
     "no-empty-static-block": "error",
 
     // disallow unnecessary parentheses
