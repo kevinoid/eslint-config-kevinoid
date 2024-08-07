@@ -59,7 +59,7 @@
   },
   "peerDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-jsdoc": "^49.0.0",
     "eslint-plugin-n": "^17.1.0",
     "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-regexp": "^2.0.0",
@@ -70,7 +70,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-find-rules": "^4.0.0",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-jsdoc": "^49.0.0",
     "eslint-plugin-n": "^17.1.0",
     "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-regexp": "^2.0.0",
