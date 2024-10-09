@@ -80,5 +80,11 @@
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0",
     "npm": ">=1.3.7"
+  },
+  "david": {
+    "//": "Ignore eslint pending https://github.com/airbnb/javascript/issues/2961",
+    "ignore": [
+      "eslint"
+    ]
   }
 }
