@@ -18,12 +18,11 @@
   Notes](https://github.com/eslint-community/eslint-plugin-n/releases).
 * Bump `eslint-plugin-promise` from ^6.0.0 to ^7.0.0.  See [Release
   Notes](https://github.com/eslint-community/eslint-plugin-promise/releases).
-- Bump `globals` from ^13.0.0 to ^15.0.0.  See [Release
-  Notes](https://github.com/sindresorhus/globals/releases).
 
 ### Features
 
-
+- Bump `globals` from ^13.0.0 to ^15.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/globals/releases).
 
 
 # [32.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v31.1.0...v32.0.0) (2023-10-20)
