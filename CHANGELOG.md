@@ -1,3 +1,31 @@
+# [33.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v32.0.0...v33.0.0) (2024-10-31)
+
+### BREAKING CHANGES
+
+* Require Node.js `^18.18.0 || ^20.9.0 || >=21.1.0` for ESLint 9 and plugins ([57c8eca](https://github.com/kevinoid/eslint-config-kevinoid/commit/57c8eca20891f86c2b4b3da0a3cd457f14c630d8))
+* Enable [`no-object-constructor`](https://eslint.org/docs/latest/rules/no-object-constructor) rule ([dcc73f3](https://github.com/kevinoid/eslint-config-kevinoid/commit/dcc73f3de94f5b08f7aa9c3e4e40e4973ec208d0))
+* Enable [`no-constant-binary-expression`](https://eslint.org/docs/latest/rules/no-constant-binary-expression) rule ([566df02](https://github.com/kevinoid/eslint-config-kevinoid/commit/566df0245564eac291408b321ad7a00d19edce93))
+* Bump `eslint-plugin-unicorn` from ^48.0.0 to ^56.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+  - Enable new rule [`prefer-global-this`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-global-this.md)
+  - Enable new rule [`prefer-math-min-max`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-math-min-max.md)
+  - Enable new rule [`consistent-existence-index-check`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-existence-index-check.md)
+  - Enable new rule: [`no-length-as-slice-end`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-length-as-slice-end.md)
+  - Disable [`better-regex`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/better-regex.md), which is no longer recommended.
+* Bump `eslint-plugin-jsdoc` from ^46.0.0 to ^50.0.0.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases).
+* Bump `eslint-plugin-n` from ^16.0.0 to ^17.1.0.  See [Release
+  Notes](https://github.com/eslint-community/eslint-plugin-n/releases).
+* Bump `eslint-plugin-promise` from ^6.0.0 to ^7.0.0.  See [Release
+  Notes](https://github.com/eslint-community/eslint-plugin-promise/releases).
+- Bump `globals` from ^13.0.0 to ^15.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/globals/releases).
+
+### Features
+
+
+
+
 # [32.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v31.1.0...v32.0.0) (2023-10-20)
 
 ### BREAKING CHANGES
