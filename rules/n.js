@@ -15,6 +15,14 @@ module.exports = {
 
     // allow process.exit()
     // this rule is redundant with the built-in no-process-exit rule
-    "n/no-process-exit": "off"
+    "n/no-process-exit": "off",
+
+    // disallow unsupported Node.js built-ins
+    // Ignore fetch experimental warning on Node.js >=18 <21
+    "n/no-unsupported-features/node-builtins": ["error", {
+      "ignores": [
+        "fetch"
+      ]
+    }]
   }
 };
