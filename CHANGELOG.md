@@ -1,3 +1,12 @@
+# [33.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.0.0...v33.1.0) (2024-11-02)
+
+### Features
+
+* Configure `n/no-unsupported-features/node-builtins` to ignore `fetch`, due to
+  unnecessary warnings about experimental status on Node.js 18-20
+  ([6555383](https://github.com/kevinoid/eslint-config-kevinoid/commit/655538336b1a99cb682c235624799fdaef23e608))
+
+
 # [33.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v32.0.0...v33.0.0) (2024-10-31)
 
 ### BREAKING CHANGES
