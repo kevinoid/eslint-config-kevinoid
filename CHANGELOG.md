@@ -1,3 +1,14 @@
+# [33.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.1.0...v33.2.0) (2024-11-02)
+
+### Features
+
+* Configure `n/no-unsupported-features/node-builtins` to allow experimental features
+  ([aa803d8](https://github.com/kevinoid/eslint-config-kevinoid/commit/aa803d86d264c8ab30c21bbd9c9821d7ce10fef6))
+* Configure `n/no-unsupported-features/node-builtins` to stop ignoring
+  `fetch`, which is now allowed as an experimental feature
+  ([aa803d8](https://github.com/kevinoid/eslint-config-kevinoid/commit/aa803d86d264c8ab30c21bbd9c9821d7ce10fef6))
+
+
 # [33.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.0.0...v33.1.0) (2024-11-02)
 
 ### Features
