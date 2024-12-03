@@ -33,6 +33,7 @@ This package includes configurations for several different environments:
 
 | Name                                    | Description                              |
 | --------------------------------------- | ---------------------------------------- |
+| `@kevinoid/eslint-config/browser`       | Modern browsers                          |
 | `@kevinoid/eslint-config/ie11`          | Browsers including Internet Explorer 11. |
 | `@kevinoid/eslint-config/nodejs`        | Node 6 and later.                        |
 | `@kevinoid/eslint-config/webextensions` | [Browser Extensions](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions) |

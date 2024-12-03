@@ -22,6 +22,8 @@
     "!**/.*"
   ],
   "exports": {
+    "./browser": "./browser.js",
+    "./browser.js": "./browser.js",
     "./ie11": "./ie11.js",
     "./ie11.js": "./ie11.js",
     "./package.json": "./package.json",
@@ -43,8 +45,9 @@
     "postpublish": "git push --follow-tags origin main && echo Remember to update GitHub Releases from CHANGELOG.md",
     "preversion": "depcheck --ignores=\"eslint-*,rimraf\" && david && git-branch-is main && hub-ci-status -vv --wait",
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
-    "test-eslint": "npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
+    "test-eslint": "npm run test-eslint-browser && npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
+    "test-eslint-browser": ": | eslint --no-eslintrc -c browser.js --stdin",
     "test-eslint-ie11": ": | eslint --no-eslintrc -c ie11.js --stdin",
     "test-eslint-node": ": | eslint --no-eslintrc -c nodejs.js --stdin",
     "test-eslint-webextensions": ": | eslint --no-eslintrc -c webextensions.js --stdin",
