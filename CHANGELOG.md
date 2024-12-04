@@ -1,3 +1,10 @@
+# [33.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.2.0...v33.3.0) (2024-12-03)
+
+### Features
+
+* New `@kevinoid/eslint-config/browser` configuration for modern browsers.
+
+
 # [33.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.1.0...v33.2.0) (2024-11-02)
 
 ### Features
