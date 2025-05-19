@@ -68,8 +68,8 @@ jobs:
         - ubuntu-latest
         - windows-latest
         node:
-        - '18'
-        - 'latest'
+        - '20.0'
+        - latest
         exclude:
         # Exclude os/version already run in test-primary
         - arch: x64
