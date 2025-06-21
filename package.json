@@ -71,7 +71,7 @@
   "devDependencies": {
     "eslint": "^8.50.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-find-rules": "^4.0.0",
+    "eslint-find-rules": "^5.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsdoc": "^51.1.1",
     "eslint-plugin-n": "^17.1.0",
