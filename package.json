@@ -58,7 +58,7 @@
     "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is hub-ci-status"
   },
   "dependencies": {
-    "globals": "^15.0.0"
+    "globals": "^16.2.0"
   },
   "peerDependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
