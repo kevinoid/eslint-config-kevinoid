@@ -16,6 +16,8 @@ on:   # yamllint disable-line rule:truthy
     - template
   workflow_dispatch: {}
 
+permissions: {}
+
 jobs:
   test-primary:
     name: Lint and Test on Node.js * x64 on ubuntu-latest
