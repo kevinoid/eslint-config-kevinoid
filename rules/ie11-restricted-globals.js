@@ -6,7 +6,7 @@
 const assert = require("node:assert");
 
 const airbnbVariables =
-  require("eslint-config-airbnb-base/rules/variables");
+  require("../eslint-config-airbnb-base/rules/variables.js");
 
 module.exports = {
   "rules": {

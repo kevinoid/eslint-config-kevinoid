@@ -6,9 +6,9 @@
 
 const { FlatCompat } = require("@eslint/eslintrc");
 const js = require("@eslint/js");
-const airbnbStyle =
-  require("eslint-config-airbnb-base/rules/style");
 const globals = require("globals");
+
+const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
 
 const compat = new FlatCompat({
   "baseDirectory": __dirname,
@@ -20,7 +20,9 @@ const compat = new FlatCompat({
 module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
-    "airbnb-base/legacy",
+    // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
+    // https://github.com/airbnb/javascript/issues/2961
+    "./eslint-config-airbnb-base/legacy",
 
     // ESLint built-in rules
     "./rules/best-practices",

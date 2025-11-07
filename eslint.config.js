@@ -33,5 +33,20 @@ module.exports = [
     ]
   },
   ...nodejs,
-  ourRules
+  ourRules,
+  // Adjust style to minimize divergence of vendored eslint-config-airbnb-base
+  {
+    "name": "airbnb-base rules",
+    "files": [
+      "eslint-config-airbnb-base/**/*.js"
+    ],
+    "rules": {
+      "comma-dangle": "off",
+      "quotes": ["error", "single"],
+      "quote-props": ["error", "as-needed"],
+      "strict": ["error", "never"],
+      "unicorn/empty-brace-spaces": "off",
+      "unicorn/prefer-spread": "off"
+    }
+  }
 ];

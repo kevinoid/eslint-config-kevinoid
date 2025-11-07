@@ -3,7 +3,7 @@
 
 "use strict";
 
-const airbnbImports = require("eslint-config-airbnb-base/rules/imports");
+const airbnbImports = require("../eslint-config-airbnb-base/rules/imports.js");
 
 const airbnbImportOpts = airbnbImports.rules["import/order"][1];
 const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];

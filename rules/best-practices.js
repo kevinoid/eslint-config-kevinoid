@@ -4,7 +4,7 @@
 "use strict";
 
 const airbnbBestPractices =
-  require("eslint-config-airbnb-base/rules/best-practices");
+  require("../eslint-config-airbnb-base/rules/best-practices.js");
 
 module.exports = {
   "rules": {

@@ -4,7 +4,7 @@
 "use strict";
 
 const airbnbES6 =
-  require("eslint-config-airbnb-base/rules/es6");
+  require("../eslint-config-airbnb-base/rules/es6.js");
 
 const airbnbPreferDestructuring = airbnbES6.rules["prefer-destructuring"];
 

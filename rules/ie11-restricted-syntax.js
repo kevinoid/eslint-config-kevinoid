@@ -4,7 +4,7 @@
 "use strict";
 
 const airbnbStyle =
-  require("eslint-config-airbnb-base/rules/style");
+  require("../eslint-config-airbnb-base/rules/style.js");
 
 module.exports = {
   "rules": {

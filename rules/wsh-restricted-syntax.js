@@ -4,7 +4,7 @@
 "use strict";
 
 const airbnbStyle =
-  require("eslint-config-airbnb-base/rules/style");
+  require("../eslint-config-airbnb-base/rules/style.js");
 
 // Syntax selectors which are restricted in airbnb-base, should not be in WSH
 const unrestricted = {
