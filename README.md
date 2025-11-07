@@ -13,20 +13,6 @@ configs](https://eslint.org/docs/developer-guide/shareable-configs) for
 style).
 
 
-## Installation
-
-Before using any configuration from this package, it must be installed, either
-globally or locally, which can be done using the following steps:
-
-1.  Install `peerDependencies` (and transitive `peerDependencies`) for
-    `@kevinoid/eslint-config`.  This can be done using `npx install-peerdeps
-    --dev @kevinoid/eslint-config`,
-    [`install-peerdeps`](https://www.npmjs.com/package/install-peerdeps) or
-    manually based on the output from `npm info @kevinoid/eslint-config
-    peerDependencies`.
-2.  Install this package (e.g. `npm install @kevinoid/eslint-config`).
-
-
 ## Usage
 
 This package includes configurations for several different environments:
@@ -41,25 +27,17 @@ This package includes configurations for several different environments:
 
 Add the chosen configuration to
 [`extends`](https://eslint.org/docs/developer-guide/shareable-configs#using-a-shareable-config)
-in `.eslintrc`, for example:
+in `eslint.config.js`, for example:
 
-```json
-{
-  "extends": "@kevinoid/eslint-config/nodejs"
-}
-```
+```js
+import kevinoidConfig from '@kevinoid/eslint-config';
+import { defineConfig } from 'eslint/config';
 
-or `eslintConfig` in `package.json`, for example:
-
-```json
-{
-  "name": "packagename",
-  "version": "1.0.0",
-  ...
-  "eslintConfig": {
-    "extends": "@kevinoid/eslint-config/nodejs"
+export default defineConfig([
+  {
+    extends: [kevinoidConfig]
   }
-}
+]);
 ```
 
 
