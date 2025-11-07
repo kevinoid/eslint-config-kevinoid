@@ -11,10 +11,6 @@ module.exports = {
     // require curly braces around all control statements, not just multi-line.
     "curly": ["error", "all"],
 
-    // disallow empty static blocks
-    // TODO [eslint@>=9]: Remove.  Included in default config.
-    "no-empty-static-block": "error",
-
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
     "no-extra-parens": ["error", "all", {
