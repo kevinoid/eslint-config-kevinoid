@@ -23,7 +23,7 @@ module.exports = {
     "no-new-native-nonconstructor": "error",
 
     // disallow unused private class members
-    // TODO [eslint@>=9]: Remove.  Included in default config.
+    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
     "no-unused-private-class-members": "error"
   }
 };
