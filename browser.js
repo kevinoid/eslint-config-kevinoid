@@ -3,7 +3,17 @@
 
 "use strict";
 
-module.exports = {
+const { FlatCompat } = require("@eslint/eslintrc");
+const js = require("@eslint/js");
+
+const compat = new FlatCompat({
+  "baseDirectory": __dirname,
+  "resolvePluginsRelativeTo": __dirname,
+  "recommendedConfig": js.configs.recommended,
+  "allConfig": js.configs.all
+});
+
+module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
     "airbnb-base",
@@ -47,4 +57,4 @@ module.exports = {
     // don't prefer modules
     "unicorn/prefer-module": "off"
   }
-};
+});

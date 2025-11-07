@@ -1,14 +1,21 @@
 "use strict";
 
-module.exports = {
-  "extends": "./nodejs",
+const nodejs = require("./nodejs.js");
 
+const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
   "rules": {
     "comma-dangle": ["error", "never"],
     "max-len": "off",
     "quotes": ["error", "double"],
     "quote-props": ["error", "always"],
+
+    // Imports from this file should be devDependencies
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": [
+        "eslint.config.js"
+      ]
+    }],
 
     // ESLint Shareable Configs must be CommonJS
     // (Until RFC 9 is implemented)
@@ -17,3 +24,14 @@ module.exports = {
     "unicorn/prefer-module": "off"
   }
 };
+
+module.exports = [
+  {
+    "ignores": [
+      "coverage/",
+      "doc/"
+    ]
+  },
+  ...nodejs,
+  ourRules
+];

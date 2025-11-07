@@ -4,11 +4,20 @@
 
 "use strict";
 
+const { FlatCompat } = require("@eslint/eslintrc");
+const js = require("@eslint/js");
 const airbnbStyle =
   require("eslint-config-airbnb-base/rules/style");
 const globals = require("globals");
 
-module.exports = {
+const compat = new FlatCompat({
+  "baseDirectory": __dirname,
+  "resolvePluginsRelativeTo": __dirname,
+  "recommendedConfig": js.configs.recommended,
+  "allConfig": js.configs.all
+});
+
+module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
     "airbnb-base/legacy",
@@ -103,4 +112,4 @@ module.exports = {
     // since WSH doesn't support Array.isArray()
     "unicorn/no-instanceof-array": "off"
   }
-};
+});

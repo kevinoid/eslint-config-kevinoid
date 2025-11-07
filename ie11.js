@@ -3,7 +3,17 @@
 
 "use strict";
 
-module.exports = {
+const { FlatCompat } = require("@eslint/eslintrc");
+const js = require("@eslint/js");
+
+const compat = new FlatCompat({
+  "baseDirectory": __dirname,
+  "resolvePluginsRelativeTo": __dirname,
+  "recommendedConfig": js.configs.recommended,
+  "allConfig": js.configs.all
+});
+
+module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
     // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
@@ -89,4 +99,4 @@ module.exports = {
       "ignoreReadBeforeAssign": true
     }]
   }
-};
+});

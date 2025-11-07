@@ -3,6 +3,16 @@
 
 "use strict";
 
+const { FlatCompat } = require("@eslint/eslintrc");
+const js = require("@eslint/js");
+
+const compat = new FlatCompat({
+  "baseDirectory": __dirname,
+  "resolvePluginsRelativeTo": __dirname,
+  "recommendedConfig": js.configs.recommended,
+  "allConfig": js.configs.all
+});
+
 const requirePeer = require("./lib/require-peer.js");
 const { "rules": { "no-restricted-properties": noRestrictedProps } } =
   require("./rules/best-practices.js");
@@ -10,7 +20,7 @@ const { "rules": { "no-restricted-properties": noRestrictedProps } } =
 const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
   requirePeer("eslint-plugin-n");
 
-module.exports = {
+module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
     "airbnb-base",
@@ -85,4 +95,4 @@ module.exports = {
       "unusedExports": true
     }]
   }
-};
+});

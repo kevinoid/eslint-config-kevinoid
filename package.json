@@ -19,7 +19,8 @@
     "*.js",
     "lib/",
     "rules/*.js",
-    "!**/.*"
+    "!**/.*",
+    "!**/eslint.config.*"
   ],
   "exports": {
     "./browser": "./browser.js",
@@ -47,37 +48,31 @@
     "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
     "test-eslint": "npm run test-eslint-browser && npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
-    "test-eslint-browser": ": | eslint --no-eslintrc -c browser.js --stdin",
-    "test-eslint-ie11": ": | eslint --no-eslintrc -c ie11.js --stdin",
-    "test-eslint-node": ": | eslint --no-eslintrc -c nodejs.js --stdin",
-    "test-eslint-webextensions": ": | eslint --no-eslintrc -c webextensions.js --stdin",
-    "test-eslint-wsh": ": | eslint --no-eslintrc -c wsh.js --stdin",
+    "test-eslint-browser": ": | eslint --no-config-lookup -c browser.js --rule \"unicorn/no-empty-file: 0\" --stdin",
+    "test-eslint-ie11": ": | eslint --no-config-lookup -c ie11.js --rule \"unicorn/no-empty-file: 0\" --stdin",
+    "test-eslint-node": ": | eslint --no-config-lookup -c nodejs.js --rule \"unicorn/no-empty-file: 0\" --stdin",
+    "test-eslint-webextensions": ": | eslint --no-config-lookup -c webextensions.js --rule \"unicorn/no-empty-file: 0\" --stdin",
+    "test-eslint-wsh": ": | eslint --no-config-lookup -c wsh.js --rule \"unicorn/no-empty-file: 0\" --stdin",
     "test-peer-versions": "peer-version-check package.json",
     "test-peer-versions-ci": "npm run test-peer-versions",
     "version": "npm run changelog && echo && echo === Please edit CHANGELOG.md as desired, then exit === && echo && \"${npm_config_shell:-${SHELL:-bash}}\" && git commit -m \"Update CHANGELOG.md for $npm_package_version\" CHANGELOG.md",
     "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is hub-ci-status"
   },
   "dependencies": {
-    "globals": "^16.2.0"
-  },
-  "peerDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.39.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-jsdoc": "^52.0.0",
-    "eslint-plugin-n": "^17.1.0",
-    "eslint-plugin-promise": "^7.0.0",
-    "eslint-plugin-regexp": "^2.0.0",
-    "eslint-plugin-unicorn": "^56.0.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.50.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-find-rules": "^5.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsdoc": "^52.0.0",
     "eslint-plugin-n": "^17.1.0",
     "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-regexp": "^2.0.0",
     "eslint-plugin-unicorn": "^56.0.0",
+    "globals": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-find-rules": "^5.0.0",
     "peer-version-check": "^0.1.0"
   },
   "engines": {
