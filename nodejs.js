@@ -20,27 +20,10 @@ const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
   require("eslint-plugin-n");
 
 module.exports = compat.config({
-  // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
-    "eslint:recommended",
+    "./common",
 
-    // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
-    // https://github.com/airbnb/javascript/issues/2961
-    "./eslint-config-airbnb-base",
-
-    // ESLint built-in rules
-    "./rules/es6",
-    "./rules/best-practices",
-    "./rules/possible-errors",
-    "./rules/style",
-    "./rules/variables",
-
-    // Plugin rules
     "./rules/import",
-    "./rules/jsdoc",
-    "./rules/promise",
-    "./rules/regexp",
-    "./rules/unicorn",
 
     // extend node plugin last because it sets parserOptions based on type
     // field from nearest ancestor package.json to process.cwd().

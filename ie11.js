@@ -14,31 +14,17 @@ const compat = new FlatCompat({
 });
 
 module.exports = compat.config({
-  // Based on Airbnb with changes to match Node core and my prefs.
   "extends": [
-    "eslint:recommended",
-
-    // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
-    // https://github.com/airbnb/javascript/issues/2961
     // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
-    "./eslint-config-airbnb-base/legacy",
-
-    // ESLint built-in rules
-    "./rules/best-practices",
-    "./rules/possible-errors",
-    "./rules/style",
-    "./rules/variables",
+    "./common-legacy",
 
     // IE-specific rules
     "./rules/ie11-restricted-globals",
     "./rules/ie11-restricted-properties",
     "./rules/ie11-restricted-syntax",
 
-    // Plugin rules
-    "./rules/jsdoc",
+    // Promise polyfills are common enough to lint
     "./rules/promise",
-    "./rules/regexp",
-    "./rules/unicorn",
 
     // IE-specific plugin rules
     "./rules/ie11-unicorn"
