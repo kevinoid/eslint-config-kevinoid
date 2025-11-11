@@ -40,12 +40,13 @@ module.exports = {
     "ecmaFeatures": {
       "generators": true
     },
-    // It would be preferable to use the version set by eslint-plugin-n
-    // (determined based on package.json#engines/node).  Unfortunately, it
-    // currently sets ecmaVersion: 2019 unconditionally, which lacks support
-    // for widely used language features (e.g. import() and import.meta in
-    // 2021, top-level await in 2022).
-    "ecmaVersion": 2022
+    // Note: eslint-plugin-n >= 16 sets ecmaVersion to 2021:
+    // https://github.com/eslint-community/eslint-plugin-n/pull/96
+    // It would be preferable to set from package.json#engines/node:
+    // https://github.com/eslint-community/eslint-plugin-n/issues/42#issuecomment-1267139576
+    // Until then, set based on supported LTS version (Node 20 supports ES2023)
+    // TODO [engine:node@>=21]: Bump based on https://node.green/
+    "ecmaVersion": 2023
   },
 
   "env": {
