@@ -13,12 +13,11 @@ const compat = new FlatCompat({
   "allConfig": js.configs.all
 });
 
-const requirePeer = require("./lib/require-peer.js");
 const { "rules": { "no-restricted-properties": noRestrictedProps } } =
   require("./rules/best-practices.js");
 
 const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
-  requirePeer("eslint-plugin-n");
+  require("eslint-plugin-n");
 
 module.exports = compat.config({
   // Based on Airbnb with changes to match Node core and my prefs.

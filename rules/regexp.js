@@ -3,7 +3,6 @@
 
 "use strict";
 
-const requirePeer = require("../lib/require-peer.js");
 const warnToError = require("../lib/warn-to-error.js");
 
 const {
@@ -13,7 +12,7 @@ const {
       ...regexpConfig
     }
   }
-} = requirePeer("eslint-plugin-regexp");
+} = require("eslint-plugin-regexp");
 
 // Configure all rules as error.
 const errorRules = warnToError(rules);
