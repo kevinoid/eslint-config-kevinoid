@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/possible-errors",
+
   "rules": {
     // disallow constant expressions in conditions
     "no-constant-condition": "error",

@@ -7,6 +7,8 @@ const airbnbStyle =
   require("../eslint-config-airbnb-base/rules/style.js");
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/style",
+
   "rules": {
     // enforce line breaks after opening and before closing array brackets
     "array-bracket-newline": ["error", "consistent"],

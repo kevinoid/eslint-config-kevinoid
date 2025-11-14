@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/variables",
+
   "rules": {
     // disallow shadowing of variables (including builtins and hoisted funcs)
     "no-shadow": ["error", { "builtinGlobals": true, "hoist": "all" }],

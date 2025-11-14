@@ -19,6 +19,8 @@ const ie11Unicorn = require("./rules/ie11-unicorn.js");
 const rulesPromise = require("./rules/promise.js");
 
 const ie11Config = {
+  "name": "eslint-config-kevinoid/ie11",
+
   "languageOptions": {
     // Note: ES6 features can't be controlled by ecmaFeatures anymore, so
     // ecmaVersion: 6 is required to parse const/let and no-restricted-syntax

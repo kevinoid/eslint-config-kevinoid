@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/regexp",
+
   "rules": {
     // Don't require consistent letter case
     // Capitalization of escape sequences is enforced by unicorn/escape-case.

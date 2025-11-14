@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/n",
+
   "rules": {
     // require file extensions in import declarations
     // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions

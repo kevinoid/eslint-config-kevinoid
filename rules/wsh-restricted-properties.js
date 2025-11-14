@@ -27,6 +27,8 @@ const restricted = {
 };
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/wsh-restricted-properties",
+
   "rules": {
     "no-restricted-properties": Array.prototype.concat.apply(
       // Update IE11 messages to WSH

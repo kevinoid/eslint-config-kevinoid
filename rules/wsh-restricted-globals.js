@@ -8,6 +8,8 @@ const ie11RestrictedGlobals = require("./ie11-restricted-globals.js");
 const notSupported = "Not supported by JScript.";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/wsh-restricted-globals",
+
   "rules": {
     "no-restricted-globals": [
       "error",

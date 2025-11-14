@@ -18,6 +18,8 @@ const n = require("./rules/n.js");
 const { sourceType } = nConfig.languageOptions;
 
 const nodeConfig = {
+  "name": "eslint-config-kevinoid/nodejs",
+
   "languageOptions": {
     // Note: eslint-plugin-n >= 16 sets ecmaVersion to 2021:
     // https://github.com/eslint-community/eslint-plugin-n/pull/96

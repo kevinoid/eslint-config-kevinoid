@@ -9,6 +9,8 @@ const airbnbVariables =
   require("../eslint-config-airbnb-base/rules/variables.js");
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/ie11-restricted-globals",
+
   "rules": {
     "no-restricted-globals": [
       "error",

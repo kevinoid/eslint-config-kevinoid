@@ -9,6 +9,8 @@ const airbnbImportOpts = airbnbImports.rules["import/order"][1];
 const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/import",
+
   "rules": {
     // Ensure consistent use of file extension within the import path
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md

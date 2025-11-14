@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/promise",
+
   "rules": {
     // Don't require return inside then() functions
     // Promises can be used for sequencing functions with no return value

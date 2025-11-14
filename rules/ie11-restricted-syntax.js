@@ -7,6 +7,8 @@ const airbnbStyle =
   require("../eslint-config-airbnb-base/rules/style.js");
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/ie11-restricted-syntax",
+
   "rules": {
     "no-restricted-syntax": [
       "error",

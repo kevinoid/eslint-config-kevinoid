@@ -7,6 +7,8 @@ const airbnbBestPractices =
   require("../eslint-config-airbnb-base/rules/best-practices.js");
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/best-practices",
+
   "rules": {
     // require curly braces around all control statements, not just multi-line.
     "curly": ["error", "all"],

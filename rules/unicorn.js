@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/unicorn",
+
   "rules": {
     // don't require regex character classes over character sets
     // classes are shorter but less understandable to programmers familiar with

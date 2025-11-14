@@ -15,6 +15,8 @@ const wshRestrictedProperties = require("./rules/wsh-restricted-properties.js");
 const wshRestrictedSyntax = require("./rules/wsh-restricted-syntax.js");
 
 const wshConfig = {
+  "name": "eslint-config-kevinoid/wsh",
+
   "languageOptions": {
     "ecmaVersion": 3,
     "sourceType": "script",

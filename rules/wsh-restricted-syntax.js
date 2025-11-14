@@ -15,6 +15,8 @@ const unrestricted = {
 };
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/wsh-restricted-syntax",
+
   "rules": {
     "no-restricted-syntax":
       airbnbStyle

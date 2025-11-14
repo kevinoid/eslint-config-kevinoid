@@ -3,6 +3,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/ie11-unicorn",
+
   "rules": {
     // allow use of a for loop that can be replaced with a for-of loop.
     // since IE 11 doesn't support for-of loops.

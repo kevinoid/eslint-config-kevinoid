@@ -4,6 +4,8 @@
 "use strict";
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/jsdoc",
+
   "rules": {
     // Allow single- and multi-line blocks, with text on first/last line.
     "jsdoc/multiline-blocks": "off",

@@ -8,6 +8,8 @@ const globals = require("globals");
 const common = require("./common.js");
 
 module.exports = [...common, {
+  "name": "eslint-config-kevinoid/browser",
+
   "languageOptions": {
     "sourceType": "script",
     "globals": {

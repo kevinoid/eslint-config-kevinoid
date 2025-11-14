@@ -71,6 +71,8 @@ const restricted = {
 };
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/ie11-restricted-properties",
+
   "rules": {
     "no-restricted-properties": Array.prototype.concat.apply(
       bestPractices

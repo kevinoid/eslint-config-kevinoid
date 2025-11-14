@@ -9,6 +9,8 @@ const airbnbES6 =
 const airbnbPreferDestructuring = airbnbES6.rules["prefer-destructuring"];
 
 module.exports = {
+  "name": "eslint-config-kevinoid/rules/es6",
+
   "rules": {
     // Prefer destructuring, but not for array assignments
     // since I don't usually find `[,x] = a` preferable to `x = a[1]`
