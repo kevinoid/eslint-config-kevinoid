@@ -80,7 +80,7 @@ module.exports = {
     // Reports modules without any exports, or with unused exports
     // https://github.com/benmosher/eslint-plugin-import/blob/f63dd261809de6883b13b6b5b960e6d7f42a7813/docs/rules/no-unused-modules.md
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
-    "import/no-unused-modules": sourceType === "script" ? "off" : ["error", {
+    "import/no-unused-modules": sourceType !== "module" ? "off" : ["error", {
       "missingExports": true,
       "unusedExports": true
     }]
