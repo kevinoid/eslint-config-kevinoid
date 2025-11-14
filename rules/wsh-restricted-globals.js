@@ -3,27 +3,12 @@
 
 "use strict";
 
-const ie11RestrictedGlobals = require("./ie11-restricted-globals.js");
-
-const notSupported = "Not supported by JScript.";
-
 module.exports = {
   "name": "eslint-config-kevinoid/rules/wsh-restricted-globals",
 
   "rules": {
     "no-restricted-globals": [
       "error",
-
-      ...ie11RestrictedGlobals
-        .rules["no-restricted-globals"]
-        .slice(1)
-        // Adjust "Not supported by IE" messages for JScript
-        .map((restriction) => {
-          const { message } = restriction;
-          return message && message.startsWith("Not supported")
-            ? { ...restriction, "message": notSupported }
-            : restriction;
-        }),
 
       // Additional globals not supported by JScript
       ...[
@@ -37,7 +22,7 @@ module.exports = {
         "valueOf"
       ].map((name) => ({
         name,
-        "message": notSupported
+        "message": "Not supported by JScript."
       })),
 
       // WSH globals which are restricted
