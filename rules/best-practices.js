@@ -15,7 +15,7 @@ module.exports = {
 
     // disallow unnecessary parentheses
     // allow unnecessary parentheses where useful for disambiguation
-    "no-extra-parens": ["error", "all", {
+    "@stylistic/no-extra-parens": ["error", "all", {
       "conditionalAssign": false,
       "enforceForArrowConditionals": false,
       "nestedBinaryExpressions": false,
@@ -32,7 +32,7 @@ module.exports = {
 
     // disallow multiple spaces, except before EOL comments
     // (which can be useful for inline comment alignment)
-    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "@stylistic/no-multi-spaces": ["error", { "ignoreEOLComments": true }],
 
     // disallow calls to the Object constructor without an argument
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled

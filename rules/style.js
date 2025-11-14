@@ -11,10 +11,10 @@ module.exports = {
 
   "rules": {
     // enforce line breaks after opening and before closing array brackets
-    "array-bracket-newline": ["error", "consistent"],
+    "@stylistic/array-bracket-newline": ["error", "consistent"],
 
     // enforce line breaks between array elements
-    "array-element-newline": ["error", "consistent"],
+    "@stylistic/array-element-newline": ["error", "consistent"],
 
     // require camel case names (even for properties and destructuring)
     // Note: options object needed to override airbnb, values set for clarity.
@@ -28,7 +28,7 @@ module.exports = {
 
     // don't enforce consistent linebreak style
     // Allow developers to develop with native EOL.  VCS manages committed style.
-    "linebreak-style": "off",
+    "@stylistic/linebreak-style": "off",
 
     // Require logical assignment logical operator shorthand
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
@@ -41,7 +41,7 @@ module.exports = {
     // ignore lines which consist of a single string, URL, or RegExp literal,
     // possibly prefixed with comment opener or suffixed with ";" or ",".
     // (Not ESLint ignore props which ignores any lines which contain these.)
-    "max-len": ["error", 80, 2, {
+    "@stylistic/max-len": ["error", 80, 2, {
       "ignorePattern": "^\\s*((/?\\*|/[/])\\s*)?('[^'\\\\]*(\\\\.[^'\\\\]*)*'|\"[^\"\\\\]*(\\\\.[^\"\\\\]*)*\"|/[^/\\\\]*(\\\\.[^/\\\\]*)*/[gimuy]*|[^:/?#\\s]+:/[/]\\S+)[,;]?$"
     }],
 
@@ -84,12 +84,12 @@ module.exports = {
     "one-var": "off",
 
     // require initialized variables to be declared on separate lines
-    "one-var-declaration-per-line": ["error", "initializations"],
+    "@stylistic/one-var-declaration-per-line": ["error", "initializations"],
 
     // Requires operator at the beginning of the line in multiline statements
     // Airbnb prevents breaks around =, suggesting ().  I don't see the advantage.
     // Break after = looks better to me, so first assigned operand is farther left.
-    "operator-linebreak": ["error", "before", {
+    "@stylistic/operator-linebreak": ["error", "before", {
       "overrides": {
         "=": "after",
         "+=": "after",
@@ -112,7 +112,7 @@ module.exports = {
     "prefer-exponentiation-operator": "error",
 
     // space before function parens only for async arrow (as Node core does)
-    "space-before-function-paren": ["error", {
+    "@stylistic/space-before-function-paren": ["error", {
       "anonymous": "never",
       "named": "never",
       "asyncArrow": "always"

@@ -5,10 +5,10 @@ const nodejs = require("./nodejs.js");
 const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "max-len": "off",
-    "quotes": ["error", "double"],
-    "quote-props": ["error", "always"],
+    "@stylistic/comma-dangle": ["error", "never"],
+    "@stylistic/max-len": "off",
+    "@stylistic/quotes": ["error", "double"],
+    "@stylistic/quote-props": ["error", "always"],
 
     // Imports from this file should be devDependencies
     "import/no-extraneous-dependencies": ["error", {
@@ -41,9 +41,9 @@ module.exports = [
       "eslint-config-airbnb-base/**/*.js"
     ],
     "rules": {
-      "comma-dangle": "off",
-      "quotes": ["error", "single"],
-      "quote-props": ["error", "as-needed"],
+      "@stylistic/comma-dangle": "off",
+      "@stylistic/quotes": ["error", "single"],
+      "@stylistic/quote-props": ["error", "as-needed"],
       "strict": ["error", "never"],
       "unicorn/empty-brace-spaces": "off",
       "unicorn/prefer-spread": "off"

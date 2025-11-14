@@ -46,7 +46,7 @@ const ie11Config = {
     // lack of support in IE:
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#Browser_compatibility
     // Note: airbnb-base uses always-multiline, airbnb-base/legacy uses never.
-    "comma-dangle": ["error", {
+    "@stylistic/comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",
       "imports": "always-multiline",
