@@ -29,8 +29,10 @@ const ie11Config = {
     "ecmaVersion": 6,
     "sourceType": "script",
     "globals": {
-      // Note: IE11 doesn't support even most ES6 globals.
+      // Note: IE11 supports some ES2015 globals.
       // See https://kangax.github.io/compat-table/es6/#ie11
+      // Unsupported ES2015 globals are caught by no-restricted-globals rule.
+      ...globals.es2015,
       ...globals.browser
     }
   },
