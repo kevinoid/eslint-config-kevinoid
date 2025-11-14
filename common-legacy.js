@@ -3,7 +3,6 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
 const js = require("@eslint/js");
 const {
   "configs": {
@@ -21,6 +20,14 @@ const {
   }
 } = require("eslint-plugin-unicorn");
 
+// Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
+// https://github.com/airbnb/javascript/issues/2961
+const airbnbLegacy = require("./eslint-config-airbnb-base/legacy.js");
+const airbnbBestPractices = require("./eslint-config-airbnb-base/rules/best-practices.js");
+const airbnbErrors = require("./eslint-config-airbnb-base/rules/errors.js");
+const airbnbNode = require("./eslint-config-airbnb-base/rules/node.js");
+const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
+const airbnbVariables = require("./eslint-config-airbnb-base/rules/variables.js");
 const warnToError = require("./lib/warn-to-error.js");
 const rulesBestPractices = require("./rules/best-practices.js");
 const rulesJsdoc = require("./rules/jsdoc.js");
@@ -30,20 +37,26 @@ const rulesStyle = require("./rules/style.js");
 const rulesUnicorn = require("./rules/unicorn.js");
 const rulesVariables = require("./rules/variables.js");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname
-});
-
 module.exports = [
   {
     "name": "ESLint recommended",
     ...js.configs.recommended
   },
 
-  // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
-  // https://github.com/airbnb/javascript/issues/2961
-  ...compat.extends("./eslint-config-airbnb-base/legacy"),
+  {
+    "name": "eslint-config-airbnb-base/legacy",
+    // Include just rules to avoid undesirable settings and need for FlatCompat
+    "rules": {
+      // Note: Order from
+      // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.4/packages/eslint-config-airbnb-base/legacy.js
+      ...airbnbBestPractices.rules,
+      ...airbnbErrors.rules,
+      ...airbnbNode.rules,
+      ...airbnbStyle.rules,
+      ...airbnbVariables.rules,
+      ...airbnbLegacy.rules
+    }
+  },
 
   jsdocConfig,
 

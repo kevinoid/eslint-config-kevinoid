@@ -3,8 +3,17 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
 const js = require("@eslint/js");
+const {
+  "flatConfigs": {
+    "recommended": {
+      // eslint-plugin-import sets { ecmaVersion: 2018, sourceType: module } to
+      // ensure import is parsed.  Skip in favor of default ecmaVersion.
+      "languageOptions": importLanguageOptions,
+      ...importRecommended
+    }
+  }
+} = require("eslint-plugin-import");
 const {
   "configs": {
     "flat/recommended-error": jsdocConfig
@@ -26,6 +35,16 @@ const {
   }
 } = require("eslint-plugin-unicorn");
 
+// Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
+// https://github.com/airbnb/javascript/issues/2961
+const airbnbBestPractices = require("./eslint-config-airbnb-base/rules/best-practices.js");
+const airbnbErrors = require("./eslint-config-airbnb-base/rules/errors.js");
+const airbnbEs6 = require("./eslint-config-airbnb-base/rules/es6.js");
+const airbnbImports = require("./eslint-config-airbnb-base/rules/imports.js");
+const airbnbNode = require("./eslint-config-airbnb-base/rules/node.js");
+const airbnbStrict = require("./eslint-config-airbnb-base/rules/strict.js");
+const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
+const airbnbVariables = require("./eslint-config-airbnb-base/rules/variables.js");
 const warnToError = require("./lib/warn-to-error.js");
 const rulesBestPractices = require("./rules/best-practices.js");
 const rulesEs6 = require("./rules/es6.js");
@@ -37,20 +56,34 @@ const rulesStyle = require("./rules/style.js");
 const rulesUnicorn = require("./rules/unicorn.js");
 const rulesVariables = require("./rules/variables.js");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname
-});
-
 module.exports = [
   {
     "name": "ESLint recommended",
     ...js.configs.recommended
   },
 
-  // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
-  // https://github.com/airbnb/javascript/issues/2961
-  ...compat.extends("./eslint-config-airbnb-base"),
+  // Include eslint-plugin-import required by eslint-config-airbnb-base
+  {
+    "name": "eslint-plugin-import/config/flat/recommended",
+    ...importRecommended
+  },
+
+  {
+    "name": "eslint-config-airbnb-base",
+    // Include just rules to avoid undesirable settings and need for FlatCompat
+    "rules": {
+      // Note: Order from
+      // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.4/packages/eslint-config-airbnb-base/index.js
+      ...airbnbBestPractices.rules,
+      ...airbnbErrors.rules,
+      ...airbnbNode.rules,
+      ...airbnbStyle.rules,
+      ...airbnbVariables.rules,
+      ...airbnbEs6.rules,
+      ...airbnbImports.rules,
+      ...airbnbStrict.rules
+    }
+  },
 
   jsdocConfig,
 

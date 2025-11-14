@@ -19,6 +19,11 @@ const wshConfig = {
 
   "languageOptions": {
     "ecmaVersion": 3,
+    "parserOptions": {
+      "ecmaFeatures": {
+        "globalReturn": true
+      }
+    },
     "sourceType": "script",
 
     // Note: ESLint always includes ES5 globals

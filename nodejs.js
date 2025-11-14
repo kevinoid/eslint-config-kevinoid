@@ -28,6 +28,11 @@ const nodeConfig = {
     // Until then, set based on supported LTS version (Node 20 supports ES2023)
     // TODO [engine:node@>=21]: Bump based on https://node.green/
     "ecmaVersion": 2023,
+    "parserOptions": {
+      "ecmaFeatures": {
+        "globalReturn": true
+      }
+    },
     sourceType
   },
 
