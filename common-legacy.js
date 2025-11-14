@@ -16,7 +16,12 @@ const {
 } = require("eslint-plugin-regexp");
 const {
   "configs": {
-    "flat/recommended": unicornConfig
+    "flat/recommended": {
+      // eslint-plugin-unicorn sets globals.builtins, which are not necessarily
+      // supported in legacy environments
+      "languageOptions": unicornLanguageOptions,
+      ...unicornConfig
+    }
   }
 } = require("eslint-plugin-unicorn");
 
