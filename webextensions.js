@@ -3,34 +3,17 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
-const js = require("@eslint/js");
+const globals = require("globals");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname,
-  "recommendedConfig": js.configs.recommended,
-  "allConfig": js.configs.all
-});
+const common = require("./common.js");
 
-module.exports = compat.config({
-  "extends": "./common",
-
-  "parserOptions": {
+module.exports = [...common, {
+  "languageOptions": {
     "sourceType": "script",
-    // airbnb-base disables generators due to regenerator-runtime overhead.
-    // The current and LTS versions of WebExtension browsers support generators
-    // without regenerator, so this is not a concern.
-    "ecmaFeatures": {
-      "generators": true
+    "globals": {
+      ...globals.browser,
+      ...globals.webextensions
     }
-  },
-
-  "env": {
-    "browser": true,
-    // Disable node env added by airbnb-base/legacy
-    "node": false,
-    "webextensions": true
   },
 
   "rules": {
@@ -44,4 +27,4 @@ module.exports = compat.config({
     // https://stackoverflow.com/q/48104433
     "unicorn/prefer-module": "off"
   }
-});
+}];

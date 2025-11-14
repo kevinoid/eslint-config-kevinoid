@@ -3,26 +3,8 @@
 
 "use strict";
 
-const warnToError = require("../lib/warn-to-error.js");
-
-const {
-  "configs": {
-    "all": {
-      rules,
-      ...regexpConfig
-    }
-  }
-} = require("eslint-plugin-regexp");
-
-// Configure all rules as error.
-const errorRules = warnToError(rules);
-
 module.exports = {
-  ...regexpConfig,
-
   "rules": {
-    ...errorRules,
-
     // Don't require consistent letter case
     // Capitalization of escape sequences is enforced by unicorn/escape-case.
     // I don't want to enforce capitalization for case-insensitive queries,

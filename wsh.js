@@ -4,51 +4,28 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
-const js = require("@eslint/js");
 const globals = require("globals");
 
+// Note: WSH doesn't support ES5 or ES6.  Use legacy ruleset.
+const commonLegacy = require("./common-legacy.js");
 const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
+const ie11Unicorn = require("./rules/ie11-unicorn.js");
+const wshRestrictedGlobals = require("./rules/wsh-restricted-globals.js");
+const wshRestrictedProperties = require("./rules/wsh-restricted-properties.js");
+const wshRestrictedSyntax = require("./rules/wsh-restricted-syntax.js");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname,
-  "recommendedConfig": js.configs.recommended,
-  "allConfig": js.configs.all
-});
-
-module.exports = compat.config({
-  "extends": [
-    // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
-    "./common-legacy",
-
-    // WSH-specific rules
-    "./rules/wsh-restricted-globals",
-    "./rules/wsh-restricted-properties",
-    "./rules/wsh-restricted-syntax",
-
-    // WSH-specific plugin rules
-    "./rules/ie11-unicorn"
-  ],
-
-  // Note: ESLint always includes ES5 globals
-  // Unsupported ones are disallowed by no-restricted-globals rule
-  // https://github.com/eslint/eslint/issues/2657
-  // https://github.com/eslint/eslint/issues/4085#issuecomment-146938022
-  "globals": globals.wsh,
-
-  "parserOptions": {
+const wshConfig = {
+  "languageOptions": {
     "ecmaVersion": 3,
-    "sourceType": "script"
-  },
+    "sourceType": "script",
 
-  "env": {
-    // Disable browser env added by airbnb-base/legacy
-    "browser": false,
-    // Disable es2022 env added by unicorn
-    "es2022": false,
-    // Disable node env added by airbnb-base/legacy
-    "node": false
+    // Note: ESLint always includes ES5 globals
+    // Unsupported ones are disallowed by no-restricted-globals rule
+    // https://github.com/eslint/eslint/issues/2657
+    // https://github.com/eslint/eslint/issues/4085#issuecomment-146938022
+    "globals": {
+      ...globals.wsh
+    }
   },
 
   "rules": {
@@ -101,4 +78,18 @@ module.exports = compat.config({
     // since WSH doesn't support Array.isArray()
     "unicorn/no-instanceof-array": "off"
   }
-});
+};
+
+module.exports = [
+  ...commonLegacy,
+
+  // WSH-specific rules
+  wshRestrictedGlobals,
+  wshRestrictedProperties,
+  wshRestrictedSyntax,
+
+  // Apply IE-specific plugin rules workable for WSH
+  ie11Unicorn,
+
+  wshConfig
+];

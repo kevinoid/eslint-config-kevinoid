@@ -3,57 +3,30 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
-const js = require("@eslint/js");
+const {
+  "configs": {
+    "flat/recommended": nConfig
+  }
+} = require("eslint-plugin-n");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname,
-  "recommendedConfig": js.configs.recommended,
-  "allConfig": js.configs.all
-});
-
+const common = require("./common.js");
 const { "rules": { "no-restricted-properties": noRestrictedProps } } =
   require("./rules/best-practices.js");
+const importConfigs = require("./rules/import.js");
+const n = require("./rules/n.js");
 
-const { "configs": { "recommended": { "parserOptions": { sourceType } } } } =
-  require("eslint-plugin-n");
+const { sourceType } = nConfig.languageOptions;
 
-module.exports = compat.config({
-  "extends": [
-    "./common",
-
-    "./rules/import",
-
-    // extend node plugin last because it sets parserOptions based on type
-    // field from nearest ancestor package.json to process.cwd().
-    "./rules/n"
-  ],
-
-  "parserOptions": {
-    // airbnb-base disables generators due to regenerator-runtime overhead.
-    // Node.js has supported generators without regenerator since v4.
-    "ecmaFeatures": {
-      "generators": true
-    },
+const nodeConfig = {
+  "languageOptions": {
     // Note: eslint-plugin-n >= 16 sets ecmaVersion to 2021:
     // https://github.com/eslint-community/eslint-plugin-n/pull/96
     // It would be preferable to set from package.json#engines/node:
     // https://github.com/eslint-community/eslint-plugin-n/issues/42#issuecomment-1267139576
     // Until then, set based on supported LTS version (Node 20 supports ES2023)
     // TODO [engine:node@>=21]: Bump based on https://node.green/
-    "ecmaVersion": 2023
-  },
-
-  "env": {
-    // Disable node env added by airbnb-base/legacy.
-    // globals are set by plugin:node based on package.json#type.
-    // Enabling the node env would define CommonJS globals unconditionally.
-    //
-    // FIXME: eslint-plugin-n does not keep up with recent globals, like fetch:
-    // https://github.com/eslint-community/eslint-plugin-n/issues/35
-    // Leave node enabled until eslint-plugin-n is updated.
-    // "node": false
+    "ecmaVersion": 2023,
+    sourceType
   },
 
   "rules": {
@@ -81,4 +54,18 @@ module.exports = compat.config({
       "unusedExports": true
     }]
   }
-});
+};
+
+module.exports = [
+  ...common,
+
+  nConfig,
+
+  importConfigs,
+
+  // extend node plugin last because it sets languageOptions based on type
+  // field from nearest ancestor package.json to process.cwd().
+  n,
+
+  nodeConfig
+];

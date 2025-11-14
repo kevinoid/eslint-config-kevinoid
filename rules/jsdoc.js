@@ -4,10 +4,6 @@
 "use strict";
 
 module.exports = {
-  "extends": [
-    "plugin:jsdoc/recommended-error"
-  ],
-
   "rules": {
     // Allow single- and multi-line blocks, with text on first/last line.
     "jsdoc/multiline-blocks": "off",

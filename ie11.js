@@ -3,49 +3,34 @@
 
 "use strict";
 
-const { FlatCompat } = require("@eslint/eslintrc");
-const js = require("@eslint/js");
+const {
+  "configs": {
+    "flat/recommended": promiseConfig
+  }
+} = require("eslint-plugin-promise");
+const globals = require("globals");
 
-const compat = new FlatCompat({
-  "baseDirectory": __dirname,
-  "resolvePluginsRelativeTo": __dirname,
-  "recommendedConfig": js.configs.recommended,
-  "allConfig": js.configs.all
-});
+// Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
+const commonLegacy = require("./common-legacy.js");
+const ie11RestrictedGlobals = require("./rules/ie11-restricted-globals.js");
+const ie11RestrictedProperties = require("./rules/ie11-restricted-properties.js");
+const ie11RestrictedSyntax = require("./rules/ie11-restricted-syntax.js");
+const ie11Unicorn = require("./rules/ie11-unicorn.js");
+const rulesPromise = require("./rules/promise.js");
 
-module.exports = compat.config({
-  "extends": [
-    // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
-    "./common-legacy",
-
-    // IE-specific rules
-    "./rules/ie11-restricted-globals",
-    "./rules/ie11-restricted-properties",
-    "./rules/ie11-restricted-syntax",
-
-    // Promise polyfills are common enough to lint
-    "./rules/promise",
-
-    // IE-specific plugin rules
-    "./rules/ie11-unicorn"
-  ],
-
-  "parserOptions": {
+const ie11Config = {
+  "languageOptions": {
     // Note: ES6 features can't be controlled by ecmaFeatures anymore, so
     // ecmaVersion: 6 is required to parse const/let and no-restricted-syntax
     // rule is used to disable syntax not supported by targeted browsers.
     // https://github.com/eslint/espree/issues/307#issuecomment-264954713
     "ecmaVersion": 6,
-    "sourceType": "script"
-  },
-
-  "env": {
-    "browser": true,
-    // Disable es2022 enabled by unicorn, since IE11 doesn't support even most
-    // ES6 globals.  See https://kangax.github.io/compat-table/es6/#ie11
-    "es2022": false,
-    // Disable node env enabled by airbnb-base/legacy
-    "node": false
+    "sourceType": "script",
+    "globals": {
+      // Note: IE11 doesn't support even most ES6 globals.
+      // See https://kangax.github.io/compat-table/es6/#ie11
+      ...globals.browser
+    }
   },
 
   "rules": {
@@ -89,4 +74,23 @@ module.exports = compat.config({
       "ignoreReadBeforeAssign": true
     }]
   }
-});
+};
+
+module.exports = [
+  ...commonLegacy,
+
+  promiseConfig,
+
+  // IE-specific rules
+  ie11RestrictedGlobals,
+  ie11RestrictedProperties,
+  ie11RestrictedSyntax,
+
+  // Promise polyfills are common enough to lint
+  rulesPromise,
+
+  // IE-specific plugin rules
+  ie11Unicorn,
+
+  ie11Config
+];

@@ -4,10 +4,6 @@
 "use strict";
 
 module.exports = {
-  "extends": [
-    "plugin:promise/recommended"
-  ],
-
   "rules": {
     // Don't require return inside then() functions
     // Promises can be used for sequencing functions with no return value

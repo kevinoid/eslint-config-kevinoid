@@ -4,10 +4,6 @@
 "use strict";
 
 module.exports = {
-  "extends": [
-    "plugin:n/recommended"
-  ],
-
   "rules": {
     // require file extensions in import declarations
     // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions

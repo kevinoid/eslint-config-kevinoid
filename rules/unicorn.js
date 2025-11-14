@@ -3,16 +3,8 @@
 
 "use strict";
 
-const unicorn = require("eslint-plugin-unicorn");
-
 module.exports = {
-  // Based on Unicorn recommended config
-  // Note: Not using ESLint "extends" due to unwanted env and parserOptions
-  ...unicorn.configs.recommended,
-
   "rules": {
-    ...unicorn.configs.recommended.rules,
-
     // don't require regex character classes over character sets
     // classes are shorter but less understandable to programmers familiar with
     // other regex dialects (where they are absent or behave differently)
