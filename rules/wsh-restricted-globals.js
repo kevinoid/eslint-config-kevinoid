@@ -10,19 +10,11 @@ module.exports = {
     "no-restricted-globals": [
       "error",
 
-      // Additional globals not supported by JScript
-      ...[
-        "constructor",
-        "hasOwnProperty",
-        "isPrototypeOf",
-        "JSON",
-        "propertyIsEnumerable",
-        "toLocaleString",
-        "toString",
-        "valueOf"
-      ].map((name) => ({
+      // ESLint allows properties of Object.prototype as global variables
+      // https://github.com/eslint/eslint/issues/10757
+      ...Object.getOwnPropertyNames(Object.prototype).map((name) => ({
         name,
-        "message": "Not supported by JScript."
+        "message": "JScript global object does not inherit from Object.prototype."
       })),
 
       // WSH globals which are restricted
