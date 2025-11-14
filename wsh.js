@@ -4,7 +4,7 @@
 
 "use strict";
 
-const globals = require("globals");
+const { es5, wsh } = require("globals");
 
 // Note: WSH doesn't support ES5 or ES6.  Use legacy ruleset.
 const commonLegacy = require("./common-legacy.js");
@@ -13,6 +13,12 @@ const ie11Unicorn = require("./rules/ie11-unicorn.js");
 const wshRestrictedGlobals = require("./rules/wsh-restricted-globals.js");
 const wshRestrictedProperties = require("./rules/wsh-restricted-properties.js");
 const wshRestrictedSyntax = require("./rules/wsh-restricted-syntax.js");
+
+// WSH supports all ES5 globals except JSON
+const {
+  "JSON": es5Json,
+  ...es5NoJson
+} = es5;
 
 const wshConfig = {
   "name": "eslint-config-kevinoid/wsh",
@@ -26,12 +32,9 @@ const wshConfig = {
     },
     "sourceType": "script",
 
-    // Note: ESLint always includes ES5 globals
-    // Unsupported ones are disallowed by no-restricted-globals rule
-    // https://github.com/eslint/eslint/issues/2657
-    // https://github.com/eslint/eslint/issues/4085#issuecomment-146938022
     "globals": {
-      ...globals.wsh
+      ...es5NoJson,
+      ...wsh
     }
   },
 
