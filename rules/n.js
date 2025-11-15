@@ -11,6 +11,9 @@ module.exports = {
     // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
     "n/file-extension-in-import": "error",
 
+    // disallow require calls to be mixed with regular variable declarations
+    "n/no-mixed-requires": "error",
+
     // disallow unsupported Node.js built-ins, allow experimental
     "n/no-unsupported-features/node-builtins": ["error", {
       "allowExperimental": true
