@@ -18,6 +18,9 @@ module.exports = {
     // disallow require calls to be mixed with regular variable declarations
     "n/no-mixed-requires": "error",
 
+    // disallow synchronous methods
+    "n/no-sync": "error",
+
     // disallow unsupported Node.js built-ins, allow experimental
     "n/no-unsupported-features/node-builtins": ["error", {
       "allowExperimental": true
