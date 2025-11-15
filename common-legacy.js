@@ -6,10 +6,7 @@
 const js = require("@eslint/js");
 const {
   "configs": {
-    "all": {
-      "rules": stylisticRules,
-      ...stylisticConfig
-    }
+    "customize": stylisticCustomize
   }
 } = require("@stylistic/eslint-plugin");
 const {
@@ -50,6 +47,10 @@ const rulesRegexp = require("./rules/regexp.js");
 const rulesStyle = require("./rules/style.js");
 const rulesUnicorn = require("./rules/unicorn.js");
 const rulesVariables = require("./rules/variables.js");
+
+// Customized stylistic default configuration
+// https://eslint.style/guide/config-presets#configuration-factory
+const stylisticConfig = stylisticCustomize({ "semi": true });
 
 module.exports = [
   {
