@@ -1,6 +1,4 @@
-"use strict";
-
-const nodejs = require("./nodejs.js");
+import nodejs from "./nodejs.js";
 
 const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
@@ -18,7 +16,7 @@ const ourRules = {
   }
 };
 
-module.exports = [
+export default [
   {
     "ignores": [
       "coverage/",

@@ -1,9 +1,7 @@
 // ESLint common configuration rules for N plugin
 // https://github.com/weiran-zsd/eslint-plugin-node#-rules
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/n",
 
   "rules": {

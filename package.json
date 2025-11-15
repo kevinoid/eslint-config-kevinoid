@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/kevinoid/eslint-config-kevinoid.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "files": [
     "*.js",
     "eslint-config-airbnb-base/**/*.js",

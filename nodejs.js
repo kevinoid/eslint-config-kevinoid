@@ -1,20 +1,15 @@
 // ESLint configuration for currently supported versions of Node.js.
 // <https://eslint.org/docs/user-guide/configuring>
 
-"use strict";
+import nPlugin from "eslint-plugin-n";
 
-const {
-  "configs": {
-    "flat/recommended": nConfig
-  }
-} = require("eslint-plugin-n");
+import common from "./common.js";
+import bestPractices from "./rules/best-practices.js";
+import importConfigs from "./rules/import.js";
+import n from "./rules/n.js";
 
-const common = require("./common.js");
-const { "rules": { "no-restricted-properties": noRestrictedProps } } =
-  require("./rules/best-practices.js");
-const importConfigs = require("./rules/import.js");
-const n = require("./rules/n.js");
-
+const noRestrictedProps = bestPractices.rules["no-restricted-properties"];
+const nConfig = nPlugin.configs["flat/recommended"];
 const { sourceType } = nConfig.languageOptions;
 
 const nodeConfig = {
@@ -71,7 +66,7 @@ const nodeConfig = {
   }
 };
 
-module.exports = [
+export default [
   ...common,
 
   nConfig,

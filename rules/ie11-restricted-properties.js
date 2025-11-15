@@ -1,9 +1,7 @@
 // ESLint IE 11 no-restricted-properties configuration rules
 // https://eslint.org/docs/rules/no-restricted-properties
 
-"use strict";
-
-const bestPractices = require("./best-practices.js");
+import bestPractices from "./best-practices.js";
 
 const allowed = {
   "Math": {
@@ -70,7 +68,7 @@ const restricted = {
   }
 };
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/ie11-restricted-properties",
 
   "rules": {

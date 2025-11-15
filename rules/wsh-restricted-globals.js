@@ -1,9 +1,7 @@
 // ESLint WSH no-restricted-globals configuration rules
 // https://eslint.org/docs/rules/no-restricted-globals
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/wsh-restricted-globals",
 
   "rules": {

@@ -1,14 +1,11 @@
 // ESLint common configuration rules for ES6
 // https://eslint.org/docs/rules/#ecmascript-6
 
-"use strict";
-
-const airbnbES6 =
-  require("../eslint-config-airbnb-base/rules/es6.js");
+import airbnbES6 from "../eslint-config-airbnb-base/rules/es6.js";
 
 const airbnbPreferDestructuring = airbnbES6.rules["prefer-destructuring"];
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/es6",
 
   "rules": {

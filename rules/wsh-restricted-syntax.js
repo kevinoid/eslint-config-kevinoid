@@ -1,10 +1,7 @@
 // ESLint WSH no-restricted-syntax configuration rules
 // https://eslint.org/docs/rules/no-restricted-syntax
 
-"use strict";
-
-const airbnbStyle =
-  require("../eslint-config-airbnb-base/rules/style.js");
+import airbnbStyle from "../eslint-config-airbnb-base/rules/style.js";
 
 // Syntax selectors which are restricted in airbnb-base, should not be in WSH
 const unrestricted = {
@@ -14,7 +11,7 @@ const unrestricted = {
   "ForOfStatement": true
 };
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/wsh-restricted-syntax",
 
   "rules": {

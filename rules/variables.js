@@ -1,9 +1,7 @@
 // ESLint common configuration rules for variables
 // https://eslint.org/docs/rules/#variables
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/variables",
 
   "rules": {

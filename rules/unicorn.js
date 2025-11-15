@@ -1,9 +1,7 @@
 // ESLint common configuration rules for Unicorn plugin
 // https://github.com/sindresorhus/eslint-plugin-unicorn#rules
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/unicorn",
 
   "rules": {

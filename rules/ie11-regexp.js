@@ -1,8 +1,6 @@
 // ESLint IE 11 regexp configuration rules
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/ie11-regexp",
 
   "rules": {

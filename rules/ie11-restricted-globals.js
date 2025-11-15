@@ -1,14 +1,11 @@
 // ESLint IE 11 no-restricted-globals configuration rules
 // https://eslint.org/docs/rules/no-restricted-globals
 
-"use strict";
+import assert from "node:assert";
 
-const assert = require("node:assert");
+import airbnbVariables from "../eslint-config-airbnb-base/rules/variables.js";
 
-const airbnbVariables =
-  require("../eslint-config-airbnb-base/rules/variables.js");
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/ie11-restricted-globals",
 
   "rules": {

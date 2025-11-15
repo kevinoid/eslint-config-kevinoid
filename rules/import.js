@@ -1,16 +1,14 @@
 // ESLint configuration rules for import plugin
 // https://github.com/benmosher/eslint-plugin-import/
 
-"use strict";
-
-const airbnbImports = require("../eslint-config-airbnb-base/rules/imports.js");
+import airbnbImports from "../eslint-config-airbnb-base/rules/imports.js";
 
 const airbnbImportOpts = airbnbImports.rules["import/order"][1];
 const airbnbNoExtraneousOpts =
   airbnbImports.rules["import/no-extraneous-dependencies"][1];
 const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/import",
 
   "rules": {

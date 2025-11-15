@@ -1,11 +1,11 @@
-module.exports = {
+export default {
   extends: [
     './rules/best-practices',
     './rules/errors',
     './rules/node',
     './rules/style',
     './rules/variables'
-  ].map(require.resolve),
+  ].map(import.meta.resolve),
   env: {
     browser: true,
     node: true,

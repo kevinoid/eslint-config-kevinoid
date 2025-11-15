@@ -1,14 +1,11 @@
 // ESLint common configuration rules for stylistic issues
 // https://eslint.org/docs/rules/#stylistic-issues
 
-"use strict";
-
-const airbnbStyle =
-  require("../eslint-config-airbnb-base/rules/style.js");
+import airbnbStyle from "../eslint-config-airbnb-base/rules/style.js";
 
 const indentOptions = airbnbStyle.rules.indent[2];
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/style",
 
   "rules": {

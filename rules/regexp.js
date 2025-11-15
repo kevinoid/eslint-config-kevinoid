@@ -1,9 +1,7 @@
 // ESLint common configuration rules for Regexp plugin
 // https://github.com/ota-meshi/eslint-plugin-regexp#white_check_mark-rules
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/regexp",
 
   "rules": {

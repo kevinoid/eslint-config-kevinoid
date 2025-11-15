@@ -1,12 +1,9 @@
 // ESLint common configuration rules for best practices
 // https://eslint.org/docs/rules/#best-practices
 
-"use strict";
+import airbnbBestPractices from "../eslint-config-airbnb-base/rules/best-practices.js";
 
-const airbnbBestPractices =
-  require("../eslint-config-airbnb-base/rules/best-practices.js");
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/best-practices",
 
   "rules": {

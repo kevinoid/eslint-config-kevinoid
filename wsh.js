@@ -2,24 +2,22 @@
 // (i.e. cscript or wscript)
 // <https://eslint.org/docs/user-guide/configuring>
 
-"use strict";
-
-const { es5, wsh } = require("globals");
+import globals from "globals";
 
 // Note: WSH doesn't support ES5 or ES6.  Use legacy ruleset.
-const commonLegacy = require("./common-legacy.js");
-const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
-const ie11Regexp = require("./rules/ie11-regexp.js");
-const ie11Unicorn = require("./rules/ie11-unicorn.js");
-const wshRestrictedGlobals = require("./rules/wsh-restricted-globals.js");
-const wshRestrictedProperties = require("./rules/wsh-restricted-properties.js");
-const wshRestrictedSyntax = require("./rules/wsh-restricted-syntax.js");
+import commonLegacy from "./common-legacy.js";
+import airbnbStyle from "./eslint-config-airbnb-base/rules/style.js";
+import ie11Regexp from "./rules/ie11-regexp.js";
+import ie11Unicorn from "./rules/ie11-unicorn.js";
+import wshRestrictedGlobals from "./rules/wsh-restricted-globals.js";
+import wshRestrictedProperties from "./rules/wsh-restricted-properties.js";
+import wshRestrictedSyntax from "./rules/wsh-restricted-syntax.js";
 
 // WSH supports all ES5 globals except JSON
 const {
   "JSON": es5Json,
   ...es5NoJson
-} = es5;
+} = globals.es5;
 
 const wshConfig = {
   "name": "eslint-config-kevinoid/wsh",
@@ -35,7 +33,7 @@ const wshConfig = {
 
     "globals": {
       ...es5NoJson,
-      ...wsh
+      ...globals.wsh
     }
   },
 
@@ -91,7 +89,7 @@ const wshConfig = {
   }
 };
 
-module.exports = [
+export default [
   ...commonLegacy,
 
   // WSH-specific rules

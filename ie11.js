@@ -1,23 +1,17 @@
 // ESLint configuration for JS run directly in browsers (IE11 or better).
 // <https://eslint.org/docs/user-guide/configuring>
 
-"use strict";
-
-const {
-  "configs": {
-    "flat/recommended": promiseConfig
-  }
-} = require("eslint-plugin-promise");
-const globals = require("globals");
+import promise from "eslint-plugin-promise";
+import globals from "globals";
 
 // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
-const commonLegacy = require("./common-legacy.js");
-const ie11Regexp = require("./rules/ie11-regexp.js");
-const ie11RestrictedGlobals = require("./rules/ie11-restricted-globals.js");
-const ie11RestrictedProperties = require("./rules/ie11-restricted-properties.js");
-const ie11RestrictedSyntax = require("./rules/ie11-restricted-syntax.js");
-const ie11Unicorn = require("./rules/ie11-unicorn.js");
-const rulesPromise = require("./rules/promise.js");
+import commonLegacy from "./common-legacy.js";
+import ie11Regexp from "./rules/ie11-regexp.js";
+import ie11RestrictedGlobals from "./rules/ie11-restricted-globals.js";
+import ie11RestrictedProperties from "./rules/ie11-restricted-properties.js";
+import ie11RestrictedSyntax from "./rules/ie11-restricted-syntax.js";
+import ie11Unicorn from "./rules/ie11-unicorn.js";
+import rulesPromise from "./rules/promise.js";
 
 const ie11Config = {
   "name": "eslint-config-kevinoid/ie11",
@@ -81,10 +75,10 @@ const ie11Config = {
   }
 };
 
-module.exports = [
+export default [
   ...commonLegacy,
 
-  promiseConfig,
+  promise.configs["flat/recommended"],
 
   // IE-specific rules
   ie11RestrictedGlobals,

@@ -1,21 +1,15 @@
 // ESLint configuration for JS run directly in (modern) browsers.
 // <https://eslint.org/docs/user-guide/configuring>
 
-"use strict";
+import noUnsanitized from "eslint-plugin-no-unsanitized";
+import globals from "globals";
 
-const {
-  "configs": {
-    "recommended": nounsanitizedConfig
-  }
-} = require("eslint-plugin-no-unsanitized");
-const globals = require("globals");
-
-const common = require("./common.js");
-const { removePluginRules } = require("./lib/remove-plugin-rules.js");
+import common from "./common.js";
+import { removePluginRules } from "./lib/remove-plugin-rules.js";
 
 const commonNoN = removePluginRules(common, "n");
 
-module.exports = [...commonNoN, nounsanitizedConfig, {
+export default [...commonNoN, noUnsanitized.configs.recommended, {
   "name": "eslint-config-kevinoid/browser",
 
   "languageOptions": {

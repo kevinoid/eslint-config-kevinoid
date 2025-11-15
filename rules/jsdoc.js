@@ -1,9 +1,7 @@
 // ESLint common configuration rules for JSDoc plugin
 // https://github.com/gajus/eslint-plugin-jsdoc
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/jsdoc",
 
   "rules": {

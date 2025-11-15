@@ -1,9 +1,7 @@
 // ESLint common configuration rules for Promises
 // https://github.com/xjamundx/eslint-plugin-promise#rules
 
-"use strict";
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/promise",
 
   "rules": {

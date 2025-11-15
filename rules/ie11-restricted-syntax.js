@@ -1,12 +1,9 @@
 // ESLint IE 11 no-restricted-syntax configuration rules
 // https://eslint.org/docs/rules/no-restricted-syntax
 
-"use strict";
+import airbnbStyle from "../eslint-config-airbnb-base/rules/style.js";
 
-const airbnbStyle =
-  require("../eslint-config-airbnb-base/rules/style.js");
-
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/ie11-restricted-syntax",
 
   "rules": {

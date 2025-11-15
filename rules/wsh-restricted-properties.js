@@ -1,9 +1,7 @@
 // ESLint WSH no-restricted-properties configuration rules
 // https://eslint.org/docs/rules/no-restricted-properties
 
-"use strict";
-
-const ie11NoRestrictedProperties = require("./ie11-restricted-properties.js");
+import ie11NoRestrictedProperties from "./ie11-restricted-properties.js";
 
 const restricted = {
   "Array": {
@@ -26,7 +24,7 @@ const restricted = {
   }
 };
 
-module.exports = {
+export default {
   "name": "eslint-config-kevinoid/rules/wsh-restricted-properties",
 
   "rules": {
