@@ -38,7 +38,7 @@ const {
   "configs": {
     "flat/recommended": unicornConfig
   }
-} = require("eslint-plugin-unicorn");
+} = require("eslint-plugin-unicorn").default;
 
 // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
 // https://github.com/airbnb/javascript/issues/2961
