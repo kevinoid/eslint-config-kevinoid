@@ -66,6 +66,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsdoc": "^52.0.0",
     "eslint-plugin-n": "^17.1.0",
+    "eslint-plugin-no-unsanitized": "^4.0.0",
     "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-regexp": "^2.0.0",
     "eslint-plugin-unicorn": "^56.0.0",

@@ -3,11 +3,16 @@
 
 "use strict";
 
+const {
+  "configs": {
+    "recommended": nounsanitizedConfig
+  }
+} = require("eslint-plugin-no-unsanitized");
 const globals = require("globals");
 
 const common = require("./common.js");
 
-module.exports = [...common, {
+module.exports = [...common, nounsanitizedConfig, {
   "name": "eslint-config-kevinoid/webextensions",
 
   "languageOptions": {
