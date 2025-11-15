@@ -11,6 +11,10 @@ module.exports = {
     // https://nodejs.org/api/esm.html#esm_mandatory_file_extensions
     "n/file-extension-in-import": "error",
 
+    // require error handling in callbacks
+    // with error argument named err, error, errSomething, or errorSomething
+    "n/handle-callback-err": ["error", "^err(or)?([A-Z0-9]|$)"],
+
     // disallow require calls to be mixed with regular variable declarations
     "n/no-mixed-requires": "error",
 
