@@ -11,8 +11,11 @@ const {
 const globals = require("globals");
 
 const common = require("./common.js");
+const { removePluginRules } = require("./lib/remove-plugin-rules.js");
 
-module.exports = [...common, nounsanitizedConfig, {
+const commonNoN = removePluginRules(common, "n");
+
+module.exports = [...commonNoN, nounsanitizedConfig, {
   "name": "eslint-config-kevinoid/browser",
 
   "languageOptions": {

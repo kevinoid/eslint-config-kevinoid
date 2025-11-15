@@ -75,9 +75,6 @@ module.exports = {
     // if they are indented one-expression-per-line, they are clear enough for me
     "no-nested-ternary": "off",
 
-    // disallow process.exit()
-    "no-process-exit": "error",
-
     // disallow certain syntax forms
     "no-restricted-syntax": airbnbStyle.rules["no-restricted-syntax"]
       // allow for-of statement
