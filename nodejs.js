@@ -1,4 +1,4 @@
-// ESLint configuration for Node 6 and later.
+// ESLint configuration for currently supported versions of Node.js.
 // <https://eslint.org/docs/user-guide/configuring>
 
 "use strict";
