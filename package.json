@@ -74,9 +74,12 @@
     "semver": "^7.7.3"
   },
   "devDependencies": {
-    "eslint": "^9.0.0",
+    "eslint": "^9.21.0",
     "eslint-find-rules": "^5.0.0",
     "peer-version-check": "^0.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.21.0"
   },
   "engines": {
     "node": "^20.11.0 || >=21.1.0",

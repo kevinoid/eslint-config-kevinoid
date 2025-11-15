@@ -50,8 +50,7 @@ const airbnbNode = require("./eslint-config-airbnb-base/rules/node.js");
 const airbnbStrict = require("./eslint-config-airbnb-base/rules/strict.js");
 const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
 const airbnbVariables = require("./eslint-config-airbnb-base/rules/variables.js");
-const rulesToN = require("./lib/rules-to-n.js");
-const rulesToStylistic = require("./lib/rules-to-stylistic.js");
+const rulesToReplacements = require("./lib/rules-to-replacements.js");
 const warnToError = require("./lib/warn-to-error.js");
 const rulesBestPractices = require("./rules/best-practices.js");
 const rulesEs6 = require("./rules/es6.js");
@@ -87,18 +86,24 @@ module.exports = [
   {
     "name": "eslint-config-airbnb-base",
     // Include just rules to avoid undesirable settings and need for FlatCompat
-    "rules": rulesToN(rulesToStylistic({
-      // Note: Order from
-      // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.4/packages/eslint-config-airbnb-base/index.js
-      ...airbnbBestPractices.rules,
-      ...airbnbErrors.rules,
-      ...airbnbNode.rules,
-      ...airbnbStyle.rules,
-      ...airbnbVariables.rules,
-      ...airbnbEs6.rules,
-      ...airbnbImports.rules,
-      ...airbnbStrict.rules
-    }))
+    "rules": rulesToReplacements(
+      {
+        // Note: Order from
+        // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.4/packages/eslint-config-airbnb-base/index.js
+        ...airbnbBestPractices.rules,
+        ...airbnbErrors.rules,
+        ...airbnbNode.rules,
+        ...airbnbStyle.rules,
+        ...airbnbVariables.rules,
+        ...airbnbEs6.rules,
+        ...airbnbImports.rules,
+        ...airbnbStrict.rules
+      },
+      {
+        "@stylistic/eslint-plugin": "@stylistic",
+        "eslint-plugin-n": "n"
+      }
+    )
   },
 
   jsdocConfig,
