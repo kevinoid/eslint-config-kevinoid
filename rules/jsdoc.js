@@ -25,6 +25,12 @@ module.exports = {
       ]
     }],
 
+    // Don't forbid use of any (or *) type within JSDoc tag types.
+    // Although it is better to be specific where possible, it is not uncommon
+    // to document values which may be of any type, particularly when loading
+    // or deserializing data.
+    "jsdoc/reject-any-type": "off",
+
     // Requires a hyphen before the @param description is not used.
     // It seems inconsistent with other tags and doesn't add value for me.
     "jsdoc/require-hyphen-before-param-description": ["error", "never"],
