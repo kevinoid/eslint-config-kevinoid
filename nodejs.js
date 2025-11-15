@@ -25,9 +25,12 @@ const nodeConfig = {
     // https://github.com/eslint-community/eslint-plugin-n/pull/96
     // It would be preferable to set from package.json#engines/node:
     // https://github.com/eslint-community/eslint-plugin-n/issues/42#issuecomment-1267139576
-    // Until then, set based on supported LTS version (Node 20 supports ES2023)
+    // Until then, set based on supported LTS version
+    // Although Node.js 20 doesn't support much of ES2025, it does support
+    // import attributes, required to lint use of eslint-plugin-unicorn@58.0.0
+    // https://github.com/import-js/eslint-plugin-import/issues/3171
     // TODO [engine:node@>=21]: Bump based on https://node.green/
-    "ecmaVersion": 2023,
+    "ecmaVersion": 2025,
     "parserOptions": {
       "ecmaFeatures": {
         "globalReturn": true
