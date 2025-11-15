@@ -6,6 +6,8 @@
 const airbnbStyle =
   require("../eslint-config-airbnb-base/rules/style.js");
 
+const indentOptions = airbnbStyle.rules.indent[2];
+
 module.exports = {
   "name": "eslint-config-kevinoid/rules/style",
 
@@ -25,6 +27,17 @@ module.exports = {
 
     // allow unnamed functions
     "func-names": "off",
+
+    // require specific indentation of nested blocks and statements
+    "@stylistic/indent": ["error", 2, {
+      ...indentOptions,
+      "ignoredNodes": [
+        ...indentOptions.ignoredNodes,
+        // Allow top-level CommonJS exports to be unindented so exporting doesn't
+        // change indentation of function body.
+        "Program > ExpressionStatement > AssignmentExpression[left.type=MemberExpression] > FunctionExpression"
+      ]
+    }],
 
     // don't enforce consistent linebreak style
     // Allow developers to develop with native EOL.  VCS manages committed style.
