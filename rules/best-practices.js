@@ -17,7 +17,10 @@ module.exports = {
     // allow unnecessary parentheses where useful for disambiguation
     "@stylistic/no-extra-parens": ["error", "all", {
       "conditionalAssign": false,
-      "enforceForArrowConditionals": false,
+      "ignoredNodes": [
+        // enforceForArrowConditionals: false
+        "ArrowFunctionExpression[body.type=ConditionalExpression]"
+      ],
       "nestedBinaryExpressions": false,
       "returnAssign": false
     }],
