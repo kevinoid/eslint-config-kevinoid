@@ -117,6 +117,15 @@ module.exports = {
       }
     }],
 
+    // requires or disallows blank lines between 2 given kinds of statements
+    "@stylistic/padding-line-between-statements": [
+      "error",
+      // Require blank lines after all directive prologues,
+      // like lines-around-directive rule enabled by airbnb-base
+      { "blankLine": "always", "prev": "directive", "next": "*" },
+      { "blankLine": "any", "prev": "directive", "next": "directive" }
+    ],
+
     // Disallow the use of Math.pow in favor of the ** operator
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
     "prefer-exponentiation-operator": "error",
