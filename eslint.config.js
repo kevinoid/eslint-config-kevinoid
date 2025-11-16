@@ -1,4 +1,7 @@
 import nodejs from "./nodejs.js";
+import packageConfig from "./package.json" with { "type": "json" };
+
+const noUnusedModulesOpts = nodejs.at(-1).rules["import/no-unused-modules"][1];
 
 const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
@@ -7,6 +10,17 @@ const ourRules = {
     "@stylistic/max-len": "off",
     "@stylistic/quotes": ["error", "double"],
     "@stylistic/quote-props": ["error", "always"],
+
+    "import/no-unused-modules": ["error", {
+      ...noUnusedModulesOpts,
+      "ignoreExports": [
+        ...noUnusedModulesOpts.ignoreExports,
+
+        // Don't report unused exports from package exports
+        // https://github.com/import-js/eslint-plugin-import/issues/2525
+        ...new Set(Object.values(packageConfig.exports))
+      ]
+    }],
 
     // ESLint Shareable Configs must be CommonJS
     // (Until RFC 9 is implemented)
