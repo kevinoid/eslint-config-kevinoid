@@ -6,6 +6,8 @@
 const airbnbImports = require("../eslint-config-airbnb-base/rules/imports.js");
 
 const airbnbImportOpts = airbnbImports.rules["import/order"][1];
+const airbnbNoExtraneousOpts =
+  airbnbImports.rules["import/no-extraneous-dependencies"][1];
 const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];
 
 module.exports = {
@@ -15,6 +17,18 @@ module.exports = {
     // Ensure consistent use of file extension within the import path
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     "import/extensions": ["error", "ignorePackages"],
+
+    // Forbid the use of extraneous packages
+    "import/no-extraneous-dependencies": ["error", {
+      ...airbnbNoExtraneousOpts,
+      "devDependencies": [
+        ...airbnbNoExtraneousOpts.devDependencies,
+
+        // ESLint configuration files are only used during development
+        // https://eslint.org/docs/latest/use/configure/configuration-files
+        "**/eslint.config.{js,mjs,cjs,ts,mts,cts}"
+      ]
+    }],
 
     "import/no-unresolved": [
       "error",

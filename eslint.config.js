@@ -10,13 +10,6 @@ const ourRules = {
     "@stylistic/quotes": ["error", "double"],
     "@stylistic/quote-props": ["error", "always"],
 
-    // Imports from this file should be devDependencies
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": [
-        "eslint.config.js"
-      ]
-    }],
-
     // ESLint Shareable Configs must be CommonJS
     // (Until RFC 9 is implemented)
     // https://github.com/eslint/eslint/issues/13440
