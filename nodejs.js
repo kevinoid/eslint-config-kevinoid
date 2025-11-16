@@ -33,7 +33,7 @@ const nodeConfig = {
     "ecmaVersion": 2025,
     "parserOptions": {
       "ecmaFeatures": {
-        "globalReturn": true
+        "globalReturn": sourceType === "commonjs" || sourceType === "script"
       }
     },
     sourceType
