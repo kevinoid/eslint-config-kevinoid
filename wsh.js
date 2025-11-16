@@ -9,6 +9,7 @@ const { es5, wsh } = require("globals");
 // Note: WSH doesn't support ES5 or ES6.  Use legacy ruleset.
 const commonLegacy = require("./common-legacy.js");
 const airbnbStyle = require("./eslint-config-airbnb-base/rules/style.js");
+const ie11Regexp = require("./rules/ie11-regexp.js");
 const ie11Unicorn = require("./rules/ie11-unicorn.js");
 const wshRestrictedGlobals = require("./rules/wsh-restricted-globals.js");
 const wshRestrictedProperties = require("./rules/wsh-restricted-properties.js");
@@ -99,6 +100,7 @@ module.exports = [
   wshRestrictedSyntax,
 
   // Apply IE-specific plugin rules workable for WSH
+  ie11Regexp,
   ie11Unicorn,
 
   wshConfig

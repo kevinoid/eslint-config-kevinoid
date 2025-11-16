@@ -12,6 +12,7 @@ const globals = require("globals");
 
 // Note: IE11 doesn't support most ES6 features.  Use legacy ruleset.
 const commonLegacy = require("./common-legacy.js");
+const ie11Regexp = require("./rules/ie11-regexp.js");
 const ie11RestrictedGlobals = require("./rules/ie11-restricted-globals.js");
 const ie11RestrictedProperties = require("./rules/ie11-restricted-properties.js");
 const ie11RestrictedSyntax = require("./rules/ie11-restricted-syntax.js");
@@ -94,6 +95,7 @@ module.exports = [
   rulesPromise,
 
   // IE-specific plugin rules
+  ie11Regexp,
   ie11Unicorn,
 
   ie11Config
