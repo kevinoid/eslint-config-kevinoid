@@ -51,7 +51,7 @@
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
     "test-eslint-browser": ": | eslint --no-config-lookup -c browser.js --rule \"unicorn/no-empty-file: 0\" --stdin",
     "test-eslint-ie11": ": | eslint --no-config-lookup -c ie11.js --rule \"unicorn/no-empty-file: 0\" --stdin",
-    "test-eslint-node": ": | eslint --no-config-lookup -c nodejs.js --rule \"unicorn/no-empty-file: 0\" --stdin",
+    "test-eslint-node": ": | eslint --no-config-lookup -c nodejs.js --rule \"unicorn/no-empty-file: 0, import/no-unused-modules: 0\" --stdin",
     "test-eslint-webextensions": ": | eslint --no-config-lookup -c webextensions.js --rule \"unicorn/no-empty-file: 0\" --stdin",
     "test-eslint-wsh": ": | eslint --no-config-lookup -c wsh.js --rule \"unicorn/no-empty-file: 0\" --stdin",
     "test-peer-versions": "peer-version-check package.json",
