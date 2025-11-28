@@ -20,13 +20,7 @@ const ourRules = {
         // https://github.com/import-js/eslint-plugin-import/issues/2525
         ...new Set(Object.values(packageConfig.exports))
       ]
-    }],
-
-    // ESLint Shareable Configs must be CommonJS
-    // (Until RFC 9 is implemented)
-    // https://github.com/eslint/eslint/issues/13440
-    // https://github.com/eslint/eslint/issues/13481
-    "unicorn/prefer-module": "off"
+    }]
   }
 };
 
