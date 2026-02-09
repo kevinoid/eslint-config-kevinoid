@@ -60,7 +60,7 @@
     "version-deps": "npm install conventional-changelog-cli david depcheck git-branch-is hub-ci-status"
   },
   "dependencies": {
-    "@eslint/js": "^9.39.1",
+    "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.3.1",
     "confusing-browser-globals": "^1.0.11",
     "eslint-plugin-import": "^2.25.3",
