@@ -14,6 +14,12 @@ export default {
     // ease of editing and comprehensibility.
     "no-inner-declarations": "off",
 
+    // TODO [@eslint/js@>=10]: Remove this.  It's enabled in recommended.
+    "no-unassigned-vars": "error",
+
+    // TODO [@eslint/js@>=10]: Remove this.  It's enabled in recommended.
+    "no-useless-assignment": "error",
+
     // disallow unused private class members
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
     "no-unused-private-class-members": "error"

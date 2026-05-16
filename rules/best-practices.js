@@ -61,6 +61,9 @@ export default {
     // require using Error objects as Promise rejection reason (including empty)
     "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }],
 
+    // TODO [@eslint/js@>=10]: Remove this.  It's enabled in recommended.
+    "preserve-caught-error": "error",
+
     // don't require all vars to be at top of their containing scope
     // benefits from locality (comprehensibility, ease of editing) outweigh
     // matching effective scope, since ESLint will warn about use-before-decl.
