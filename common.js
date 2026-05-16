@@ -6,7 +6,7 @@ import stylistic from "@stylistic/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import jsdoc from "eslint-plugin-jsdoc";
 import promise from "eslint-plugin-promise";
-import regexp from "eslint-plugin-regexp";
+import { configs as regexpConfigs } from "eslint-plugin-regexp";
 import unicorn from "eslint-plugin-unicorn";
 
 // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
@@ -93,8 +93,8 @@ export default [
   promise.configs["flat/recommended"],
 
   {
-    ...regexp.configs["flat/all"],
-    "rules": warnToError(regexp.configs["flat/all"].rules)
+    ...regexpConfigs["flat/all"],
+    "rules": warnToError(regexpConfigs["flat/all"].rules)
   },
 
   unicorn.configs["flat/recommended"],
