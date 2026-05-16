@@ -4,7 +4,7 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import jsdoc from "eslint-plugin-jsdoc";
-import regexp from "eslint-plugin-regexp";
+import { configs as regexpConfigs } from "eslint-plugin-regexp";
 import unicorn from "eslint-plugin-unicorn";
 
 // Vendor airbnb-base to avoid peerDep conflicts with eslint@^9
@@ -80,8 +80,8 @@ export default [
   jsdoc.configs["flat/recommended-error"],
 
   {
-    ...regexp.configs["flat/all"],
-    "rules": warnToError(regexp.configs["flat/all"].rules)
+    ...regexpConfigs["flat/all"],
+    "rules": warnToError(regexpConfigs["flat/all"].rules)
   },
 
   unicornConfig,
