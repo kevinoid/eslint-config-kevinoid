@@ -1,10 +1,5 @@
 // Deprecated ESLint configuration file eslint-plugin-import workaround
 // https://github.com/import-js/eslint-plugin-import/issues/3079
 {
-  "root": true,
-  "ignorePatterns": [
-    "coverage/",
-    "doc/",
-    "node_modules/"
-  ]
+  "root": true
 }
