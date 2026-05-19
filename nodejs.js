@@ -28,6 +28,7 @@ const nodeConfig = {
     "ecmaVersion": 2025,
     "parserOptions": {
       "ecmaFeatures": {
+        // Note: ESLint forces globalReturn: false for sourceType: module
         "globalReturn": sourceType === "commonjs" || sourceType === "script"
       }
     },
