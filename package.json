@@ -73,12 +73,12 @@
     "globals": "^17.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.35.0",
+    "eslint": "^10.4.0",
     "eslint-find-rules": "^5.0.0",
     "peer-version-check": "^0.1.0"
   },
   "peerDependencies": {
-    "eslint": "^9.35.0"
+    "eslint": "^10.4.0"
   },
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24",
