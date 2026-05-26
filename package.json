@@ -86,9 +86,11 @@
   },
   "david": {
     "//": "Ignore eslint pending https://github.com/airbnb/javascript/issues/2961",
+    "// eslint-plugin-jsdoc": "Ignore eslint-plugin-jsdoc@63 for now due to age and lack of Node 20 support",
     "ignore": [
       "@eslint/js",
-      "eslint"
+      "eslint",
+      "eslint-plugin-jsdoc"
     ]
   }
 }
