@@ -1,3 +1,65 @@
+# [34.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.3.0...v34.0.0) (2026-05-19)
+
+### BREAKING CHANGES
+
+* Switch to ESLint [Flat Configuration
+  Files](https://eslint.org/docs/latest/use/configure/configuration-files).
+* Support (and require) ESLint 9.
+* Convert this package to a native ECMAScript module.
+* Drop support for Node.js 21 and &lt;20.19.
+* Enable rules recommended in ESLint 10
+  - [`no-unassigned-vars`](https://eslint.org/docs/latest/rules/no-unassigned-vars)
+  - [`no-useless-assignment`](https://eslint.org/docs/latest/rules/no-useless-assignment)
+  - [`preserve-caught-error`](https://eslint.org/docs/latest/rules/preserve-caught-error)
+* Enable [`n/no-sync`](https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-sync.md) rule.
+* Enable [`n/handle-callback-err`](https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/handle-callback-err.md) rule.
+* Enable [`n/no-mixed-requires`](https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-mixed-requires.md) rule
+* Disable built-in rules deprecated in favor of
+  [eslint-plugin-n](https://github.com/eslint-community/eslint-plugin-n)
+  alternatives.
+* Use [eslint-plugin-no-unsanitized](https://github.com/mozilla/eslint-plugin-no-unsanitized/).
+* Use [@stylistic](https://eslint.style/) rules instead of deprecated ESLint
+  formatting rules.
+* Bump `eslint-plugin-unicorn` from ^56.0.0 to ^64.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+  - Enable new rule [`consistent-template-literal-escape`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-template-literal-escape.md).
+  - Enable new rule [`no-useless-iterator-to-array`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-iterator-to-array.md).
+  - Enable new rule [`prefer-simple-condition-first`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-simple-condition-first.md).
+  - Enable new rule [`switch-case-break-position`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/switch-case-break-position.md).
+  - Enable new rule [`isolated-functions`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/isolated-functions.md).
+* Bump `eslint-plugin-jsdoc` from ^50.0.0 to ^62.5.4.  See [Release
+  Notes](https://github.com/gajus/eslint-plugin-jsdoc/releases).
+* Bump `eslint-plugin-n` from ^17.1.0 to ^18.0.1.  See [Release
+  Notes](https://github.com/eslint-community/eslint-plugin-n/releases).
+* Bump `eslint-plugin-promise` from ^6.0.0 to ^7.0.0.  See [Release
+  Notes](https://github.com/eslint-community/eslint-plugin-promise/releases).
+* Bump `eslint-plugin-regexp` from ^2.10.0 to ^3.1.0.  See [Release
+  Notes](https://github.com/ota-meshi/eslint-plugin-regexp/releases).
+
+### Features
+
+* Extend `eslint:recommended` ([a9716bd](https://github.com/kevinoid/eslint-config-kevinoid/commit/a9716bd6556dc8ab7a186cac2abd29da7afe1eab))
+* Configure `eslint.config.js` to use `devDependencies` ([31a1095](https://github.com/kevinoid/eslint-config-kevinoid/commit/31a1095f5ea01f4f4ec6716511b309bc68e14153))
+* Disable `jsdoc/reject-any-type` ([f93341b](https://github.com/kevinoid/eslint-config-kevinoid/commit/f93341b0eaf3c3977bf2bc287cd735b972fac29f))
+* Implement trusted publishing from GitHub ([43f1675](https://github.com/kevinoid/eslint-config-kevinoid/commit/43f1675261b4c2789621493539a7abb0ad13701b))
+* Added names to configuration objects to aid debugging ([86d70f4](https://github.com/kevinoid/eslint-config-kevinoid/commit/86d70f4b4c3ff639a8490e0569419fa48aeea456))
+* **ie11:** Add es2015 globals ([488ed35](https://github.com/kevinoid/eslint-config-kevinoid/commit/488ed3563099171b537f3b1964098165d993b4c8))
+* **ie11:** disable unsupported regexp features ([0532c9d](https://github.com/kevinoid/eslint-config-kevinoid/commit/0532c9d900fd7fcc120cee3227dcf4a64cc914db))
+* **nodejs:** Bump `ecmaVersion` to 2025 ([e18c19b](https://github.com/kevinoid/eslint-config-kevinoid/commit/e18c19b81007435eec2442379d6ea61a85652a73))
+* **nodejs:** `no-unused-modules` ignore eslint.config.js ([94a2900](https://github.com/kevinoid/eslint-config-kevinoid/commit/94a290028b178ff12b5725086c46d56a61725c5b))
+* **nodejs:** set `globalReturn` based on `sourceType` ([7e6027e](https://github.com/kevinoid/eslint-config-kevinoid/commit/7e6027e9d0940b0052ed9b3454d22c8cee21c2e1))
+* **wsh:** add Object.prototype to no-restricted-globals ([b518ce9](https://github.com/kevinoid/eslint-config-kevinoid/commit/b518ce91a5b4ba90ea6af07c83a68f3a34096cf4))
+* **wsh:** define ES5 and WSH globals ([783bf31](https://github.com/kevinoid/eslint-config-kevinoid/commit/783bf31ca20a24cfaa0aaae344aefec698157904))
+
+### Bug Fixes
+
+* Change inline [@param](https://github.com/param) to [@link](https://github.com/link) ([74186fd](https://github.com/kevinoid/eslint-config-kevinoid/commit/74186fdc140191f196fc6305eb9d7d059c6f6548))
+* Disable `import/no-unused-modules` for non-module ([2c87bea](https://github.com/kevinoid/eslint-config-kevinoid/commit/2c87beacd57a5ad38ad3ae00e152f9207c9c8ae8))
+* `no-extra-parens` `enforceForArrowConditionals` ([5b51273](https://github.com/kevinoid/eslint-config-kevinoid/commit/5b512733da13a5f5a512040efd0532281113c29d))
+* Skip unicorn `languageOptions` in `common-legacy` ([e795a43](https://github.com/kevinoid/eslint-config-kevinoid/commit/e795a4384979e7c558f0ca7aa58c2b8acd986010))
+* **wsh:** don't use ie11 `no-restricted-globals` ([aeb3038](https://github.com/kevinoid/eslint-config-kevinoid/commit/aeb3038d26d6864bf2394a6c0081d1419a6f4eb3))
+
+
 # [33.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v33.2.0...v33.3.0) (2024-12-03)
 
 ### Features
