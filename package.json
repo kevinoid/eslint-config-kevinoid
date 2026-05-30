@@ -92,5 +92,11 @@
       "eslint",
       "eslint-plugin-jsdoc"
     ]
+  },
+  "david": {
+    "// eslint": "Must match version from peerDependencies of @kevinoid/eslint-plugin",
+    "ignore": [
+      "eslint"
+    ]
   }
 }
