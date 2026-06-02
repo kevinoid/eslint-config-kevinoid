@@ -41,6 +41,7 @@
   "//": "All scripts should run in POSIX sh and Windows cmd.exe",
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -u",
+    "check-deps": "npm exec npm-deprecated-check -- current --verbose --failfast",
     "lint": "npm run lint-es && npm run lint-rules",
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "lint-rules": "eslint-find-rules --deprecated --flatConfig",
