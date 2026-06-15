@@ -5,11 +5,6 @@ export default {
   "name": "eslint-config-kevinoid/rules/unicorn",
 
   "rules": {
-    // don't require regex character classes over character sets
-    // classes are shorter but less understandable to programmers familiar with
-    // other regex dialects (where they are absent or behave differently)
-    "unicorn/better-regex": "off",
-
     // require catch variable name to begin with err
     "unicorn/catch-error-name": ["error", {
       "name": "err",
