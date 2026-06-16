@@ -24,7 +24,7 @@ const nodeConfig = {
     // Although Node.js 20 doesn't support much of ES2025, it does support
     // import attributes, required to lint use of eslint-plugin-unicorn@58.0.0
     // https://github.com/import-js/eslint-plugin-import/issues/3171
-    // TODO [engine:node@>=21]: Bump based on https://node.green/
+    // TODO [engine:node@>=23]: Bump based on https://node.green/
     "ecmaVersion": 2025,
     "parserOptions": {
       "ecmaFeatures": {
