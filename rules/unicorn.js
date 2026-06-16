@@ -88,6 +88,10 @@ export default {
     // these have different behavior and uses
     "unicorn/prefer-dom-node-text-content": "off",
 
+    // don't prefer .includes() over repeated equality comparisons
+    // it doesn't seem more readable to me and may not be optimized as well
+    "unicorn/prefer-includes-over-repeated-comparisons": "off",
+
     // don't prefer Number static properties over global ones.
     // I don't find these more-verbose and less-compatible versions preferable,
     // with the exception of isFinite/isNaN already caught by airbnb-base.
