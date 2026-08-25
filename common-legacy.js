@@ -47,7 +47,6 @@ const airbnbRules = rulesRemovePlugin(airbnbLegacyRules, "n");
 // remove undesirable deprecated rules
 delete airbnbRules["no-return-await"];
 delete airbnbRules["prefer-reflect"];
-delete airbnbRules["import/imports-first"];
 
 // Customized stylistic default configuration
 // https://eslint.style/guide/config-presets#configuration-factory
