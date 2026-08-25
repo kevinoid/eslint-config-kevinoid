@@ -3,6 +3,7 @@
 
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
+// eslint-disable-next-line import-x/no-named-as-default
 import jsdoc from "eslint-plugin-jsdoc";
 import { configs as regexpConfigs } from "eslint-plugin-regexp";
 import unicorn from "eslint-plugin-unicorn";

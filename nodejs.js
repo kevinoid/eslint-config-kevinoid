@@ -53,9 +53,11 @@ const nodeConfig = {
     ],
 
     // Reports modules without any exports, or with unused exports
-    // https://github.com/benmosher/eslint-plugin-import/blob/f63dd261809de6883b13b6b5b960e6d7f42a7813/docs/rules/no-unused-modules.md
+    // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unused-modules.md
+    // Note: Deprecation is being considered in favor of knip:
+    // https://github.com/un-ts/eslint-plugin-import-x/issues/90#issuecomment-2213222134
     // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
-    "import/no-unused-modules": sourceType !== "module" ? "off" : ["error", {
+    "import-x/no-unused-modules": sourceType !== "module" ? "off" : ["error", {
       "missingExports": true,
       "unusedExports": true,
       "ignoreExports": [

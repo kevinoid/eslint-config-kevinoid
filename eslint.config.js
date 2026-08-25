@@ -1,7 +1,7 @@
 import nodejs from "./nodejs.js";
 import packageConfig from "./package.json" with { "type": "json" };
 
-const noUnusedModulesOpts = nodejs.at(-1).rules["import/no-unused-modules"][1];
+const noUnusedModulesOpts = nodejs.at(-1).rules["import-x/no-unused-modules"][1];
 
 const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
@@ -11,7 +11,7 @@ const ourRules = {
     "@stylistic/quotes": ["error", "double"],
     "@stylistic/quote-props": ["error", "always"],
 
-    "import/no-unused-modules": ["error", {
+    "import-x/no-unused-modules": ["error", {
       ...noUnusedModulesOpts,
       "ignoreExports": [
         ...noUnusedModulesOpts.ignoreExports,

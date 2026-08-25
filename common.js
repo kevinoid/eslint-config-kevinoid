@@ -3,7 +3,8 @@
 
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
-import importPlugin from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
+// eslint-disable-next-line import-x/no-named-as-default
 import jsdoc from "eslint-plugin-jsdoc";
 import promise from "eslint-plugin-promise";
 import { configs as regexpConfigs } from "eslint-plugin-regexp";
@@ -19,6 +20,7 @@ import airbnbNode from "./eslint-config-airbnb-base/rules/node.js";
 import airbnbStrict from "./eslint-config-airbnb-base/rules/strict.js";
 import airbnbStyle from "./eslint-config-airbnb-base/rules/style.js";
 import airbnbVariables from "./eslint-config-airbnb-base/rules/variables.js";
+import replaceRulePrefixes from "./lib/replace-rule-prefixes.js";
 import rulesToReplacements from "./lib/rules-to-replacements.js";
 import warnToError from "./lib/warn-to-error.js";
 import rulesBestPractices from "./rules/best-practices.js";
@@ -54,12 +56,9 @@ delete airbnbRules["no-return-await"];
 delete airbnbRules["prefer-reflect"];
 delete airbnbRules["import/imports-first"];
 
-const {
-  // eslint-plugin-import sets { ecmaVersion as 2018, sourceType as module } to
-  // ensure import is parsed.  Skip in favor of default ecmaVersion.
-  "languageOptions": importLanguageOptions,
-  ...importRecommended
-} = importPlugin.flatConfigs.recommended;
+const airbnbRulesWithReplacements = replaceRulePrefixes(airbnbRules, {
+  "import": "import-x"
+});
 
 // Customized stylistic default configuration
 // https://eslint.style/guide/config-presets#configuration-factory
@@ -78,14 +77,14 @@ export default [
 
   // Include eslint-plugin-import required by eslint-config-airbnb-base
   {
-    "name": "eslint-plugin-import/config/flat/recommended",
-    ...importRecommended
+    "name": "eslint-plugin-import-x/config/flat/recommended",
+    ...importX.flatConfigs.recommended
   },
 
   {
     "name": "eslint-config-airbnb-base",
     // Include just rules to avoid undesirable settings and need for FlatCompat
-    "rules": airbnbRules
+    "rules": airbnbRulesWithReplacements
   },
 
   jsdoc.configs["flat/recommended-error"],

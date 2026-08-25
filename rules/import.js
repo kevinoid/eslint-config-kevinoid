@@ -1,23 +1,22 @@
-// ESLint configuration rules for import plugin
-// https://github.com/benmosher/eslint-plugin-import/
+// ESLint configuration rules for import-x plugin
+// https://github.com/un-ts/eslint-plugin-import-x
 
 import airbnbImports from "../eslint-config-airbnb-base/rules/imports.js";
 
 const airbnbImportOpts = airbnbImports.rules["import/order"][1];
 const airbnbNoExtraneousOpts =
   airbnbImports.rules["import/no-extraneous-dependencies"][1];
-const airbnbNoUnresolvedOpts = airbnbImports.rules["import/no-unresolved"][1];
 
 export default {
   "name": "eslint-config-kevinoid/rules/import",
 
   "rules": {
     // Ensure consistent use of file extension within the import path
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
-    "import/extensions": ["error", "ignorePackages"],
+    // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/extensions.md
+    "import-x/extensions": ["error", "ignorePackages"],
 
     // Forbid the use of extraneous packages
-    "import/no-extraneous-dependencies": ["error", {
+    "import-x/no-extraneous-dependencies": ["error", {
       ...airbnbNoExtraneousOpts,
       "devDependencies": [
         ...airbnbNoExtraneousOpts.devDependencies,
@@ -28,20 +27,7 @@ export default {
       ]
     }],
 
-    "import/no-unresolved": [
-      "error",
-      {
-        ...airbnbNoUnresolvedOpts,
-        "ignore": [
-          ...airbnbNoUnresolvedOpts.ignore ?? [],
-          // Ignore false positives due to issues with exports
-          // https://github.com/import-js/eslint-plugin-import/issues/1810
-          "ava"
-        ]
-      }
-    ],
-
-    "import/order": [
+    "import-x/order": [
       "error",
       {
         ...airbnbImportOpts,
