@@ -4,8 +4,7 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import { importX } from "eslint-plugin-import-x";
-// eslint-disable-next-line import-x/no-named-as-default
-import jsdoc from "eslint-plugin-jsdoc";
+import { configs as jsdocConfigs } from "eslint-plugin-jsdoc";
 import promise from "eslint-plugin-promise";
 import { configs as regexpConfigs } from "eslint-plugin-regexp";
 import unicorn from "eslint-plugin-unicorn";
@@ -87,7 +86,7 @@ export default [
     "rules": airbnbRulesWithReplacements
   },
 
-  jsdoc.configs["flat/recommended-error"],
+  jsdocConfigs["flat/recommended-error"],
 
   promise.configs["flat/recommended"],
 
