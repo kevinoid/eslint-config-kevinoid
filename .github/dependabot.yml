@@ -25,3 +25,9 @@ updates:
     interval: "daily"
   cooldown:
     default-days: 7
+  groups:
+    # Group eslint package updates, which must be done in tandem
+    eslint:
+      patterns:
+      - "@eslint/*"
+      - "eslint"
