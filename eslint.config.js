@@ -1,7 +1,4 @@
 import nodejs from "./nodejs.js";
-import packageConfig from "./package.json" with { "type": "json" };
-
-const noUnusedModulesOpts = nodejs.at(-1).rules["import-x/no-unused-modules"][1];
 
 const ourRules = {
   // Use style consistent with JSON for easier sharing between formats
@@ -9,18 +6,7 @@ const ourRules = {
     "@stylistic/comma-dangle": ["error", "never"],
     "@stylistic/max-len": "off",
     "@stylistic/quotes": ["error", "double"],
-    "@stylistic/quote-props": ["error", "always"],
-
-    "import-x/no-unused-modules": ["error", {
-      ...noUnusedModulesOpts,
-      "ignoreExports": [
-        ...noUnusedModulesOpts.ignoreExports,
-
-        // Don't report unused exports from package exports
-        // https://github.com/import-js/eslint-plugin-import/issues/2525
-        ...new Set(Object.values(packageConfig.exports))
-      ]
-    }]
+    "@stylistic/quote-props": ["error", "always"]
   }
 };
 

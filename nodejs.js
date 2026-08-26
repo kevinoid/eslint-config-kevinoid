@@ -50,22 +50,7 @@ const nodeConfig = {
         "property": "nextTick",
         "message": "Use queueMicrotask() instead."
       }
-    ],
-
-    // Reports modules without any exports, or with unused exports
-    // https://github.com/un-ts/eslint-plugin-import-x/blob/master/docs/rules/no-unused-modules.md
-    // Note: Deprecation is being considered in favor of knip:
-    // https://github.com/un-ts/eslint-plugin-import-x/issues/90#issuecomment-2213222134
-    // TODO [eslint-config-airbnb-base@>=16]: Remove if enabled
-    "import-x/no-unused-modules": sourceType !== "module" ? "off" : ["error", {
-      "missingExports": true,
-      "unusedExports": true,
-      "ignoreExports": [
-        // ESLint configuration files are not expected to be imported
-        // https://eslint.org/docs/latest/use/configure/configuration-files
-        "**/eslint.config.{js,mjs,cjs,ts,mts,cts}"
-      ]
-    }]
+    ]
   }
 };
 
