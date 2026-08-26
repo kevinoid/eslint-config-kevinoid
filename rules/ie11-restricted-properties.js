@@ -77,8 +77,8 @@ export default {
         .rules["no-restricted-properties"]
         // Remove IE-specific allowed properties
         .filter((restriction) => typeof restriction !== "object"
-          || !allowed[restriction.object]
-          || !allowed[restriction.object][restriction.property]),
+          || !Object.hasOwn(allowed, restriction.object)
+          || !Object.hasOwn(allowed[restriction.object], restriction.property)),
       // Add IE-specific restricted properties
       Object.keys(restricted)
         .map((object) => Object.keys(restricted[object])
