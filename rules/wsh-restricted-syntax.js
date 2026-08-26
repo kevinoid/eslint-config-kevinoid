@@ -19,7 +19,8 @@ export default {
       airbnbStyle
         .rules["no-restricted-syntax"]
         .filter(
-          (rule) => typeof rule !== "object" || !unrestricted[rule.selector]
+          (rule) => typeof rule !== "object"
+            || !Object.hasOwn(unrestricted, rule.selector)
         )
   }
 };
