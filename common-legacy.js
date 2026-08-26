@@ -42,11 +42,14 @@ const airbnbLegacyRules = rulesToReplacements(
     "eslint-plugin-n": "n"
   }
 );
+const {
+  // remove undesirable deprecated rules
+  "no-return-await": noReturnAwait,
+  "prefer-reflect": preferReflect,
+
+  ...airbnbRules
 // Remove rules for eslint-plugin-n which isn't used by legacy configs
-const airbnbRules = rulesRemovePlugin(airbnbLegacyRules, "n");
-// remove undesirable deprecated rules
-delete airbnbRules["no-return-await"];
-delete airbnbRules["prefer-reflect"];
+} = rulesRemovePlugin(airbnbLegacyRules, "n");
 
 // Customized stylistic default configuration
 // https://eslint.style/guide/config-presets#configuration-factory

@@ -32,7 +32,14 @@ import rulesStyle from "./rules/style.js";
 import rulesUnicorn from "./rules/unicorn.js";
 import rulesVariables from "./rules/variables.js";
 
-const airbnbRules = rulesToReplacements(
+const {
+  // remove undesirable deprecated rules
+  "no-return-await": noReturnAwait,
+  "prefer-reflect": preferReflect,
+  "import/imports-first": importsFirst,
+
+  ...airbnbRules
+} = rulesToReplacements(
   {
     // Note: Order from
     // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-v19.0.4/packages/eslint-config-airbnb-base/index.js
@@ -50,10 +57,6 @@ const airbnbRules = rulesToReplacements(
     "eslint-plugin-n": "n"
   }
 );
-// remove undesirable deprecated rules
-delete airbnbRules["no-return-await"];
-delete airbnbRules["prefer-reflect"];
-delete airbnbRules["import/imports-first"];
 
 const airbnbRulesWithReplacements = replaceRulePrefixes(airbnbRules, {
   "import": "import-x"
