@@ -32,9 +32,9 @@ export default {
       // Update IE11 messages to WSH
       ie11NoRestrictedProperties
         .rules["no-restricted-properties"]
-        .map((prop) => (typeof prop !== "object" ? prop : {
-          ...prop,
-          "message": prop.message.replaceAll(/IE(\s*11)?/g, "WSH")
+        .map((property) => (typeof property !== "object" ? property : {
+          ...property,
+          "message": property.message.replaceAll(/IE(\s*11)?/g, "WSH")
         })),
       // Add WSH-specific restricted properties
       Object.entries(restricted)
