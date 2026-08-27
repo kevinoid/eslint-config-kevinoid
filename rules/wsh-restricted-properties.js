@@ -37,8 +37,8 @@ export default {
           "message": prop.message.replaceAll(/IE(\s*11)?/g, "WSH")
         })),
       // Add WSH-specific restricted properties
-      Object.keys(restricted)
-        .map((object) => Object.keys(restricted[object])
+      Object.entries(restricted)
+        .map(([object, properties]) => Object.keys(properties)
           .map((property) => ({
             object,
             property,

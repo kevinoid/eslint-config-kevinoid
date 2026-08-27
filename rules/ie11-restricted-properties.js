@@ -80,8 +80,8 @@ export default {
           || !Object.hasOwn(allowed, restriction.object)
           || !Object.hasOwn(allowed[restriction.object], restriction.property)),
       // Add IE-specific restricted properties
-      Object.keys(restricted)
-        .map((object) => Object.keys(restricted[object])
+      Object.entries(restricted)
+        .map(([object, properties]) => Object.keys(properties)
           .map((property) => ({
             object,
             property,
