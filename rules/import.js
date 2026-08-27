@@ -3,8 +3,8 @@
 
 import airbnbImports from "../eslint-config-airbnb-base/rules/imports.js";
 
-const airbnbImportOpts = airbnbImports.rules["import/order"][1];
-const airbnbNoExtraneousOpts =
+const airbnbImportOptions = airbnbImports.rules["import/order"][1];
+const airbnbNoExtraneousOptions =
   airbnbImports.rules["import/no-extraneous-dependencies"][1];
 
 export default {
@@ -17,9 +17,9 @@ export default {
 
     // Forbid the use of extraneous packages
     "import-x/no-extraneous-dependencies": ["error", {
-      ...airbnbNoExtraneousOpts,
+      ...airbnbNoExtraneousOptions,
       "devDependencies": [
-        ...airbnbNoExtraneousOpts.devDependencies,
+        ...airbnbNoExtraneousOptions.devDependencies,
 
         // ESLint configuration files are only used during development
         // https://eslint.org/docs/latest/use/configure/configuration-files
@@ -30,7 +30,7 @@ export default {
     "import-x/order": [
       "error",
       {
-        ...airbnbImportOpts,
+        ...airbnbImportOptions,
         "alphabetize": {
           "order": "asc"
         },

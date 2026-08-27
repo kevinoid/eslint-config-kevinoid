@@ -8,7 +8,7 @@ import bestPractices from "./rules/best-practices.js";
 import importConfigs from "./rules/import.js";
 import n from "./rules/n.js";
 
-const noRestrictedProps = bestPractices.rules["no-restricted-properties"];
+const noRestrictedProperties = bestPractices.rules["no-restricted-properties"];
 const nConfig = nPlugin.configs["flat/recommended"];
 const { sourceType } = nConfig.languageOptions;
 
@@ -41,7 +41,7 @@ const nodeConfig = {
     "strict": ["error", "global"],
 
     "no-restricted-properties": [
-      ...noRestrictedProps,
+      ...noRestrictedProperties,
       // Add process.nextTick() to no-restricted-properties
       // https://nodejs.org/api/process.html#process_when_to_use_queuemicrotask_vs_process_nexttick
       // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1346
