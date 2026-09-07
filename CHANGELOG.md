@@ -1,3 +1,10 @@
+# [35.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.0.0...v35.1.0) (2026-09-07)
+
+### Features
+
+* Disable [`unicorn/name-replacements`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/name-replacements.md).
+
+
 # [35.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v34.0.0...v35.0.0) (2026-09-07)
 
 ### BREAKING CHANGES
