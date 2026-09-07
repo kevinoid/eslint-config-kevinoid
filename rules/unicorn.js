@@ -13,6 +13,19 @@ export default {
       ]
     }],
 
+    // enforce consistent naming for boolean names
+    "unicorn/consistent-boolean-name": ["error", {
+      "ignore": [
+        // ignore "meta" variable names, which may hold booleans
+        // (e.g. stubResult, propertyValue, firstReturn)
+        "^result$",
+        "Result$",
+        "Return$",
+        "^value$",
+        "Value$"
+      ]
+    }],
+
     // don't require correct Error subclassing
     // requiring name to be set in the constructor is overly-verbose and adds
     // an unnecessary instance property:
