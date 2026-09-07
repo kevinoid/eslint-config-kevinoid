@@ -1,3 +1,10 @@
+# [35.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.2.0...v35.3.0) (2026-09-07)
+
+### Features
+
+* Disable [`prefer-then-catch`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-then-catch.md).
+
+
 # [35.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.1.0...v35.2.0) (2026-09-07)
 
 ### Features
