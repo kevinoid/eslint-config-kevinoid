@@ -29,6 +29,9 @@ export default {
     // https://github.com/sindresorhus/eslint-plugin-unicorn/pull/346
     "unicorn/filename-case": "off",
 
+    // don't enforce replacements for variable, property, and filenames.
+    "unicorn/name-replacements": "off",
+
     // allow specifying rules to disable in eslint-disable comments
     // which is useful to minimize diff for adopted code
     "unicorn/no-abusive-eslint-disable": "off",
