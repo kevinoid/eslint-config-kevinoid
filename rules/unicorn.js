@@ -92,6 +92,10 @@ export default {
       }
     }],
 
+    // don't prefer early continues over whole-loop conditional wrapping.
+    // although early continue can be useful, it's not always more readable
+    "unicorn/prefer-continue": "off",
+
     // don't require Node#append() instead of Node#appendChild()
     // consistency advantage doesn't outweigh backwards compat
     "unicorn/prefer-dom-node-append": "off",
