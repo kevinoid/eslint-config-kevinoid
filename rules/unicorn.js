@@ -101,6 +101,9 @@ export default {
     // consistency advantage doesn't outweigh perf and backwards compat
     "unicorn/prefer-query-selector": "off",
 
+    // prefer RegExp.escape() for escaping strings to use in regular expressions.
+    "unicorn/prefer-regexp-escape": "error",
+
     // don't prefer using the `String.raw` tag to avoid escaping `\`
     // it often makes the combined literal longer
     // it's much less performant
