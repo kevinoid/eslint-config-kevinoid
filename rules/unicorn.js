@@ -126,6 +126,10 @@ export default {
     // either can be clearer, should be decided on case-by-case basis
     "unicorn/prefer-ternary": "off",
 
+    // prefer Uint8Array#toBase64() and Uint8Array.fromBase64() over atob(),
+    // btoa(), and Buffer base64 conversions.
+    "unicorn/prefer-uint8array-base64": "error",
+
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off",
 
