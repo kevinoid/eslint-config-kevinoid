@@ -23,7 +23,10 @@ export default {
         "Return$",
         "^value$",
         "Value$"
-      ]
+      ],
+      "prefixes": {
+        "needs": true
+      }
     }],
 
     // don't require correct Error subclassing
