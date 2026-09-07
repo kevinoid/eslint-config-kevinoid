@@ -23,6 +23,11 @@ export default {
       ]
     }],
 
+    // Normalize links in @see tags to a canonical {@link} form.
+    "jsdoc/normalize-see-links": ["error", {
+      "wrapBareUrls": true
+    }],
+
     // Don't forbid use of any (or *) type within JSDoc tag types.
     // Although it is better to be specific where possible, it is not uncommon
     // to document values which may be of any type, particularly when loading
