@@ -153,6 +153,9 @@ export default {
     // don't prevent common abbreviations
     "unicorn/prevent-abbreviations": "off",
 
+    // enforce a consistent style for single-line block comments.
+    "unicorn/single-line-block-comment-style": ["error", "single-line"],
+
     // enforce consistent brace style for case clauses
     "unicorn/switch-case-braces": ["error", "avoid"]
   }
