@@ -1,3 +1,12 @@
+# [35.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.1.0...v35.2.0) (2026-09-07)
+
+### Features
+
+* Disable [`prefer-continue`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-continue.md).
+* Configure [`single-line-block-comment-style`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/single-line-block-comment-style.md) for `single-line`.
+* Exclude metavariable names from [`consistent-boolean-name`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-boolean-name.md).
+
+
 # [35.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.0.0...v35.1.0) (2026-09-07)
 
 ### Features
