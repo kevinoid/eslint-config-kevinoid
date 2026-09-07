@@ -146,6 +146,10 @@ export default {
     // either can be clearer, should be decided on case-by-case basis
     "unicorn/prefer-ternary": "off",
 
+    // don't prefer .then().catch() over .then(..., ...) for error handling
+    // I use .then(..., ...) when I want to avoid catching from onFulfilled
+    "unicorn/prefer-then-catch": "off",
+
     // prefer Uint8Array#toBase64() and Uint8Array.fromBase64() over atob(),
     // btoa(), and Buffer base64 conversions.
     "unicorn/prefer-uint8array-base64": "error",
