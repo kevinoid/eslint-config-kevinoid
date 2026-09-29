@@ -46,7 +46,7 @@
     "lint-es": "eslint --report-unused-disable-directives . && echo ESLint passed.",
     "release": "git push --follow-tags origin main && echo \"Create a GitHub Release (from CHANGELOG.md) to run publish workflow.\"",
     "preversion": "depcheck --ignores=\"eslint-*,rimraf\" && david && git-branch-is main && hub-ci-status -vv --wait",
-    "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint",
+    "test": "npm run test-peer-versions-ci && npm run lint && npm run test-eslint && knip",
     "test-eslint": "npm run test-eslint-browser && npm run test-eslint-ie11 && npm run test-eslint-node && npm run test-eslint-webextensions && npm run test-eslint-wsh",
     "//": "Test that config can be loaded and works on empty input.  Note: echo prints 'ECHO is on.' in cmd.exe, : produces no output in cmd.exe or sh.",
     "test-eslint-browser": ": | eslint --no-config-lookup -c browser.js --rule \"unicorn/no-empty-file: 0\" --stdin",
@@ -74,6 +74,7 @@
   },
   "devDependencies": {
     "eslint": "^10.8.1",
+    "knip": "^6.0.0",
     "peer-version-check": "^0.1.0"
   },
   "peerDependencies": {
