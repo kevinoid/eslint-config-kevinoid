@@ -95,6 +95,11 @@ export default {
       }
     }],
 
+    // don't prefer combining consecutive guards with identical exit statements.
+    // code may be clearer and better commented when guards are separated.
+    // defer to the code author to decide when each is preferable.
+    "unicorn/prefer-combined-guards": "off",
+
     // don't prefer early continues over whole-loop conditional wrapping.
     // although early continue can be useful, it's not always more readable
     "unicorn/prefer-continue": "off",
