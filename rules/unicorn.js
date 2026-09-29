@@ -25,8 +25,10 @@ export default {
         "Value$"
       ],
       "prefixes": {
+        "need": true,
         "needs": true,
-        "use": true
+        "use": true,
+        "uses": true
       }
     }],
 
