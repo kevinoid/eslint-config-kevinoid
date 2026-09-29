@@ -119,6 +119,11 @@ export default {
     // these have different behavior and uses
     "unicorn/prefer-dom-node-text-content": "off",
 
+    // don't prefer early returns over conditionals wrapping the remainder of
+    // the function body
+    // it often reads more logically or facilitates future expansion
+    "unicorn/prefer-early-return": "off",
+
     // don't prefer .includes() over repeated equality comparisons
     // it doesn't seem more readable to me and may not be optimized as well
     "unicorn/prefer-includes-over-repeated-comparisons": "off",
