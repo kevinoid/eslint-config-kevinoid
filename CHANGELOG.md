@@ -1,3 +1,33 @@
+# [36.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.3.0...v36.0.0) (2026-09-29)
+
+### Features
+
+* Add "needs" prefix to `unicorn/consistent-boolean-name` ([852de57](https://github.com/kevinoid/eslint-config-kevinoid/commit/852de5712577f5a9614d098efb1f9d2fd7092260))
+* Bump `eslint-plugin-unicorn` from ^74.0.0 to ^76.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+  Enable new rules:
+  - [`no-unused-iterator-helper`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unused-iterator-helper.md)
+  - [`no-unused-builtin-method-return`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unused-builtin-method-return.md)
+  - [`prefer-iterator-zip`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-iterator-zip.md)
+  - [`no-useless-set-construction`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-useless-set-construction.md)
+  - [`prefer-iterator-helpers`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-iterator-helpers.md)
+  - [`prefer-json-import`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-json-import.md)
+  - [`prefer-temporal-conversion`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-temporal-conversion.md)
+  - [`no-async-iterator-callback`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-async-iterator-callback.md)
+  - [`no-using-resource-escape`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-using-resource-escape.md)
+  - [`prefer-uint8array-hex`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-uint8array-hex.md)
+  - [`no-deprecated-css-features`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-deprecated-css-features.md)
+  - [`no-unscoped-css-nesting-selector`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unscoped-css-nesting-selector.md)
+  - [`no-duplicate-css-selectors`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-duplicate-css-selectors.md)
+  - [`no-unknown-pseudo-selectors`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unknown-pseudo-selectors.md)
+  - [`no-invalid-media-features`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-media-features.md)
+  - [`no-unknown-css-annotations`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unknown-css-annotations.md)
+  - [`no-nesting-with-mixed-specificity`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-nesting-with-mixed-specificity.md)
+  - [`prefer-media-feature-range-syntax`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-media-feature-range-syntax.md)
+  - [`no-duplicate-font-family-names`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-duplicate-font-family-names.md)
+  - [`no-redundant-nested-style-rules`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-redundant-nested-style-rules.md)
+
+
 # [35.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.2.0...v35.3.0) (2026-09-07)
 
 ### Features
