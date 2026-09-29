@@ -25,7 +25,8 @@ export default {
         "Value$"
       ],
       "prefixes": {
-        "needs": true
+        "needs": true,
+        "use": true
       }
     }],
 
