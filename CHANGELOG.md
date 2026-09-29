@@ -1,3 +1,10 @@
+# [36.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.1.0...v36.2.0) (2026-09-29)
+
+### Features
+
+* disable [`prefer-early-return`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-early-return.md)
+
+
 # [36.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.0.0...v36.1.0) (2026-09-29)
 
 ### Features
