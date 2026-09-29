@@ -1,3 +1,10 @@
+# [36.1.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.0.0...v36.1.0) (2026-09-29)
+
+### Features
+
+* add "need", "use", and "uses" prefixes to `unicorn/consistent-boolean-name`.
+
+
 # [36.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v35.3.0...v36.0.0) (2026-09-29)
 
 ### Features
