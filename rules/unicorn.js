@@ -48,6 +48,10 @@ export default {
     // https://github.com/sindresorhus/eslint-plugin-unicorn/pull/346
     "unicorn/filename-case": "off",
 
+    // don't limit the depth of nested calls
+    // trust the author's discretion for readability
+    "unicorn/max-nested-calls": "off",
+
     // don't enforce replacements for variable, property, and filenames.
     "unicorn/name-replacements": "off",
 
