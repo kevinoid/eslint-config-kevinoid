@@ -1,3 +1,10 @@
+# [36.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.2.0...v36.3.0) (2026-09-30)
+
+### Features
+
+* disable [`max-nested-calls`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/max-nested-calls.md)
+
+
 # [36.2.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.1.0...v36.2.0) (2026-09-29)
 
 ### Features
