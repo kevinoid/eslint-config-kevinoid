@@ -50,7 +50,11 @@ const nodeConfig = {
         "property": "nextTick",
         "message": "Use queueMicrotask() instead."
       }
-    ]
+    ],
+
+    // TODO: Should depend on version in linted package.json#engines
+    // TODO [engine:node@>=24]: Remove this
+    "unicorn/prefer-regexp-escape": "off"
   }
 };
 
