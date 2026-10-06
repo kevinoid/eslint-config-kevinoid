@@ -40,6 +40,10 @@ export default {
     // since IE 11 doesn't support optional catch binding
     "unicorn/prefer-optional-catch-binding": "off",
 
+    // don't prefer RegExp.escape() for escaping strings
+    // since IE 11 doesn't provide RegExp.escape
+    "unicorn/prefer-regexp-escape": "off",
+
     // don't require String#startsWith() & String#endsWith() over alternatives
     // since IE 11 doesn't support startsWith/endsWith
     "unicorn/prefer-string-starts-ends-with": "off"
