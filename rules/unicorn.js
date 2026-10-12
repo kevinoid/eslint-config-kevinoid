@@ -69,6 +69,10 @@ export default {
     // I agree #reduce() can be hard to read, but is useful enough not to warn.
     "unicorn/no-array-reduce": "off",
 
+    // allow asterisk prefixes and shared indentation in multiline comments.
+    // To help distinguish comment lines from non-comment lines.
+    "unicorn/no-asterisk-prefix-in-documentation-comments": "off",
+
     // allow the use of hexadecimal escapes
     "unicorn/no-hex-escape": "off",
 
