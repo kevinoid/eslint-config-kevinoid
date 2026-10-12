@@ -60,7 +60,7 @@ const {
   // supported in legacy environments
   "languageOptions": unicornLanguageOptions,
   ...unicornConfig
-} = unicorn.configs["flat/recommended"];
+} = unicorn.configs.recommended;
 
 export default [
   {
