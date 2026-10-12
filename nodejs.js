@@ -4,11 +4,9 @@
 import nPlugin from "eslint-plugin-n";
 
 import common from "./common.js";
-import bestPractices from "./rules/best-practices.js";
 import importConfigs from "./rules/import.js";
 import n from "./rules/n.js";
 
-const noRestrictedProperties = bestPractices.rules["no-restricted-properties"];
 const nConfig = nPlugin.configs["flat/recommended"];
 const { sourceType } = nConfig.languageOptions;
 
@@ -39,18 +37,6 @@ const nodeConfig = {
     // require 'use strict' in global scope
     // Note: This rule has no effect when sourceType: module
     "strict": ["error", "global"],
-
-    "no-restricted-properties": [
-      ...noRestrictedProperties,
-      // Add process.nextTick() to no-restricted-properties
-      // https://nodejs.org/api/process.html#process_when_to_use_queuemicrotask_vs_process_nexttick
-      // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/1346
-      {
-        "object": "process",
-        "property": "nextTick",
-        "message": "Use queueMicrotask() instead."
-      }
-    ],
 
     // TODO: Should depend on version in linted package.json#engines
     // TODO [engine:node@>=24]: Remove this
