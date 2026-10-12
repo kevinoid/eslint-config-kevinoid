@@ -6,7 +6,9 @@ const ourRules = {
     "@stylistic/comma-dangle": ["error", "never"],
     "@stylistic/max-len": "off",
     "@stylistic/quotes": ["error", "double"],
-    "@stylistic/quote-props": ["error", "always"]
+    "@stylistic/quote-props": ["error", "always"],
+    // Too many false-positives from warnToError(), .filter(), etc.
+    "unicorn/no-top-level-side-effects": "off"
   }
 };
 
