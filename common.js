@@ -98,7 +98,7 @@ export default [
     "rules": warnToError(regexpConfigs["flat/all"].rules)
   },
 
-  unicorn.configs["flat/recommended"],
+  unicorn.configs.recommended,
 
   // ESLint built-in rules
   rulesEs6,
