@@ -1,3 +1,42 @@
+# [37.0.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.3.0...v37.0.0) (2026-10-19)
+
+### Features
+
+* Bump `eslint-plugin-unicorn` from ^76.0.0 to ^78.0.0.  See [Release
+  Notes](https://github.com/sindresorhus/eslint-plugin-unicorn/releases).
+  Enable new rules:
+  - [`no-invalid-response-options`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-response-options.md)
+  - [`no-prevent-default-in-passive-listener`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-prevent-default-in-passive-listener.md)
+  - [`no-invalid-boolean-attribute-value`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-boolean-attribute-value.md)
+  - [`no-conflicting-constraints`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-conflicting-constraints.md)
+  - [`no-invalid-property-descriptor`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-property-descriptor.md)
+  - [`no-invalid-url-protocol-comparison`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-url-protocol-comparison.md)
+  - [`no-invalid-integrity`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-integrity.md)
+  - [`no-url-in-search-params`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-url-in-search-params.md)
+  - [`no-invalid-dom-token`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-dom-token.md)
+  - [`require-text-decoder-streaming`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/require-text-decoder-streaming.md)
+  - [`no-invalid-temporal-arithmetic`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-temporal-arithmetic.md)
+  - [`no-invalid-style-set-property`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-style-set-property.md)
+  - [`no-ineffective-csp-directives`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-ineffective-csp-directives.md)
+  - [`no-invalid-intl-options`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-invalid-intl-options.md)
+  - [`no-unsafe-json-serialization`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-unsafe-json-serialization.md)
+  - [`no-leading-empty-lines`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-leading-empty-lines.md)
+  - [`prefer-promise-static-methods`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-promise-static-methods.md)
+  - [`no-incomplete-accessor-override`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-incomplete-accessor-override.md)
+  - [`prefer-escaped-irregular-whitespace`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-escaped-irregular-whitespace.md)
+  - [`prefer-literal-ascii`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-literal-ascii.md)
+  - [`prefer-short-escape-sequences`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-short-escape-sequences.md)
+  - [`no-loss-of-precision`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-loss-of-precision.md)
+* disable `unicorn/prefer-regexp-escape` for ie11 ([1698aa1](https://github.com/kevinoid/eslint-config-kevinoid/commit/1698aa1b652ee26428dec7275efc14948d242072))
+* disable `unicorn/prefer-regexp-escape` for nodejs (with plans to re-enable once support for Node.js < 24 is dropped) ([8afd517](https://github.com/kevinoid/eslint-config-kevinoid/commit/8afd517835bc2cd197ad1ed0b0dde633573ebdf5))
+* prefer static class names to `this`/`super` ([f2a83ce](https://github.com/kevinoid/eslint-config-kevinoid/commit/f2a83cef8a3be774cf258099cd03d6a7c85969b9))
+
+### Bug Fixes
+
+* Remove `process.nextTick` from `no-restricted-properties`, since it has been covered by [`unicorn/prefer-queue-microtask`](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-queue-microtask.md) since `eslint-plugin-unicorn@65.0.0` ([d42c0a3](https://github.com/kevinoid/eslint-config-kevinoid/commit/d42c0a370335070afa0a9d8276d22b5c9b7ad448))
+* Use `recommended` config for `eslint-plugin-unicorn` instead of `flat/recommended`, which has been deprecated for quite a while and was removed in `eslint-plugin-unicorn@77.0.0` ([04c4d45](https://github.com/kevinoid/eslint-config-kevinoid/commit/04c4d454af3838ef5a822c0b2eb3ab9f8ebbe4ff))
+
+
 # [36.3.0](https://github.com/kevinoid/eslint-config-kevinoid/compare/v36.2.0...v36.3.0) (2026-09-30)
 
 ### Features
