@@ -13,6 +13,15 @@ export default {
       ]
     }],
 
+    // enforce consistent class references in static methods
+    // `this` is shorter and allows retargeting, but requires calling as method.
+    // I value the convenience of passing/calling as a function (and don't mind
+    // the reduced flexibility and increased explicitness) of class names.
+    "unicorn/class-reference-in-static-methods": ["error", {
+      "preferThis": false,
+      "preferSuper": false
+    }],
+
     // enforce consistent naming for boolean names
     "unicorn/consistent-boolean-name": ["error", {
       "ignore": [
