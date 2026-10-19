@@ -98,6 +98,11 @@ export default {
     // is never upgraded to non-holey <https://youtu.be/m9cTaYI95Zc?t=770>
     "unicorn/no-new-array": "error",
 
+    // allow parameters that receive the same value at every call
+    // although the code can currently be simplified, the parameter may be
+    // useful for readability at the call site or future expected uses.
+    "unicorn/no-unnecessary-parameters": "off",
+
     // allow Array destructuring with consecutive ignored values
     "unicorn/no-unreadable-array-destructuring": "off",
 
