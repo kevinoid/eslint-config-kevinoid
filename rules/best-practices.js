@@ -16,7 +16,10 @@ export default {
       "conditionalAssign": false,
       "ignoredNodes": [
         // enforceForArrowConditionals: false
-        "ArrowFunctionExpression[body.type=ConditionalExpression]"
+        "ArrowFunctionExpression[body.type=ConditionalExpression]",
+        // require around complex spread arguments for clarity
+        // enforced by unicorn/require-spread-parentheses
+        "SpreadElement"
       ],
       "nestedBinaryExpressions": false,
       "returnAssign": false
