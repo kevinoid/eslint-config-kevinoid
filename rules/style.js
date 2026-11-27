@@ -9,6 +9,10 @@ export default {
   "name": "eslint-config-kevinoid/rules/style",
 
   "rules": {
+    // enforce consistent spacing and line break styles inside brackets
+    "@stylistic/list-style": ["error", {
+      "empty": "never"
+    }],
 
     // require camel case names (even for properties and destructuring)
     // Note: options object needed to override airbnb, values set for clarity.
