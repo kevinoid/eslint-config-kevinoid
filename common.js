@@ -38,6 +38,16 @@ const {
   "prefer-reflect": preferReflect,
   "import/imports-first": importsFirst,
 
+  // remove rules replaced by @stylistic/list-style
+  "@stylistic/array-bracket-newline": stylisticArrayBracketNewline,
+  "@stylistic/array-bracket-spacing": stylisticArrayBracketSpacing,
+  "@stylistic/array-element-newline": stylisticArrayElementNewline,
+  "@stylistic/function-call-argument-newline": stylisticFunctionCallArgNewline,
+  "@stylistic/function-paren-newline": stylisticFunctionParenNewline,
+  "@stylistic/object-curly-newline": stylisticObjectCurlyNewline,
+  "@stylistic/object-curly-spacing": stylisticObjectCurlySpacing,
+  "@stylistic/object-property-newline": stylisticObjectPropertyNewline,
+
   ...airbnbRules
 } = rulesToReplacements(
   {

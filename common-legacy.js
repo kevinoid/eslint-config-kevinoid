@@ -47,6 +47,16 @@ const {
   "no-return-await": noReturnAwait,
   "prefer-reflect": preferReflect,
 
+  // remove rules replaced by @stylistic/list-style
+  "@stylistic/array-bracket-newline": stylisticArrayBracketNewline,
+  "@stylistic/array-bracket-spacing": stylisticArrayBracketSpacing,
+  "@stylistic/array-element-newline": stylisticArrayElementNewline,
+  "@stylistic/function-call-argument-newline": stylisticFunctionCallArgNewline,
+  "@stylistic/function-paren-newline": stylisticFunctionParenNewline,
+  "@stylistic/object-curly-newline": stylisticObjectCurlyNewline,
+  "@stylistic/object-curly-spacing": stylisticObjectCurlySpacing,
+  "@stylistic/object-property-newline": stylisticObjectPropertyNewline,
+
   ...airbnbRules
 // Remove rules for eslint-plugin-n which isn't used by legacy configs
 } = rulesRemovePlugin(airbnbLegacyRules, "n");
