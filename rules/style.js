@@ -9,11 +9,6 @@ export default {
   "name": "eslint-config-kevinoid/rules/style",
 
   "rules": {
-    // enforce line breaks after opening and before closing array brackets
-    "@stylistic/array-bracket-newline": ["error", "consistent"],
-
-    // enforce line breaks between array elements
-    "@stylistic/array-element-newline": ["error", "consistent"],
 
     // require camel case names (even for properties and destructuring)
     // Note: options object needed to override airbnb, values set for clarity.
